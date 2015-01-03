@@ -36,47 +36,12 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
 <noscript>
 <p>Debe habilitar el uso de Javascript, para poder usar muchas de las funciones del sitio</p>
 </noscript>
-<?php flush(); ?>      
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="">  
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>           
+<?php flush(); ?>              
 <div class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="intro-message">
-                    <h1>Planeta</h1>
-                    <h3>VaSLibre</h3>
+            <div class="col-lg-12">
+                    <h1><?php echo $nombre_sitio; ?></h1>
                 </div>
             </div>
         </div>
@@ -96,7 +61,7 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
   		</a>
   		<div class="media-body">
     		<h4 class="media-heading">'.$entry['title'].'</h4>
-            <p>'.$entry['description'].'</p>
+            <p class="text-justify">'.$entry['description'].'</p>
             <p><a href="'.$entry['link'].'" target="_blank" title="Leer nota en: '.$entry['title'].'">Leer m&aacute;s</a></p>
           <ul class="list-inline list-unstyled">
   			<li><span><i class="glyphicon glyphicon-calendar"></i> '.date("d/m/Y",$entry['pubdate']).' </span></li>
@@ -114,33 +79,20 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">⋅</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">⋅</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">⋅</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">&copy; 2014 - <?php echo date("Y",time()); ?> Dise&ntilde;o & Programaci&oacute;n: [ <a href="http://viserproject.com" target="_blank" title="Visitar ViserProject"><span>ViSerProject</span></a> ]</p>
+                    <p class="copyright text-muted small">&copy; 2014 - <?php echo date("Y",time()); ?> Dise&ntilde;o & Programaci&oacute;n: [ <a href="http://viserproject.com" target="_blank" title="Visitar ViserProject"><span>ViSerProject</span></a> ] &sdot;
+                    <a href="https://github.com/Vaslibre/planeta" target="_blank" title="Código Fuente del Planeta">Fork</a> @ <i class="fa fa-github-alt"></i> &sdot;
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Bajo Licencia Creative Commons">CC 4.0</a>
+ </p>
                 </div>
             </div>
         </div>
     </footer>
-
+<?php COOKIES(); ?>
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<?php HCARD(); ?>  
+<?php //HCARD(); ?>  
 </body>
     
 </html>    

@@ -30,6 +30,15 @@ font-family: 'Fjalla One',sans-serif;
 .page {
     margin-top: 20px;
 }
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#inner-message {
+    margin: 0 auto;
+}
 footer {
     padding: 50px 0px;
     background-color: #F8F8F8;
