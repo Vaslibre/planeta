@@ -1,0 +1,52 @@
+#Configuración para vaslibre.org.ve
+# Errores
+ErrorDocument 404  /errores/nofound.html
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{QUERY_STRING} ^(.*)=http [NC]
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E)[N,C]
+# compression data
+#Expira
+<IfModule mod_headers.c>
+ ExpiresActive On
+ ExpiresDefault A0
+  # YEAR
+  <FilesMatch "\.(ico|gif|jpg|jpeg|png|flv|pdf|js|css|swf|xml|mp3)$">
+  Header set Cache-Control "max-age=29030400"
+  ExpiresDefault A29030400
+  Header append Cache-Control "public"
+RequestHeader unset Cookie
+  Header always unset Set-Cookie
+  Header unset ETag
+  FileETag None
+  </FilesMatch>
+  # 10 min
+  <FilesMatch "\.(html|htm|txt|php)$">
+  Header set Cache-Control "max-age=2700"
+  Header append Cache-Control "public, must-revalidate"
+  ExpiresDefault A600
+  </FilesMatch>
+</IfModule>
+### GZip Files
+<FilesMatch "\.(htm|html|shtml)$">
+AddHandler application/x-httpd-php .html
+</FilesMatch>
+<FilesMatch "\.(htm|html|shtml|php|xml|css|js|ico)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+################## GZip Files ###################
+<FilesMatch "\.js$">
+AddHandler application/x-httpd-php .js
+</FilesMatch>
+<FilesMatch "\.css$">
+AddHandler application/x-httpd-php .css
+</FilesMatch>
+<FilesMatch "\.(htm|html|shtml)$">
+AddHandler application/x-httpd-php .html
+</FilesMatch>
+SetEnv SERVER_ADMIN info@viserproject.com
+
