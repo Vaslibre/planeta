@@ -1,6 +1,6 @@
 #Configuración para vaslibre.org.ve
 # Errores
-ErrorDocument 404  /errores/nofound.html
+ErrorDocument 404  404.html
 RewriteEngine On
 Options +FollowSymlinks
 #RewriteBase /
