@@ -237,7 +237,7 @@ if (VERIFICA_ONLINE($url)){
 	$ciclo = 1;
 	foreach ($noticias as $noticia) {  
 		foreach($noticia as $reg){ 
-			if(!empty($reg->title) && $ciclo<$lee&& !empty($reg->description)){
+			if(!empty($reg->title) && $ciclo<$lee&& !empty($reg->description) && !empty($reg->pubDate)){
 		        $pubdate =  $reg->pubDate;
 		        $title   =  $reg->title;
 	 			$link    =  $reg->link;

@@ -3,7 +3,7 @@
 ErrorDocument 404  /errores/nofound.html
 RewriteEngine On
 Options +FollowSymlinks
-RewriteBase /
+#RewriteBase /
 RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -38,7 +38,6 @@ AddHandler application/x-httpd-php .html
 <FilesMatch "\.(htm|html|shtml|php|xml|css|js|ico)$">
 SetOutputFilter DEFLATE
 </FilesMatch>
-################## GZip Files ###################
 <FilesMatch "\.js$">
 AddHandler application/x-httpd-php .js
 </FilesMatch>

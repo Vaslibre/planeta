@@ -11,18 +11,30 @@ VASLIBRE
 http://vaslibre.org.ve
 -------------------------------------------------------- */
 
+#Valores del sistema
+
+# Redes sociales
+
    $nombre_sitio = 'Planet VaSlibre';
-   $timecache    = 7200; # 2 horas
+   $twitter  = 'vaslibre';  # cuenta twitter
+   $facebook = '26465149152'; # pagina de facebook
+   $youtube  = ''; # canal de youtube
+   $glus     = '104909365331295810049'; #pagina de gplus
+
+#  Cache del sitio
+
+   $timecache    = 60; # 2 horas
    $urlcache     = 'cache/index.html';
   
 	//  feeds | RSS
-	$feeds = array (
-		"Mint"              => "http://blog.linuxmint.com/?feed=rss2"
+/*	$feeds = array (
+		"Mint"              => "http://blog.linuxmint.com/?feed=rss2",
+        "xombra"   		    => "http://xombra.com/backend.php"
          
 
-	);
+	); */
 
-/*	$feeds = array (
+	$feeds = array (
 		"vaslibre"     	 	=> "http://vaslibre.org.ve/backend.php",
 		"xombra"   		    => "http://xombra.com/backend.php",
 		"Mint"              => "http://blog.linuxmint.com/?feed=rss2",
@@ -36,5 +48,6 @@ http://vaslibre.org.ve
         "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
         "sinfallas"        	=> "http://sinfallas.wordpress.com/feed/"
 
-	); */
+	); 
+
 ?>

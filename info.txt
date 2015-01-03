@@ -1,0 +1,13 @@
+# Contact info submission
+url: vaslibre.org.ve
+site_owner: Valencia Software Libre - VaSlibre
+address1: 
+address2: 
+city: Valencia
+state: Carabobo
+country: Venezuela
+postal_code: 2001
+phone_number:
+display_email: webmaster@vaslibre.org.ve
+site_name: Planeta VaSlibre
+site_description: Planeta VaSlibre, sitio lector de FEEDS
