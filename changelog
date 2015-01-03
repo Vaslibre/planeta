@@ -1,4 +1,46 @@
-commit d96e8e7f9fc2bbf0163d5882a98ace9836e1dca2 (HEAD, origin/master, origin/HEAD, master)
+commit afd375a9cc02b9b4a76b1f7d358a5fa01190f2e0 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Sat Jan 3 15:48:11 2015 -0430
+
+    * Inclusion de envio de nuevo feed
+    * Validacion de valores
+    * Arreglado valor css de enlace
+    * Inclusion de nuevos valores en config.php
+    * agregado humans.txt
+    * .html de mensaje de error en ingreso a new_feed.php
+
+commit 55196e628f33ed98ba3ebdcadccf9a125de24144
+Merge: 24214a1 258839e
+Author: xombra <xombra.com@gmail.com>
+Date:   Sat Jan 3 01:49:49 2015 -0430
+
+    * Merge https://github.com/abr4xas/planeta
+
+commit 258839e5db1d9acfd4c2927cba605accb5f2cff3
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 2 23:19:12 2015 -0430
+
+    actualizado
+
+commit db81650c710fec57cfdc7cb1170a4dffb9683ba0
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 2 23:15:09 2015 -0430
+
+    new file
+
+commit f80e096d76e942b82334a3a5bd04d940ff59e095
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 2 23:11:38 2015 -0430
+
+    Actualizado, se agrega pagina de error 404
+
+commit 24214a1ea6a2e30ab5e7c66f477e9f2603045cb4
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 2 23:01:37 2015 -0430
+
+    * changelog
+
+commit d96e8e7f9fc2bbf0163d5882a98ace9836e1dca2
 Author: xombra <xombra.com@gmail.com>
 Date:   Fri Jan 2 22:28:18 2015 -0430
 
