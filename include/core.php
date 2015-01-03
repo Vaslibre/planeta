@@ -35,7 +35,12 @@ function BUFFER_FIN()
 
 function COOKIES()
 { echo '
- <div class="contcookies" style="display: none;">Este sitio, como la mayoría, usa cookies. Si sigues navegando entendemos que acepta las politicas de uso. <a href="#" class="cookiesaceptar">Aceptar</a></div>';
+<div id="message">
+    <div id="inner-message" class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      Este sitio, como la mayoría, usa cookies. Si sigues navegando entendemos que aceptas las Políticas de cookies.
+    </div>
+</div>';
 return;
 }
 
@@ -84,7 +89,7 @@ return $ExpStr;
 }
 
 function HCARD() {
-echo '<div id="hcard-Xanadu Linux" class="vcard"> 
+echo '<div id="hcard-Planeta VaSLibre" class="vcard"> 
 	   <span class="fn n"><span class="given-name">Planeta VaSlibre</span> 
 	   </span>
            <div class="org">Planeta VaSlibre</div> 
@@ -155,7 +160,7 @@ function META()
 	<meta name="twitter: description" content="Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones"/> 
 	<meta name="twitter: url" content="http://vaslibre.org.ve/planet/" />
 	<meta name="twitter:imagen" content="http://vaslibre.org.ve/planet/img/logo.png" />
-	<meta name="abstract" content="Xanadu Linux- Descarga" />
+	<meta name="abstract" content="Planeta VaSLibre" />
     <link rel="shortcut icon" href="img/favicon.png">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
