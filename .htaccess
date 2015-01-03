@@ -1,16 +1,12 @@
-#Configuración para vaslibre.org.ve
-# Errores
-ErrorDocument 404  404.html
+# Configuración para vaslibre.org.ve
+ErrorDocument 404  /errores/404.html
 RewriteEngine On
 Options +FollowSymlinks
-#RewriteBase /
 RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{QUERY_STRING} ^(.*)=http [NC]
 RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E)[N,C]
-# compression data
-#Expira
 <IfModule mod_headers.c>
  ExpiresActive On
  ExpiresDefault A0
@@ -19,7 +15,7 @@ RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E)[N,C]
   Header set Cache-Control "max-age=29030400"
   ExpiresDefault A29030400
   Header append Cache-Control "public"
-RequestHeader unset Cookie
+  RequestHeader unset Cookie
   Header always unset Set-Cookie
   Header unset ETag
   FileETag None
@@ -31,7 +27,6 @@ RequestHeader unset Cookie
   ExpiresDefault A600
   </FilesMatch>
 </IfModule>
-### GZip Files
 <FilesMatch "\.(htm|html|shtml)$">
 AddHandler application/x-httpd-php .html
 </FilesMatch>
@@ -48,4 +43,3 @@ AddHandler application/x-httpd-php .css
 AddHandler application/x-httpd-php .html
 </FilesMatch>
 SetEnv SERVER_ADMIN info@viserproject.com
-

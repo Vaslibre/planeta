@@ -107,17 +107,18 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
           <h4 class="modal-title" id="myModalLabel"> Agregar tu Blog - FEED/RSS </h4>
         </div>
         <div class="modal-body">
-          <form class="form-horizontal">
+          <div id="myWatch"></div>
+          <form enctype="application/x-www-form-urlencoded" class="form-horizontal" action="javascript:void(0);" role="form" method="post" name="form1" id="form1" onsubmit="return GetUser(); return document.MM_returnValue">
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Tu eMail</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="eMail">
               </div>
             </div>
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">URL Feed</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="url" placeholder="Url Feed">
+                <input type="text" class="form-control" id="url" placeholder="https | https -> Url Feed">
               </div>
             </div>
             <div class="form-group">
@@ -133,7 +134,9 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
       </div>
     </div>
   </div>
-  <div class="contcookies" style="display: none;">Este sitio, como la mayoría, usa cookies. Si sigues navegando entendemos que aceptas las Políticas de cookies. <a href="#" class="cookiesaceptar">Aceptar</a></div>
+  <div class="contcookies" style="display: none;">Este sitio, como la mayoría, usa cookies. Si sigues navegando entendemos que aceptas las Políticas de cookies.
+    <a href="#" class="cookiesaceptar">Aceptar</a>
+  </div>
   <script type="text/javascript" src="js/js.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </div>
@@ -144,5 +147,5 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
  BUFFER_FIN();
  if (!file_exists($urlcache) || $expira < filemtime($urlcache))
   {  CREA_CACHE($urlcache,$timecache,$buffer,$expira);  }
-BORRAR_VARIABLES();
+ BORRAR_VARIABLES();
  ?>

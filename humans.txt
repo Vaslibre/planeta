@@ -1,0 +1,21 @@
+/* TEAM */
+        Development PHP - MySQL - Ajax:
+        Eduardo Echeverria (echevemaster)
+	Twitter: @echevemaster
+	From: Valencia, Carabobo, Venezuela
+
+        Héctor A. Mantellini (Xombra)
+	Twitter: @xombra
+	From: Valencia, Carabobo, Venezuela
+
+	Theme HTML: 
+        Homero Palacios
+	Twitter: @homeropalacios
+	From: Valencia, Carabobo, Venezuela
+
+/* SITE */
+	Start Date:2010/12/22
+	Language:Spanish
+	Doctype:XHTML 1.0 with CSS3
+	Tools:PHP / Mysql / Ajax
+	IDE:Aptana Studio 3.0 & Gedit & DreamWeaver CS4

@@ -12,7 +12,6 @@
                 esperaScroll: 15000,
                 expires: 3600 * 24 * 365 * 3 //segundos en 3 años
             }
-
             if(!Cookies.enabled){
                 configuracion.mensaje = "Este sitio usa Cookies y en tu navegador están desactivadas. Actívalas por favor.";
             }
@@ -47,3 +46,23 @@ $(function(){
 	jQuery.jsMalditasCookies();
 });
 
+function GetUser() {
+  var arroba,str, ruta = document.form1, error="";
+  var regexp = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
+  if(ruta.inputEmail.value == "")
+   { error += "Debe ingresar su email \n";}
+  if(ruta.inputEmail.value != ""){ str = ruta.inputEmail.value;
+    if(!str.match(/^[\w]{1}[\w\.\-_]*@[\w]{1}[\w\-_\.]*\.[\w]{2,6}$/i)){
+      error += "Formato email invalido\n"; }}
+  if(ruta.url.value == "")
+   { error += "Debe ingresar una URL del FEED \n";}
+  if (regexp.test(ruta.url.value)) { } else  
+   {  error += "Formato de url del Feed invalido\n"; }
+  if(error!=""){ alert("Lista de Errores encontrados:\n\n"+error); return false; }
+  var resultado = $.ajax({
+  type: "POST", data: $("#form1").serialize(),
+  url: 'include/new_feed.php',  
+  dataType: 'text', async: false 
+ }).responseText;
+ document.getElementById("myWatch").innerHTML = resultado;
+}
