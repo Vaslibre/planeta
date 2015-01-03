@@ -1,4 +1,19 @@
-commit a4ee8d38d040b426d83bd94e732c55191a3ccde8 (HEAD, origin/master, origin/HEAD, master)
+commit d96e8e7f9fc2bbf0163d5882a98ace9836e1dca2 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 2 22:28:18 2015 -0430
+
+    * Cambios en CSS
+    * agregada Variables de Redes Sociales
+    * Agregada opcion de nombre de sitio
+    * reducción de codigo en crear cache
+
+commit 4b027a2dcd32a55a1b0cb5f4c1c3f230657ae3b2
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 2 20:24:05 2015 -0430
+
+    * changelog
+
+commit a4ee8d38d040b426d83bd94e732c55191a3ccde8
 Author: xombra <xombra.com@gmail.com>
 Date:   Fri Jan 2 19:36:49 2015 -0430
 
