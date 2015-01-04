@@ -1,4 +1,21 @@
-commit afd375a9cc02b9b4a76b1f7d358a5fa01190f2e0 (HEAD, origin/master, origin/HEAD, master)
+commit 667332c0159ff8337fd5553d384a8c87487139a7 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Sat Jan 3 23:25:36 2015 -0430
+
+    * Agregado nuevas variables en el config.php para SEO
+    * Agregada variables de localizacion
+    * Modificado css
+    * Agregado Google Analytics
+    * Modificados algunos Metatags
+    * Agrgado Howto
+
+commit 293ef313d9f6a15aefc74172e6cc06dcd7c12264
+Author: xombra <xombra.com@gmail.com>
+Date:   Sat Jan 3 15:52:36 2015 -0430
+
+    * changelog
+
+commit afd375a9cc02b9b4a76b1f7d358a5fa01190f2e0
 Author: xombra <xombra.com@gmail.com>
 Date:   Sat Jan 3 15:48:11 2015 -0430
 
