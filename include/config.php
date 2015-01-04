@@ -24,6 +24,7 @@ http://vaslibre.org.ve
 # Sitio
 
    $nombre_sitio = 'Planet VaSlibre';
+   $lenguaje     = 'es_VE'; 
    $dominio      = 'vaslibre.org.ve';
    $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
    $emailinfo    = 'webmaster@vaslibre.org.ve'; # direccion email que aparecera en el envio de email (debe existir)
@@ -55,31 +56,39 @@ http://vaslibre.org.ve
    $timecache    = 30; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
   
+
+
+   # valores para Feed
+
+    $largo_lectura   = 550; # cantidad maxima de caracteres de texto por nota en cada feed
+    $leer_cant_feed  = 3;   # Mientras mas lea mas tardara en mostrar
+
+    # Sitio feed / xml 
+	$feeds = array (
+		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
+		"xombra"   		      => "http://xombra.com/backend.php",
+        "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
+		"Mint"                => "http://blog.linuxmint.com/?feed=rss2",
+		"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/",
+		"no-photo"         	  => "http://richzendy.org/feed",
+		"tatica"         	  => "http://tatica.org/feed/?lang=es",
+        "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
+		"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
+		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
+		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
+        "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
+        "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/"
+
+
+	); 
+
 	//  feeds | RSS 
-    # solo 2 para las pruebas luego eliminar y activar el de abajo
- 	$feeds = array (
+    # solo 2 para las pruebas luego eliminar y activar el de arriba
+ /*	$feeds = array (
         "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
         "xombra"   		    => "http://xombra.com/backend.php"
          
 
-	);  
-
-/*
-
-	$feeds = array (
-		"vaslibre"     	 	=> "http://vaslibre.org.ve/backend.php",
-		"xombra"   		    => "http://xombra.com/backend.php",
-		"Mint"              => "http://blog.linuxmint.com/?feed=rss2",
-		"phenobarbital"     => "http://phenobarbital.wordpress.com/feed/rss/",
-		"no-photo"         	=> "http://richzendy.org/feed",
-		"tatica"         	=> "http://tatica.org/feed/?lang=es",
-        "jeidi"             => "https://jeidienwp.wordpress.com/feed/",
-		"safecreative"    	=> "http://feeds.feedburner.com/es_blog_safecreative",
-		"ubuntu"         	=> "http://www.ubuntu.org.ve/rss.xml",
-		"abr4xas"         	=> "http://blog.abr4xas.org/feed",
-        "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
-        "sinfallas"        	=> "http://sinfallas.wordpress.com/feed/"
-
-	); 
-*/
+	);  */
+ 
 ?>

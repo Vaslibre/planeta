@@ -17,16 +17,15 @@ $expira = time() - $timecache;
 VERIFICA_CACHE($urlcache,$timecache,$expira);
 ?>
 <!DOCTYPE html>
-<html lang="es_VE">
+<html lang="<?php echo $lenguaje; ?>">
 <head>
 <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css' />
 <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css' />
 <link href="css/style.css" rel="stylesheet" type='text/css' />
 <?php
  echo '<title>'.$nombre_sitio.'</title>';
- META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa); 
+ META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje); 
 ?>
-<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
 <?php flush(); ?>
@@ -41,9 +40,9 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
 		      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		        <div class="enlace"> <a id="modal-452838" href="#modal-container-452838" role="button" class="btn" data-toggle="modal">Agrega tu RSS|Feed</a></div>
                 <div class="cajaLOGO">
-                  <a href="index.php" title="<?php echo $nombre_sitio;?><" class="logo" style="margin-top:-50px;"><img src="img/logo.png" class="img-responsive" alt="Logo" width="100"></a></div>  
+                  <a href="index.php" title="<?php echo $nombre_sitio;?><" class="logo" style="margin-top:-50px;"><img width="95" height="95" src="img/logo.png" class="img-responsive" alt="Logo" width="100"></a></div>  
 		        <div>
-		          <?php REDES($twitter, $facebook, $youtube, $glus); ?>
+		          <?php REDES($twitter, $facebook, $youtube, $glus, $urlplanet); ?>
 		        </div>
 		      </div>
 		    </nav>
@@ -57,20 +56,20 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
 		      </div>
 		    </div style="margin-top:-40px">
 		    <?php  foreach ($feeds as $imagen => $url) 
-		             {  RSS($url,$imagen);  }
+		             {  RSS($url,$imagen,$leer_cant_feed,$largo_lectura);  }
 		                krsort($entries); 
 		            foreach ($entries as $timestamp => $entry) {
 				        echo '
 		               <div class="row clearfix abre">
 				        <article class="format-standard">
 							<div class="col-md-2 column">
-								<img alt="'.$imagen.'" src="img/avatar/'.$entry['image'].'.png" class="img-circle img-responsive img_blog" width="95">
+								<img width="95" alt="'.$imagen.'" src="img/avatar/'.$entry['image'].'.png" class="img-circle img-responsive img_blog" />
 							</div>
 							<div class="col-md-10 column">
 								 <div class="caja"> 
 									  <div class="cajatitulo">
 		                                   <span class="fecha_post">Fecha:'.date("d/m/Y",$entry['pubdate']).' </span>
-										   <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota en: '.$entry['title'].'">'.$entry['title'].'</a></h2>
+										   <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
 									  <div>
 		                              <div class="cajacontenido">
 	 		                               '.$entry['description'].'
@@ -138,13 +137,13 @@ VERIFICA_CACHE($urlcache,$timecache,$expira);
 		  </div>
 		</div>
 	  </div>
-	  <div class="contcookies" style="display: none;">Este sitio, como la mayoría, usa cookies. Si sigues navegando entendemos que aceptas las Políticas de cookies.
-		<a href="#" class="cookiesaceptar">Aceptar</a>
-	  </div>
-	  <script type="text/javascript" src="js/js.js"></script>
-	  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	 
+      <script defer type="text/javascript" src="js/jquery.min.js"></script>
+	  <script defer type="text/javascript" src="js/js.js"></script>
+	  <script defer type="text/javascript" src="js/bootstrap.min.js"></script>
 	</div>
-	<?php HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
+	<?php COOKIES();
+          HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
 		  GoogleAnalytics($UA, $dominio);
     ?>
 </body>

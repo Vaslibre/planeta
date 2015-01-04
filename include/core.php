@@ -14,7 +14,7 @@ http://vaslibre.org.ve
 $ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();
-VERIFICA_CACHE($urlcache,$timecache,$buffer);
+VERIFICA_CACHE($urlcache,$timecache,$expira);
 
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
@@ -49,10 +49,9 @@ function COMPRESS_PAGE($buffer)
 function CREA_CACHE($urlcache,$timecache,$buffer)
 {  ob_end_flush();
    $filecached = fopen($urlcache, 'w');
-   $contenido = COMPRESS_PAGE(ob_get_contents());
+   $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
    fwrite($filecached, $contenido);
    fclose($filecached);  
-
 return;
 }
 
@@ -124,12 +123,12 @@ echo '<div id="hcard-Xanadu Linux" class="vcard">
 return;
 }
 
-function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa)
+function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje)
 { echo '
     <meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9, IE=8, IE=7, chrome=1, IE=edge" />
-    <meta name="owner" content="VaSlibre">
+    <meta name="owner" content="VaSlibre" />
 	<meta name="resource-type" content="document" />
 	<meta name="robots" content="index,follow" />
 	<meta name="author" content="VaSlibre" />
@@ -139,16 +138,16 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="generator" content="Aptana" />
 	<meta name="rating" content="General" />
 	<meta name="country" content="Venezuela" />
-	<meta name="language" content="es_ES" />
+	<meta name="language" content="'.$lenguaje.'" />
 	<meta name="adblock" content="disable" />
 	<meta name="advertising" content="ask" />
 	<meta name="dc.title" content="'.$nombre_sitio.'" />
 	<meta name="dc.date" content="'.date("Y-m-d",$_SERVER['REQUEST_TIME']).'" />
 	<meta name="dc.format" content="text/html" />
-	<meta name="dc.language" content="es_ES" />
+	<meta name="dc.language" content="'.$lenguaje.'" />
 	<meta name="geo.region" content="VE-G" />
 	<meta name="geo.placename" content="Valencia" />
-	<meta name="geo.position" content="10.181808;-68.004684" />
+	<meta name="geo.position" content="'.$latitud.';'.$longitud.'" />
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'" />
 	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword" />
 	<meta name="description" content="'.$descripcion.'" />
@@ -179,53 +178,31 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta property="og:image:height" content="350" />
     <link rel="apple-touch-icon" href="img/apple.png" />
     <link rel="shortcut icon" href="img/favicon.png">
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.php" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml" />
     <link rel="canonical" href="'.$urlplanet.'" />
 	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia" />
-    <link rel="me" href="https://plus.google.com/'.$glus.'/about" />
-';
+    <link rel="me" href="https://plus.google.com/'.$glus.'/about" />';
   $parselyPage = array();
-  $parselyPage["title"]       = $nombre_sitio;
-  $parselyPage["link"]        = $urlplanet;
-  $parselyPage["image_url"]   = $urlplanet.'img/logo.png';
-  $parselyPage["type"]        = "post";
-  $parselyPage["post_id"]     = $post_id;  
-  $parselyPage["pub_date"]    = gmdate("M d Y H:i:s",time());
-  $parselyPage["author"]      = getCleanParselyPageValue($nombre_sitio);
+  $parselyPage["title"]     = $nombre_sitio;
+  $parselyPage["link"]      = $urlplanet;
+  $parselyPage["image_url"] = $urlplanet.'img/logo.png';
+  $parselyPage["type"]      = "post";
+  $parselyPage["post_id"]   = $post_id;  
+  $parselyPage["pub_date"]  = gmdate("M d Y H:i:s",time());
+  $parselyPage["author"]    = getCleanParselyPageValue($nombre_sitio);
   $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'" />';
-
 if ($activar == 1) { 
 	echo '
     <meta name="wot-verification" content="'.$wot.'" />
     <meta name="msvalidate.01" content="'.$bing.'" /> 
 	<meta name="y_key" content="'.$yahoo.'" /> 
     <meta name="google-site-verification" content="'.$google.'" />
-	<meta name="alexaVerifyID" content="'.$alexa.'" />
-';
+	<meta name="alexaVerifyID" content="'.$alexa.'" />';
 	}
-
 return;
 }
-
-function LEER_DIR()
-{   $hay = 0;
-	if ($gestor = opendir('descarga')) {
-		while (false !== ($archivo = readdir($gestor))) {
-		    if ($archivo != "." && $archivo != ".." && $archivo != 'index.html') {
-                $hay = 1; 
-                echo "» <a href=\"descarga.php?archivo=$archivo\" class=\"btn\" title=\"Descargar ISO: $archivo\"  target=\"popup\" onclick=\"window.open(this.href, this.target, 'width=10,height=10'); return false;\"><span>$archivo</span></a><br />";
-		    }
-		}
-		closedir($gestor);
-	}
-    if ($hay == 0)
-     { echo '<div class="alert alert-danger" role="alert">No hay ninguna <strong>.ISO</strong> que descargar</div>';}
-
-	 return;
-}
- 
 
 function LIMPIAR_VALORES()
 { $_SERVER['QUERY_STRING'] = trim(strip_tags($_SERVER['QUERY_STRING']));
@@ -247,8 +224,9 @@ function LIMPIAR_VALORES()
 return;
 }
 
-function REDES($tiwtter, $facebook, $youtube, $glus)
-{ echo '<ul class="navbar-nav redes">';
+function REDES($tiwtter, $facebook, $youtube, $glus,$urlplanet)
+{ 
+ echo '<ul class="navbar-nav redes">';
   if (!empty($tiwtter)) 
    { echo '<li>
             <a href="https://twitter.com/'.$tiwtter.'" title="Siguenos en Twitter" target="_blank"><i><img src="img/social/twitter.png" alt="Twitter" width="48" height="48" /></i>
@@ -256,28 +234,24 @@ function REDES($tiwtter, $facebook, $youtube, $glus)
   if (!empty($facebook) )
    { echo '<li>
             <a href="https://facebook.com/groups/'.$facebook.'" title="Siguenos en Facebook" target="_blank"><i><img src="img/social/facebook.png" alt="Facebook" width="48" height="48" /></i></a></li>'; }
-
   if (!empty($glus)) 
    { echo '<li>
              <a href="https://plus.google.com/'.$gplus.'" title="Siguenos en G+" target="_blank"><i><img src="img/social/google.png" alt="G+" width="48" height="48" /></i></a></li>'; }
- 
  if (!empty($youtube)) 
    { echo '<li><a href="https://youtube.com/channel/'.$youtube.'" title="Siguenos en Canal Youtube"><i><img src="img/social/youtube.png" alt="Youtube" width="48" height="48" /></i></a></li>'; }
-
  echo '  <li>
-             <a href="http://vaslibre.org.ve/backend.php" title="Esta al tanto de nuestras notas" target="_blank"><i><img src="img/social/rss.png" width="48" height="48" alt="RSS/XML" /></i></a></li>';
-
+             <a href="'.$urlplanet.'backend.xml" title="Esta al tanto de nuestras notas" target="_blank"><i><img src="img/social/rss.png" width="48" height="48" alt="RSS/XML" /></i></a></li>';
  echo '</ul>';
 return;
 }
 
-function RSS($url,$imagen)
+function RSS($url,$imagen,$leer_cant_feed,$largo_lectura)
 { global $entries;
 if (VERIFICA_ONLINE($url)){
 	$noticias = simplexml_load_file($url);
-	$largo=700; 
-	$lee=3;
+	$lee=$leer_cant_feed;
 	$ciclo = 1;
+    $largo = $largo_lectura;
 	foreach ($noticias as $noticia) {  
 		foreach($noticia as $reg){ 
 			if(!empty($reg->title) && $ciclo<$lee&& !empty($reg->description) && !empty($reg->pubDate)){
@@ -318,9 +292,9 @@ return;
 }
 
 function VERIFICA_ONLINE($url)
-{  	@$headers = get_headers($url);
-    if (stristr ($headers[0],'200 OK'))
-       {  return true; }
-	else { return false; }
+{ @$headers = get_headers($url);
+  if (stristr ($headers[0],'200 OK'))
+   { return true; }
+  else { return false; }
 }
 ?>
