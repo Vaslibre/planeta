@@ -11,7 +11,7 @@ VASLIBRE
 http://vaslibre.org.ve
 -------------------------------------------------------- */
 
-ENCABEZADO();
+$ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();
 VERIFICA_CACHE($urlcache,$timecache,$buffer);
@@ -83,29 +83,48 @@ function ENCABEZADO(){
 return $ExpStr;
 }
 
-function HCARD() {
+function getCleanParselyPageValue($val) {
+    $val = str_replace("\n", "", $val);
+    $val = str_replace("\r", "", $val);
+ return $val;
+}
+
+function GoogleAnalytics($UA, $dominio)
+{ echo "
+  <script>
+   (function(i,s,o,g,r,a,m)
+    {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', '$UA', '$dominio');
+   ga('require', 'displayfeatures');
+   ga('send', 'pageview');
+  </script>";
+return;
+}
+
+function HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais) {
 echo '<div id="hcard-Xanadu Linux" class="vcard"> 
-	   <span class="fn n"><span class="given-name">Planeta VaSlibre</span> 
+	   <span class="fn n"><span class="given-name">'.$nombre_sitio.'</span> 
 	   </span>
-           <div class="org">Planeta VaSlibre</div> 
+           <div class="org">'.$nombre_sitio.'</div> 
 	   <div class="adr">
-             <span class="locality">Valencia</span>,
-             <span class="region">Carabobo</span>, 
-	     <span class="country-name">Venezuela</span>,
-             <span class="postal-code">2001</span> 
-           </div> 
-           <div class="url"><a href="http://vaslibre.org.ve/planet/" 
-                title="Planeta VaSlibre">http://vaslibre.org.ve/planet/</a>
-           </div>
+             <span class="locality">'.$ciudad.'</span>,
+             <span class="region">'.$provincia.'</span>, 
+	         <span class="country-name">'.$pais.'</span>,
+             <span class="postal-code">'.$postal.'</span> 
+       </div> 
+       <div class="url"><a href="'.$urlplanet.'" title="'.$nombre_sitio.'">'.$urlplanet.'</a></div>
 	   <div class="geo">GEO: 
-	    <span class="latitude">10.181808</span>, 
-	    <span class="longitude">-68.004684</span>
+	    <span class="latitude">'.$latitud.'</span>, 
+	    <span class="longitude">'.$longitud.'</span>
 	   </div>
       </div>';
 return;
 }
 
-function META()
+function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa)
 { echo '
     <meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -114,7 +133,7 @@ function META()
 	<meta name="resource-type" content="document" />
 	<meta name="robots" content="index,follow" />
 	<meta name="author" content="VaSlibre" />
-	<meta name="revisit-after" content="5 days" />
+	<meta name="revisit-after" content="1 days" />
 	<meta name="revisit" content="1" />
 	<meta name="distribution" content="Global" />
 	<meta name="generator" content="Aptana" />
@@ -123,46 +142,70 @@ function META()
 	<meta name="language" content="es_ES" />
 	<meta name="adblock" content="disable" />
 	<meta name="advertising" content="ask" />
-	<meta name="dc.title" content="Planeta Vaslibre" />
+	<meta name="dc.title" content="'.$nombre_sitio.'" />
 	<meta name="dc.date" content="'.date("Y-m-d",$_SERVER['REQUEST_TIME']).'" />
 	<meta name="dc.format" content="text/html" />
 	<meta name="dc.language" content="es_ES" />
 	<meta name="geo.region" content="VE-G" />
 	<meta name="geo.placename" content="Valencia" />
-	<meta name="geo.position"  content="10.181808;-68.004684" />
-	<meta name="icbm" content="10.181808;-68.004684" />
+	<meta name="geo.position" content="10.181808;-68.004684" />
+	<meta name="icbm" content="'.$latitud.';'.$longitud.'" />
 	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword" />
-	<meta name="description" content="Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones" />
+	<meta name="description" content="'.$descripcion.'" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/" />
 	<meta name="medium" content="mult" />
+    <meta name="twitter:creator" content="@'.$twitter.'"/>
+	<meta name="twitter:title" content="'.$nombre_sitio.'">
+	<meta name="twitter: description" content="'.$nombre_sitio.'"/> 
+	<meta name="twitter: url" content="'.$urlplanet.'" />
+	<meta name="twitter:imagen" content="'.$urlplanet.'/img/logo.png" />
+	<meta name="abstract" content="'.$nombre_sitio.'" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta http-equiv="pragma" content="cache" />
 	<meta http-equiv="cache-control" content ="cache" />
 	<meta http-equiv="vary" content="content-language" />
-	<link rel="apple-touch-icon" href="img/apple.png" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="expires" content="'.$ExpStr.'" />
+    <meta http-equiv="imagetoolbar" content="no" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Planeta vaSlibre" />
-	<meta property="og:description" content="Una excelente distribución pensada para ser rápida, ligera y segura..." />
-	<meta property="og:url" content="http://vaslibre.org.ve/planet/" />
-	<meta property="og:site_name" content="Planeta VaSlibre" />
-	<meta property="og:image" content="http://vaslibre.org.ve/planet/img/logo.png" />
+	<meta property="og:title" content="'.$nombre_sitio.'" />
+	<meta property="og:description" content="'.$descripcion.'" />
+	<meta property="og:url" content="'.$urlplanet.'" />
+	<meta property="og:site_name" content="'.$nombre_sitio.'" />
+	<meta property="og:image" content="'.$urlplanet.'img/logo.png" />
 	<meta property="og:locale" content="es_VE" />
 	<meta property="og:image:width" content="350" />
 	<meta property="og:image:height" content="350" />
-	<meta name="twitter:title" content="Xanadu GNU/Linux - Descarga">
-	<meta name="twitter: description" content="Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones"/> 
-	<meta name="twitter: url" content="http://vaslibre.org.ve/planet/" />
-	<meta name="twitter:imagen" content="http://vaslibre.org.ve/planet/img/logo.png" />
-	<meta name="abstract" content="Xanadu Linux- Descarga" />
+    <link rel="apple-touch-icon" href="img/apple.png" />
     <link rel="shortcut icon" href="img/favicon.png">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://vaslibre.org.ve/backend.php" />
-	<link type="text/plain" rel="socialmedia" href="socialmedia.txt" />
-    <link rel="canonical" href="http://vaslibre.org.ve/planet/" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.php" />
+    <link rel="canonical" href="'.$urlplanet.'" />
+	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia" />
+    <link rel="me" href="https://plus.google.com/'.$glus.'/about" />
 ';
+  $parselyPage = array();
+  $parselyPage["title"]       = $nombre_sitio;
+  $parselyPage["link"]        = $urlplanet;
+  $parselyPage["image_url"]   = $urlplanet.'img/logo.png';
+  $parselyPage["type"]        = "post";
+  $parselyPage["post_id"]     = $post_id;  
+  $parselyPage["pub_date"]    = gmdate("M d Y H:i:s",time());
+  $parselyPage["author"]      = getCleanParselyPageValue($nombre_sitio);
+  $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'" />';
+
+if ($activar == 1) { 
+	echo '
+    <meta name="wot-verification" content="'.$wot.'" />
+    <meta name="msvalidate.01" content="'.$bing.'" /> 
+	<meta name="y_key" content="'.$yahoo.'" /> 
+    <meta name="google-site-verification" content="'.$google.'" />
+	<meta name="alexaVerifyID" content="'.$alexa.'" />
+';
+	}
+
 return;
 }
 

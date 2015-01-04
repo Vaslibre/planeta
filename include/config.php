@@ -28,9 +28,31 @@ http://vaslibre.org.ve
    $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
    $emailinfo    = 'webmaster@vaslibre.org.ve'; # direccion email que aparecera en el envio de email (debe existir)
 
+# metatag
+   $descripcion  = 'Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones';
+   $latitud   = '10.181808';  # buscar en google maps
+   $longitud  = '-68.004684'; # buscar en google maps
+   $urlplanet = 'http://planet.vaslibre.org.ve/'; # con / al final
+   $ciudad    = 'Valencia';
+   $provincia = 'Carabobo';
+   $pais      = 'Venezuela';
+   $postal    = '2001';
+
+# seo 
+   $activar = 1;  # 0 desactiva
+   $alexa   = '5A6vXOKuR8msgNmH9jEsl3IIWVU';                  # registrarse en http://www.alexa.com/
+   $wot     = 'bd1fa12c7dd952ea98e8';                         # registrarse en http://mywot.com/
+   $bing    = 'EBCDA2C5F9E226DD58BFAA4BD0D15681';             # registrarse en http://bing.com/ Herramienta Webmaster
+   $yahoo   = 'e6cb92c08209d989';				              # registrarse en http://yahoo.com/ Herramienta Webmaster
+   $google  = 'mGx5usBCDyvfDVrmqWE7ojt4xaVGF8BMbUTNUOh8gIo';  # registrarse en http://google.com/ Herramienta Webmaster
+ 
+# Google Analytics
+
+   $UA = 'UA-18361732-1';  # Google Analytis registrarse en: https://www.google.com/analytics/
+
 #  Cache del sitio
 
-   $timecache    = 60; # 2 horas
+   $timecache    = 30; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
   
 	//  feeds | RSS 

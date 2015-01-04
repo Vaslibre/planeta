@@ -1,0 +1,14 @@
+
+.- Carpeta cache permisos de escritura y ejecución
+.- Cambiar los valores conforme al sitio en include/config.php
+.- Cambiar valores de por lo de su sitio:
+	-- humans.txt
+    -- info.txt
+    -- socialmedia.txt
+.- Se sugiere dejar el avatar y enlace a sitio de VaSlibre 
+.- Cambiar por lo de su sitio:
+   -- img/logo.png (95x95)
+   -- img/apple.png (57x57)
+.- Lo avatar que estan en img/avatar (95x95) extension .png
+
+
