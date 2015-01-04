@@ -1,4 +1,24 @@
-commit 667332c0159ff8337fd5553d384a8c87487139a7 (HEAD, origin/master, origin/HEAD, master)
+commit 2cda2ef2608a674b688f479ca85b1b9b3f831cba (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Sun Jan 4 17:25:26 2015 -0430
+
+    * solucionado problema en js.js
+    * agregado parametros a funcion RSS()
+    * Creado backend.php para generar el backend.xml
+    * Agragado parametros a META()
+    * pasado al final los javascript en el index.php
+    * eliminada funciones de core.php que no hacian falta
+    * agregado cachoycapote a la lista feeds
+    * sustituido el favicon
+    * corregido enlace rss del sitio
+
+commit bdba3a64c02b9af210a60e74b5ae80c97b03703e
+Author: xombra <xombra.com@gmail.com>
+Date:   Sat Jan 3 23:27:50 2015 -0430
+
+    * changelog
+
+commit 667332c0159ff8337fd5553d384a8c87487139a7
 Author: xombra <xombra.com@gmail.com>
 Date:   Sat Jan 3 23:25:36 2015 -0430
 
