@@ -1,4 +1,18 @@
-commit 8ddb8b5e161b6c43a81d8007edd329348e542c51 (HEAD, origin/master, origin/HEAD, master)
+commit ac0c0f5ad2523db7a1451b04ff5104be114a62a6 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 12:13:55 2015 -0430
+
+    *
+    * reconfigurado para uso de Theme
+    * uso de cdn de jquery y bootstrap
+
+commit ee2142e7b8ae05e2def1b312e1ff1ec3216d0d67
+Author: xombra <xombra.com@gmail.com>
+Date:   Sun Jan 4 22:35:30 2015 -0430
+
+    * changelog
+
+commit 8ddb8b5e161b6c43a81d8007edd329348e542c51
 Author: xombra <xombra.com@gmail.com>
 Date:   Sun Jan 4 22:32:47 2015 -0430
 
