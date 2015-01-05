@@ -65,12 +65,12 @@ $xml .= "<channel>\r
 <managingEditor>$emailinfo (($nombre_sitio)</managingEditor>\r
 <image>\r
 <title>$nombre_sitio</title>\r
-<url>$urlplanet/img/rss.png</url>\r
+<url>$urlplanet.'themes/'.$theme.'/img/rss.png</url>\r
 <link>$urlplanet</link>\r
 <description>$descripcion</description>\r
 </image>\r
 <ttl>120</ttl>\r
-<atom:link href=\"http://www.$dominio/backend.php\" rel=\"self\" type=\"application/rss+xml\" />";
+<atom:link href=\"http://'.$urlplanet.'backend.php\" rel=\"self\" type=\"application/rss+xml\" />";
 foreach ($feeds as $imagen => $url)
 {RSS($url,$imagen,$leer_cant_feed,$largo_lectura); }
 foreach ($entries as $timestamp => $entry) {

@@ -13,8 +13,9 @@ http://vaslibre.org.ve
 
 #Valores del sistema
 
-# Redes sociales
+   $theme = 'default';   # nombre del theme a usar
 
+# Redes sociales
 
    $twitter  = 'vaslibre';  # cuenta twitter
    $facebook = '26465149152'; # pagina de facebook
@@ -53,36 +54,37 @@ http://vaslibre.org.ve
 
 #  Cache del sitio
 
-   $timecache    = 20; # 1 horas = 3600 | recomendado 7200 
+   $timecache    = 7200; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
-  
-
 
    # valores para Feed
 
-    $largo_lectura   = 550; # cantidad maxima de caracteres de texto por nota en cada feed
-    $leer_cant_feed  = 3;   # Mientras mas lea mas tardara en mostrar
+    $largo_lectura   = 550;   # cantidad maxima de caracteres de texto por nota en cada feed
+    $leer_cant_feed  = 3;     # Mientras mas lea mas tardara en mostrar
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
+    #		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
+	#	"xombra"   		      => "http://xombra.com/backend.php",
+    
+
+ 
     # Sitio feed / xml 
-/*	$feeds = array (
-		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
-		"xombra"   		      => "http://xombra.com/backend.php",
+ 	$feeds = array (
+		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
         "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
+        "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
+        "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
 		"Mint"                => "http://blog.linuxmint.com/?feed=rss2",
 		"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/",
 		"no-photo"         	  => "http://richzendy.org/feed",
 		"tatica"         	  => "http://tatica.org/feed/?lang=es",
-        "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
 		"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
 		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
-		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
-        "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
         "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/"
 
 
-	);  */
-
+	);   
+ /*
 	//  feeds | RSS 
     # solo 2 para las pruebas luego eliminar y activar el de arriba
   	$feeds = array (
@@ -90,6 +92,6 @@ http://vaslibre.org.ve
     	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
          
 
-	);   
+ 	);   */ 
  
 ?>

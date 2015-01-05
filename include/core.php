@@ -123,7 +123,7 @@ echo '<div id="hcard-Xanadu Linux" class="vcard">
 return;
 }
 
-function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje)
+function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme)
 { echo '
     <meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -158,7 +158,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="twitter:title" content="'.$nombre_sitio.'">
 	<meta name="twitter: description" content="'.$nombre_sitio.'"/> 
 	<meta name="twitter: url" content="'.$urlplanet.'" />
-	<meta name="twitter:imagen" content="'.$urlplanet.'/img/logo.png" />
+	<meta name="twitter:imagen" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png" />
 	<meta name="abstract" content="'.$nombre_sitio.'" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -172,14 +172,14 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta property="og:description" content="'.$descripcion.'" />
 	<meta property="og:url" content="'.$urlplanet.'" />
 	<meta property="og:site_name" content="'.$nombre_sitio.'" />
-	<meta property="og:image" content="'.$urlplanet.'img/logo.png" />
+	<meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png" />
 	<meta property="og:locale" content="es_VE" />
 	<meta property="og:image:width" content="350" />
 	<meta property="og:image:height" content="350" />
-    <link rel="apple-touch-icon" href="img/apple.png" />
-    <link rel="shortcut icon" href="img/favicon.png">
-	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="themes/'.$theme.'/img/apple.png" />
+    <link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png">
+	<link rel="icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon" />
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml" />
     <link rel="canonical" href="'.$urlplanet.'" />
 	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia" />
@@ -187,7 +187,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
   $parselyPage = array();
   $parselyPage["title"]     = $nombre_sitio;
   $parselyPage["link"]      = $urlplanet;
-  $parselyPage["image_url"] = $urlplanet.'img/logo.png';
+  $parselyPage["image_url"] = $urlplanet.'/themes/'.$theme.'/img/logo.png';
   $parselyPage["type"]      = "post";
   $parselyPage["post_id"]   = $post_id;  
   $parselyPage["pub_date"]  = gmdate("M d Y H:i:s",time());
@@ -224,23 +224,22 @@ function LIMPIAR_VALORES()
 return;
 }
 
-function REDES($tiwtter, $facebook, $youtube, $glus,$urlplanet)
+function  REDES($twitter, $facebook, $youtube, $glus, $theme)
 { 
  echo '<ul class="navbar-nav redes">';
-  if (!empty($tiwtter)) 
+  if (!empty($twitter)) 
    { echo '<li>
-            <a href="https://twitter.com/'.$tiwtter.'" title="Siguenos en Twitter" target="_blank"><i><img src="img/social/twitter.png" alt="Twitter" width="48" height="48" /></i>
+            <a href="https://twitter.com/'.$twitter.'" title="Siguenos en Twitter" target="_blank"><i><img src="themes/'.$theme.'/img/social/twitter.png" alt="Twitter" width="48" height="48" /></i>
             </a></li>'; }
   if (!empty($facebook) )
    { echo '<li>
-            <a href="https://facebook.com/groups/'.$facebook.'" title="Siguenos en Facebook" target="_blank"><i><img src="img/social/facebook.png" alt="Facebook" width="48" height="48" /></i></a></li>'; }
+            <a href="https://facebook.com/groups/'.$facebook.'" title="Siguenos en Facebook" target="_blank"><i><img src="themes/'.$theme.'/img/social/facebook.png" alt="Facebook" width="48" height="48" /></i></a></li>'; }
   if (!empty($glus)) 
    { echo '<li>
-             <a href="https://plus.google.com/'.$gplus.'" title="Siguenos en G+" target="_blank"><i><img src="img/social/google.png" alt="G+" width="48" height="48" /></i></a></li>'; }
+             <a href="https://plus.google.com/'.$glus.'" title="Siguenos en G+" target="_blank"><i><img src="themes/'.$theme.'/img/social/google.png" alt="G+" width="48" height="48" /></i></a></li>'; }
  if (!empty($youtube)) 
-   { echo '<li><a href="https://youtube.com/channel/'.$youtube.'" title="Siguenos en Canal Youtube"><i><img src="img/social/youtube.png" alt="Youtube" width="48" height="48" /></i></a></li>'; }
- echo '  <li>
-             <a href="'.$urlplanet.'backend.xml" title="Esta al tanto de nuestras notas" target="_blank"><i><img src="img/social/rss.png" width="48" height="48" alt="RSS/XML" /></i></a></li>';
+   { echo '<li><a href="https://youtube.com/channel/'.$youtube.'" title="Siguenos en Canal Youtube"><i><img src="themes/'.$theme.'/img/social/youtube.png" alt="Youtube" width="48" height="48" /></i></a></li>'; }
+ echo '  <li><a href="backend.xml" title="Esta al tanto de nuestras notas" target="_blank"><i><img src="themes/'.$theme.'/img/social/rss.png" width="48" height="48" alt="RSS/XML" /></i></a></li>';
  echo '</ul>';
 return;
 }
