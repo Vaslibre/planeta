@@ -1,4 +1,18 @@
-commit ac0c0f5ad2523db7a1451b04ff5104be114a62a6 (HEAD, origin/master, origin/HEAD, master)
+commit e64380ffb69c31e12c3af51e025edc5473a42cd7 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 13:02:18 2015 -0430
+
+    * optimizada imagen de avatar de pheno y cachoycapote
+    * solucionado bug en content.php
+    * agregado en .htacces Header set Connection keep-alive
+
+commit e34c172c9a8e3f9c8ce86d1a4feed5ef2c863322
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 12:14:34 2015 -0430
+
+    * changelog
+
+commit ac0c0f5ad2523db7a1451b04ff5104be114a62a6
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 5 12:13:55 2015 -0430
 

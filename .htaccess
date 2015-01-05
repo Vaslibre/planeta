@@ -19,6 +19,7 @@ ExpiresByType image/x-icon "access plus 1 year"
 ExpiresDefault "access plus 2 days"
 </IfModule>
 <IfModule mod_headers.c>
+ KeepAlive On
  Header set Connection keep-alive
  ExpiresActive On
  ExpiresDefault A0

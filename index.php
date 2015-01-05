@@ -15,6 +15,7 @@ include 'include/config.php';
 include 'include/core.php';
 $expira = time() - $timecache;
 VERIFICA_CACHE($urlcache,$timecache,$expira);
+include 'sitemap.php';
 echo '
 <!DOCTYPE html>
 <html lang="'.$lenguaje.'">

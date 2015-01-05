@@ -18,10 +18,12 @@ echo '
 	  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Bajo Licencia Creative Commons"><img alt="Licencia de Creative Commons" style="border-width:0;" width="88" height="31" src="img/88x31.png" /></a><br />
 	</div>
 	<div class="div_footer">
-	  <p>Planeta de Grupo de Usuarios de VaSlibre<br />
+      <address>
+	      Planeta de Grupo de Usuarios de VaSlibre<br />
 	      Valencia - Carabobo - Venezuela<br />
-	      &copy; 2014 - '.date("Y",time()).'  Dise&ntilde;o & Programaci&oacute;n: [ <a href="http://viserproject.com" target="_blank" title="Visitar ViserProject"><span>ViSerProject</span></a> ]<br />
-	      Código fuente: <a href="https://github.com/Vaslibre/planeta" target="_blank" title="Código Fuente del Planeta"><span>github.com</span></a></p>
+      </address>
+	  &copy; 2014 - '.date("Y",time()).'  Dise&ntilde;o & Programaci&oacute;n: [ <a href="http://viserproject.com" target="_blank" title="Visitar ViserProject"><span>ViSerProject</span></a> ]<br />
+	      Código fuente: <a href="https://github.com/Vaslibre/planeta" target="_blank" title="Código Fuente del Planeta"><span>github.com</span></a>
 	</div>
 </div>';
 ?>

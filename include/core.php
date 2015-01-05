@@ -103,7 +103,7 @@ return;
 }
 
 function HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais) {
-echo '<div id="hcard-Xanadu Linux" class="vcard"> 
+echo '<div id="hcard-'.$nombre_sitio.'" class="vcard"> 
 	   <span class="fn n"><span class="given-name">'.$nombre_sitio.'</span> 
 	   </span>
            <div class="org">'.$nombre_sitio.'</div> 
@@ -125,64 +125,65 @@ return;
 function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme)
 { echo '
     <meta charset="utf-8">
- 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9, IE=8, IE=7, chrome=1, IE=edge" />
-    <meta name="owner" content="VaSlibre" />
-	<meta name="resource-type" content="document" />
-	<meta name="robots" content="index,follow" />
-	<meta name="author" content="VaSlibre" />
-	<meta name="revisit-after" content="1 days" />
-	<meta name="revisit" content="1" />
-	<meta name="distribution" content="Global" />
-	<meta name="generator" content="Aptana" />
-	<meta name="rating" content="General" />
-	<meta name="country" content="Venezuela" />
-	<meta name="language" content="'.$lenguaje.'" />
-	<meta name="adblock" content="disable" />
-	<meta name="advertising" content="ask" />
-	<meta name="dc.title" content="'.$nombre_sitio.'" />
-	<meta name="dc.date" content="'.date("Y-m-d",$_SERVER['REQUEST_TIME']).'" />
-	<meta name="dc.format" content="text/html" />
-	<meta name="dc.language" content="'.$lenguaje.'" />
-	<meta name="geo.region" content="VE-G" />
-	<meta name="geo.placename" content="Valencia" />
-	<meta name="geo.position" content="'.$latitud.';'.$longitud.'" />
-	<meta name="icbm" content="'.$latitud.';'.$longitud.'" />
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword" />
-	<meta name="description" content="'.$descripcion.'" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/" />
-	<meta name="medium" content="mult" />
-    <meta name="twitter:creator" content="@'.$twitter.'"/>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9, IE=8, IE=7, chrome=1">
+    <meta name="owner" content="VaSlibre">
+	<meta name="resource-type" content="document">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="VaSlibre">
+	<meta name="revisit-after" content="1 days">
+	<meta name="revisit" content="1">
+	<meta name="distribution" content="Global">
+	<meta name="generator" content="Aptana">
+	<meta name="rating" content="General">
+	<meta name="country" content="Venezuela">
+	<meta name="language" content="'.$lenguaje.'">
+	<meta name="adblock" content="disable">
+	<meta name="advertising" content="ask">
+	<meta name="dc.title" content="'.$nombre_sitio.'">
+	<meta name="dc.date" content="'.date("Y-m-d",$_SERVER['REQUEST_TIME']).'">
+	<meta name="dc.format" content="text/html">
+	<meta name="dc.language" content="'.$lenguaje.'">
+	<meta name="geo.region" content="VE-G">
+	<meta name="geo.placename" content="Valencia">
+	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
+	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux" />
+	<meta name="description" content="'.$descripcion.'">
+	<meta name = "viewport" content = "initial-scale = 1.0">
+	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
+	<meta name="medium" content="mult">
+    <meta name="twitter:creator" content="@'.$twitter.'">
 	<meta name="twitter:title" content="'.$nombre_sitio.'">
-	<meta name="twitter: description" content="'.$nombre_sitio.'"/> 
-	<meta name="twitter: url" content="'.$urlplanet.'" />
-	<meta name="twitter:imagen" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png" />
-	<meta name="abstract" content="'.$nombre_sitio.'" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta http-equiv="pragma" content="cache" />
-	<meta http-equiv="cache-control" content ="cache" />
-	<meta http-equiv="vary" content="content-language" />
-    <meta http-equiv="expires" content="'.$ExpStr.'" />
-    <meta http-equiv="imagetoolbar" content="no" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="'.$nombre_sitio.'" />
-	<meta property="og:description" content="'.$descripcion.'" />
-	<meta property="og:url" content="'.$urlplanet.'" />
-	<meta property="og:site_name" content="'.$nombre_sitio.'" />
-	<meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png" />
-	<meta property="og:locale" content="es_VE" />
-	<meta property="og:image:width" content="350" />
-	<meta property="og:image:height" content="350" />
-    <link rel="apple-touch-icon" href="themes/'.$theme.'/img/apple.png" />
+	<meta name="twitter: description" content="'.$nombre_sitio.'"> 
+	<meta name="twitter: url" content="'.$urlplanet.'">
+	<meta name="twitter:imagen" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png">
+	<meta name="abstract" content="'.$nombre_sitio.'">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta http-equiv="pragma" content="cache">
+	<meta http-equiv="cache-control" content ="cache">
+	<meta http-equiv="vary" content="content-language">
+    <meta http-equiv="expires" content="'.$ExpStr.'">
+    <meta http-equiv="imagetoolbar" content="no">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="'.$nombre_sitio.'">
+	<meta property="og:description" content="'.$descripcion.'">
+	<meta property="og:url" content="'.$urlplanet.'">
+	<meta property="og:site_name" content="'.$nombre_sitio.'">
+	<meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png">
+	<meta property="og:locale" content="es_VE">
+	<meta property="og:image:width" content="350">
+	<meta property="og:image:height" content="350">
+    <link rel="apple-touch-icon" href="themes/'.$theme.'/img/apple.png">
     <link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png">
-	<link rel="icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml" />
-    <link rel="canonical" href="'.$urlplanet.'" />
-	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia" />
-    <link rel="me" href="https://plus.google.com/'.$glus.'/about" />';
+	<link rel="icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml">
+    <link rel="canonical" href="'.$urlplanet.'">
+	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia">
+    <link rel="me" href="https://plus.google.com/'.$glus.'/about">
+    <link rel="publisher" href="https://plus.google.com/'.$glus.'">';
   $parselyPage = array();
   $parselyPage["title"]     = $nombre_sitio;
   $parselyPage["link"]      = $urlplanet;
@@ -194,11 +195,11 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
   $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'" />';
 if ($activar == 1) { 
 	echo '
-    <meta name="wot-verification" content="'.$wot.'" />
-    <meta name="msvalidate.01" content="'.$bing.'" /> 
-	<meta name="y_key" content="'.$yahoo.'" /> 
-    <meta name="google-site-verification" content="'.$google.'" />
-	<meta name="alexaVerifyID" content="'.$alexa.'" />';
+    <meta name="wot-verification" content="'.$wot.'">
+    <meta name="msvalidate.01" content="'.$bing.'"> 
+	<meta name="y_key" content="'.$yahoo.'"> 
+    <meta name="google-site-verification" content="'.$google.'">
+	<meta name="alexaVerifyID" content="'.$alexa.'">';
 	}
 return;
 }
