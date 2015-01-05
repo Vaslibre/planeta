@@ -10,5 +10,7 @@
    -- img/logo.png (95x95)
    -- img/apple.png (57x57)
 .- Lo avatar que estan en img/avatar (95x95) extension .png
+.- Crear accion en cron 
+	0	*/2	*	*	*	 php RUTA/backend.php
 
 

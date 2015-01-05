@@ -33,7 +33,7 @@ http://vaslibre.org.ve
    $descripcion  = 'Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones';
    $latitud   = '10.181808';  # buscar en google maps
    $longitud  = '-68.004684'; # buscar en google maps
-   $urlplanet = 'http://planet.vaslibre.org.ve/'; # con / al final
+   $urlplanet = 'http://planeta.vaslibre.org.ve/'; # con / al final
    $ciudad    = 'Valencia';
    $provincia = 'Carabobo';
    $pais      = 'Venezuela';
@@ -53,7 +53,7 @@ http://vaslibre.org.ve
 
 #  Cache del sitio
 
-   $timecache    = 30; # 1 horas = 3600 | recomendado 7200 
+   $timecache    = 20; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
   
 
@@ -62,9 +62,10 @@ http://vaslibre.org.ve
 
     $largo_lectura   = 550; # cantidad maxima de caracteres de texto por nota en cada feed
     $leer_cant_feed  = 3;   # Mientras mas lea mas tardara en mostrar
+    $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
     # Sitio feed / xml 
-	$feeds = array (
+/*	$feeds = array (
 		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
 		"xombra"   		      => "http://xombra.com/backend.php",
         "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
@@ -80,15 +81,15 @@ http://vaslibre.org.ve
         "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/"
 
 
-	); 
+	);  */
 
 	//  feeds | RSS 
     # solo 2 para las pruebas luego eliminar y activar el de arriba
- /*	$feeds = array (
+  	$feeds = array (
         "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
-        "xombra"   		    => "http://xombra.com/backend.php"
+    	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
          
 
-	);  */
+	);   
  
 ?>
