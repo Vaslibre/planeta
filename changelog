@@ -1,10 +1,23 @@
-commit 412e1198cb245e8c203398b8f784af6cdaa2ec5e (HEAD, master)
+commit 8ddb8b5e161b6c43a81d8007edd329348e542c51 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Sun Jan 4 22:32:47 2015 -0430
+
+    * Creacion de backend.php para feed propio del sitio
+    * Agregada nuevas variables en el config.php
+
+commit 6268d32bcda6c574b7656360d20bb0e908dd03a0
+Author: xombra <xombra.com@gmail.com>
+Date:   Sun Jan 4 17:33:59 2015 -0430
+
+    * changelog
+
+commit 412e1198cb245e8c203398b8f784af6cdaa2ec5e
 Author: xombra <xombra.com@gmail.com>
 Date:   Sun Jan 4 17:27:32 2015 -0430
 
     * changelog
 
-commit 2cda2ef2608a674b688f479ca85b1b9b3f831cba (origin/master, origin/HEAD)
+commit 2cda2ef2608a674b688f479ca85b1b9b3f831cba
 Author: xombra <xombra.com@gmail.com>
 Date:   Sun Jan 4 17:25:26 2015 -0430
 
