@@ -126,9 +126,12 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 { echo '
     <meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=9, IE=8, IE=7, chrome=1">
-    <meta name="owner" content="VaSlibre">
-	<meta name="resource-type" content="document">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta http-equiv="pragma" content="cache">
+	<meta http-equiv="cache-control" content ="cache">
+	<meta http-equiv="vary" content="content-language">
+    <meta http-equiv="expires" content="'.$ExpStr.'">
+    <meta http-equiv="imagetoolbar" content="no">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="VaSlibre">
 	<meta name="revisit-after" content="1 days">
@@ -148,7 +151,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux" />
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux">
 	<meta name="description" content="'.$descripcion.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
@@ -161,11 +164,6 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="abstract" content="'.$nombre_sitio.'">
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta http-equiv="pragma" content="cache">
-	<meta http-equiv="cache-control" content ="cache">
-	<meta http-equiv="vary" content="content-language">
-    <meta http-equiv="expires" content="'.$ExpStr.'">
-    <meta http-equiv="imagetoolbar" content="no">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="'.$nombre_sitio.'">
 	<meta property="og:description" content="'.$descripcion.'">
@@ -181,7 +179,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml">
     <link rel="canonical" href="'.$urlplanet.'">
-	<link rel="socialmedia" type="text/plain" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia">
+	<link rel="socialmedia" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia">
     <link rel="me" href="https://plus.google.com/'.$glus.'/about">
     <link rel="publisher" href="https://plus.google.com/'.$glus.'">';
   $parselyPage = array();

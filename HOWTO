@@ -13,6 +13,7 @@ LEER:
    content.php
    footer.php
    modal.php -> En este caso sino posee ningún modal deje vacio
+.- Para cambiar el theme debe indicarlo en config.php en la variable $theme
 .- funcion RSS() en core.php es la que lee los sitios feeds
 .- Crear una accion en cron 
 	0	*/2	*	*	*	 php RUTA/backend.php

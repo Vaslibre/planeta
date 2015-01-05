@@ -44,7 +44,8 @@ echo '
 
 			  <header>
 		        <div class="row clearfix">';  
-		          include "themes/$theme/header.php"; 
+		          include "themes/$theme/header.php";
+                  include "themes/$theme/modal.php";
               echo '
 		        </div>
 			  </header>
@@ -63,8 +64,6 @@ echo '
 		        </div> 
 			  </footer>';
 
-			  include "themes/$theme/modal.php";
-
   			   echo '
 		</div>
 
@@ -82,8 +81,8 @@ echo '
 	<script defer type="text/javascript" src="js/js.js"></script>
 </body>
 </html>';
- BUFFER_FIN();
- if (!file_exists($urlcache) || $expira < filemtime($urlcache))
+BUFFER_FIN();
+if (!file_exists($urlcache) || $expira < filemtime($urlcache))
   {  CREA_CACHE($urlcache,$timecache,$buffer,$expira);  }
- BORRAR_VARIABLES();
+BORRAR_VARIABLES();
 ?>

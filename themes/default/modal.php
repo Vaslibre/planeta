@@ -1,4 +1,16 @@
- 
+<?php
+# Planet VaSlibre
+/* -------------------------------------------------------
+Script  bajo los términos y Licencia
+GNU GENERAL PUBLIC LICENSE
+Ver Terminos en:
+http://www.gnu.org/copyleft/gpl.html
+Desarrollo: Hector A. Mantellini (Xombra)
+
+VASLIBRE
+http://vaslibre.org.ve
+-------------------------------------------------------- */
+?>
 	  <div class="modal fade" id="modal-container-452838" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 		  <div class="modal-content">
