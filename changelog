@@ -1,4 +1,17 @@
-commit bcc282f090eaee916eae1af0b1bb321c7137e24f (HEAD, origin/master, origin/HEAD, master)
+commit f0e4e1edcd2d258ded148bbe587ed1d2b913f04a (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 17:14:55 2015 -0430
+
+    * Correcion en metatag
+    * correciones menores en otros archivos
+
+commit 1e27d0fdfa47c602b9b3edd028864c03e8f0df7a
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 15:09:53 2015 -0430
+
+    * changelog
+
+commit bcc282f090eaee916eae1af0b1bb321c7137e24f
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 5 15:08:25 2015 -0430
 
