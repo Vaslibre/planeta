@@ -10,7 +10,6 @@ Desarrollo: Hector A. Mantellini (Xombra)
 VASLIBRE
 http://vaslibre.org.ve
 -------------------------------------------------------- */
-
 $ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();

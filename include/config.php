@@ -54,7 +54,7 @@ http://vaslibre.org.ve
 
 #  Cache del sitio
 
-   $timecache    = 7200; # 1 horas = 3600 | recomendado 7200 
+   $timecache    = 20; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
 
    # valores para Feed
@@ -67,7 +67,7 @@ http://vaslibre.org.ve
 	#	"xombra"   		      => "http://xombra.com/backend.php",
     
 
- 
+/*
     # Sitio feed / xml 
  	$feeds = array (
 		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
@@ -84,7 +84,7 @@ http://vaslibre.org.ve
 
 
 	);   
- /*
+*/
 	//  feeds | RSS 
     # solo 2 para las pruebas luego eliminar y activar el de arriba
   	$feeds = array (
@@ -92,6 +92,6 @@ http://vaslibre.org.ve
     	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
          
 
- 	);   */ 
+ 	);   
  
 ?>

@@ -27,7 +27,7 @@ echo '
 		        <article class="format-standard">
 
 					<div class="col-md-2 column">
-						<img width="95" alt="'.$imagen.'" src="img/avatar/'.$entry['image'].'.png" class="img-circle img-responsive img_blog" />
+						<img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" class="img-circle img-responsive img_blog" />
 					</div>
 					<div class="col-md-10 column">
 	 				   <div class="caja"> 
