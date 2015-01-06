@@ -47,7 +47,7 @@ function COMPRESS_PAGE($buffer)
 
 function CREA_CACHE($urlcache,$timecache,$buffer)
 {  ob_end_flush();
-   $filecached = fopen($urlcache, 'w');
+   $filecached = fopen($urlcache, 'w+');
    $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
    fwrite($filecached, $contenido);
    fclose($filecached);  
@@ -282,7 +282,7 @@ return;
 function VERIFICA_CACHE($urlcache,$timecache,$expira)
 { ob_start("compress_page");
   if (file_exists($urlcache) && $expira < filemtime($urlcache)) {
-     include $urlcache;#
+     include $urlcache; 
      exit;
     }
 return;
