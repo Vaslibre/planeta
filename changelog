@@ -1,4 +1,17 @@
-commit 014853e4f5189c043ab39c4d45fcb2f42385de70 (HEAD, origin/master, origin/HEAD, master)
+commit 41ba0d3f944630691a60d419d596f1131afbcff3 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 6 10:43:22 2015 -0430
+
+    * Corregido formacion de backend.xml (feed propio)
+    * inclusion de enlace a sitio web | blog
+
+commit 1b124513d29931f8eee1ccae2782c4f058f57093
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 20:41:29 2015 -0430
+
+    * changelog
+
+commit 014853e4f5189c043ab39c4d45fcb2f42385de70
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 5 20:37:01 2015 -0430
 
