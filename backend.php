@@ -39,9 +39,7 @@ $entries[$timestamp]['link']= $link;
 $entries[$timestamp]['image'] = $imagen;
 $entries[$timestamp]['description'] = $description;
 $ciclo++;
-} 
- }
-}
+}}}
 krsort($entries);
 return $entries;
 }
@@ -70,9 +68,9 @@ $xml .= "<channel>\r
 <description>$descripcion</description>\r
 </image>\r
 <ttl>120</ttl>\r
-<atom:link href=\"http://'.$urlplanet.'backend.php\" rel=\"self\" type=\"application/rss+xml\" />";
+<atom:link href=\"http://'.$urlplanet.'backend.php\" rel=\"self\" type=\"application/rss+xml\">";
 foreach ($feeds as $imagen => $url)
-{RSS($url,$imagen,$leer_cant_feed,$largo_lectura); }
+{RSS($url,$imagen,$leer_cant_feed,$largo_lectura);}
 foreach ($entries as $timestamp => $entry) {
 $fecha = date("r",$entry['pubdate']);
 $entry['title'] = $entry['title'];
@@ -89,7 +87,7 @@ $xml .= "\n<item>\n\r
 $xml .= "\n\r</channel>\n\r
 </rss>\n\r";
 $xml = trim($xml);
-$filexml = fopen('backend.xml', 'w');
+$filexml = fopen('backend.xml', 'w+');
 fwrite($filexml, $xml);
 fclose($filexml);
 include 'backend.xml';

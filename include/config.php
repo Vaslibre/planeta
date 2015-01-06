@@ -25,10 +25,11 @@ http://vaslibre.org.ve
 # Sitio
 
    $nombre_sitio = 'Planet VaSlibre';
-   $lenguaje     = 'es_VE'; 
+   $lenguaje     = 'es'; # esp = español | eng = ingles
    $dominio      = 'vaslibre.org.ve';
    $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
    $emailinfo    = 'webmaster@vaslibre.org.ve'; # direccion email que aparecera en el envio de email (debe existir)
+   $principal    = 'vaslibre.org.ve';   # enlace al sitio principal blog | sitio web 
 
 # metatag
    $descripcion  = 'Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones';
@@ -54,7 +55,7 @@ http://vaslibre.org.ve
 
 #  Cache del sitio
 
-   $timecache    = 20; # 1 horas = 3600 | recomendado 7200 
+   $timecache    = 7200; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
 
    # valores para Feed
@@ -67,7 +68,7 @@ http://vaslibre.org.ve
 	#	"xombra"   		      => "http://xombra.com/backend.php",
     
 
-/*
+ 
     # Sitio feed / xml 
  	$feeds = array (
 		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
@@ -80,11 +81,12 @@ http://vaslibre.org.ve
 		"tatica"         	  => "http://tatica.org/feed/?lang=es",
 		"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
 		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
-        "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/"
+        "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
+        "echevemaster"        => "http://echevemaster.org/feeds/all.rss.xml"
 
 
 	);   
-*/
+ /*
 	//  feeds | RSS 
     # solo 2 para las pruebas luego eliminar y activar el de arriba
   	$feeds = array (
@@ -92,6 +94,6 @@ http://vaslibre.org.ve
     	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
          
 
- 	);   
+ 	);   */ 
  
 ?>
