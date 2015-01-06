@@ -1,4 +1,18 @@
-commit f0e4e1edcd2d258ded148bbe587ed1d2b913f04a (HEAD, origin/master, origin/HEAD, master)
+commit 014853e4f5189c043ab39c4d45fcb2f42385de70 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 20:37:01 2015 -0430
+
+    * Correfido bug con backend.php
+    * agregado el blog de echevemaster
+    * agrgeado icono de blog del sitio
+
+commit ed991fac60eaf20b3c11c4364a6b6151996d9c96
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 5 17:15:31 2015 -0430
+
+    * changelog
+
+commit f0e4e1edcd2d258ded148bbe587ed1d2b913f04a
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 5 17:14:55 2015 -0430
 
