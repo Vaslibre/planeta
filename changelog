@@ -1,4 +1,16 @@
-commit d2edb8ae81537b76e7eef1dfcdc8e948ab9cbcd0 (HEAD, origin/master, origin/HEAD, master)
+commit ce36f9768a56ea910c8e14507def7259a4fc190c (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 09:12:30 2015 -0430
+
+    * Corregido bug en revision de cache
+
+commit c51a164261a402e875e88fc92d29cf31aa9ef631
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 6 20:03:15 2015 -0430
+
+    * changelog
+
+commit d2edb8ae81537b76e7eef1dfcdc8e948ab9cbcd0
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 20:02:40 2015 -0430
 
