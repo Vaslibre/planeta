@@ -1,4 +1,16 @@
-commit 64092d6b665c921b80ea46a74ecbfaee219131bd (HEAD, origin/master, origin/HEAD, master)
+commit d2edb8ae81537b76e7eef1dfcdc8e948ab9cbcd0 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 6 20:02:40 2015 -0430
+
+    * Corregido error en creacion de cache
+
+commit 3400fa305cf6dd3e941e7dce667adb95674769e3
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 6 20:02:13 2015 -0430
+
+    * changelog
+
+commit 64092d6b665c921b80ea46a74ecbfaee219131bd
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 20:01:11 2015 -0430
 
