@@ -14,7 +14,8 @@ http://vaslibre.org.ve
 include 'include/config.php';
 include 'include/core.php';
 $expira = time() - $timecache;
-VERIFICA_CACHE($urlcache,$timecache,$expira);
+$vidafile =  filemtime($urlcache);
+VERIFICA_CACHE($urlcache,$expira,$vidafile);
 include 'sitemap.php';
 echo '
 <!DOCTYPE html>
@@ -71,7 +72,7 @@ echo
 </body>
 </html>';
 BUFFER_FIN();
-if ($expira < filemtime($urlcache))
-  { CREA_CACHE($urlcache,$timecache,$buffer,$expira); }
+if ($expira >= $vidafile)
+  { CREA_CACHE($urlcache,$buffer); }
 BORRAR_VARIABLES();
 ?>

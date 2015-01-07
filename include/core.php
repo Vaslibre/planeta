@@ -13,7 +13,6 @@ http://vaslibre.org.ve
 $ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();
-VERIFICA_CACHE($urlcache,$timecache,$expira);
 
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
@@ -45,7 +44,7 @@ function COMPRESS_PAGE($buffer)
   return trim(preg_replace($search, $replace, $buffer)); 
 }
 
-function CREA_CACHE($urlcache,$timecache,$buffer)
+function CREA_CACHE($urlcache,$buffer)
 {  ob_end_flush();
    $filecached = fopen($urlcache, 'w+');
    $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
@@ -222,9 +221,14 @@ function LIMPIAR_VALORES()
 return;
 }
 
-function  REDES($twitter, $facebook, $youtube, $glus, $theme)
+function  REDES($twitter, $facebook, $youtube, $glus, $principal, $theme)
 { 
  echo '<ul class="navbar-nav redes">';
+  if (!empty($principal)) 
+   { echo '<li>
+            <a href="http://'.$principal.'" title="Visita nuestro Blog" target="_blank"><i><img src="themes/'.$theme.'/img/social/blog.png" alt="Blog" width="48" height="48" /></i>
+            </a></li>'; }
+
   if (!empty($twitter)) 
    { echo '<li>
             <a href="https://twitter.com/'.$twitter.'" title="Siguenos en Twitter" target="_blank"><i><img src="themes/'.$theme.'/img/social/twitter.png" alt="Twitter" width="48" height="48" /></i>
@@ -279,9 +283,9 @@ function URL() {
 return; 
 }
 
-function VERIFICA_CACHE($urlcache,$timecache,$expira)
+function VERIFICA_CACHE($urlcache,$expira,$vidafile)
 { ob_start("compress_page");
-  if (file_exists($urlcache) && $expira < filemtime($urlcache)) {
+  if (file_exists($urlcache) && $vidafile >= $expira ) {
      include $urlcache; 
      exit;
     }
