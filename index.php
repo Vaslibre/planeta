@@ -33,15 +33,11 @@ echo '
  </head>
 <body>';
 flush();
-echo '
-	<div id="wrapper">
-
-		<noscript>
-		   <p>Debe habilitar el uso de Javascript, para poder usar muchas de las funciones del sitio</p>
-		</noscript>
-
-		<div class="container">
-
+echo
+ '<noscript>
+	<p>Debe habilitar el uso de Javascript, para poder usar muchas de las funciones del sitio</p>
+  </noscript>
+  <div class="container">
 			  <header>
 		        <div class="row clearfix">';  
 		          include "themes/$theme/header.php";
@@ -49,40 +45,33 @@ echo '
               echo '
 		        </div>
 			  </header>
-
 			  <section>
 				<div class="row clearfix">';
 		          include "themes/$theme/content.php";
                echo ' 
 		        </div>
 			  </section>
-
 			  <footer>
 		        <div class="row clearfix">';
 		           include "themes/$theme/footer.php";
                 echo '
 		        </div> 
 			  </footer>';
-
   			   echo '
-		</div>
-
-		 <div id="end">';
-  
-		   COOKIES();
-		   HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
-		   GoogleAnalytics($UA, $dominio);
-
-		echo '
-		 </div>
-	</div>
-    <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script defer type="text/javascript" src="js/js.js"></script>
+			  <div id="end">';
+	  		    COOKIES();
+			    HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
+			    GoogleAnalytics($UA, $dominio);
+			  echo '
+			  </div>
+  </div>
+  <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script defer type="text/javascript" src="js/js.js"></script>
 </body>
 </html>';
 BUFFER_FIN();
-if (!file_exists($urlcache) || $expira < filemtime($urlcache))
-  {  CREA_CACHE($urlcache,$timecache,$buffer,$expira);  }
+if ($expira < filemtime($urlcache))
+  { CREA_CACHE($urlcache,$timecache,$buffer,$expira); }
 BORRAR_VARIABLES();
 ?>
