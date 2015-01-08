@@ -1,4 +1,10 @@
-commit 18908ed689147ae05757a8945a139b6bbd48b426 (HEAD, origin/master, origin/HEAD, master)
+commit 74aaacc8a3bfbcaabef8d130bc00fa926fd86c5f (HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 21:36:39 2015 -0430
+
+    * changelog
+
+commit 18908ed689147ae05757a8945a139b6bbd48b426 (origin/master, origin/HEAD)
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 7 21:35:46 2015 -0430
 
