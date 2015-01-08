@@ -1,4 +1,16 @@
-commit acbfa5de0b78c3ab62f3e90b6276d69233266946 (HEAD, origin/master, origin/HEAD, master)
+commit 007e18416d6808fc889e5af46bb686a9fdee32c4 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:24:40 2015 -0430
+
+    * se actualiza el readme para agregar el status de travis ci
+
+commit 2a4c9c0ca9e7b20c4976c1425df327e862491d59
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:21:02 2015 -0430
+
+    * changelog
+
+commit acbfa5de0b78c3ab62f3e90b6276d69233266946
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 8 01:20:43 2015 -0430
 
