@@ -1,4 +1,16 @@
-commit 007e18416d6808fc889e5af46bb686a9fdee32c4 (HEAD, origin/master, origin/HEAD, master)
+commit 77dde98c6575b348269aa332382e24467e3bd1f0 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:35:18 2015 -0430
+
+    * se crea el archivo ToDo para colocar una lista de las pruebas unitarias que faltan
+
+commit f701e147b596dac32e5181464767fb0fa9a43373
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:25:01 2015 -0430
+
+    * changelog
+
+commit 007e18416d6808fc889e5af46bb686a9fdee32c4
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 8 01:24:40 2015 -0430
 
