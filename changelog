@@ -1,4 +1,23 @@
-commit ce36f9768a56ea910c8e14507def7259a4fc190c (HEAD, origin/master, origin/HEAD, master)
+commit acbfa5de0b78c3ab62f3e90b6276d69233266946 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:20:43 2015 -0430
+
+    * se agrega el archivo para usar travis ci
+
+commit 18908ed689147ae05757a8945a139b6bbd48b426
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 21:35:46 2015 -0430
+
+    * Agrgado xombra.com al feed
+    * agragada cabecera (beta)
+
+commit b28f10280422be912338230f48ab09938ec98601
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 09:13:03 2015 -0430
+
+    * changelog
+
+commit ce36f9768a56ea910c8e14507def7259a4fc190c
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 7 09:12:30 2015 -0430
 
