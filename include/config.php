@@ -24,7 +24,7 @@ http://vaslibre.org.ve
 
 # Sitio
 
-   $nombre_sitio = 'Planet VaSlibre';
+   $nombre_sitio = 'Planeta VaSlibre';
    $lenguaje     = 'es'; # esp = español | eng = ingles
    $dominio      = 'vaslibre.org.ve';
    $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
@@ -65,12 +65,11 @@ http://vaslibre.org.ve
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
     #		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
-	#	"xombra"   		      => "http://xombra.com/backend.php",
+	#	
     
-
- 
     # Sitio feed / xml 
  	$feeds = array (
+        "xombra"   		      => "http://xombra.com/backend.php",
 		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
         "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
         "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
@@ -84,7 +83,6 @@ http://vaslibre.org.ve
         "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
         "echevemaster"        => "http://echevemaster.org/feeds/all.rss.xml"
 
-
 	);   
  /*
 	//  feeds | RSS 
@@ -92,8 +90,6 @@ http://vaslibre.org.ve
   	$feeds = array (
         "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
     	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
-         
-
  	);   */ 
  
 ?>

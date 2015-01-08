@@ -17,9 +17,9 @@ echo '
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <div class="enlace"> <a id="modal-452838" href="#modal-container-452838" role="button" class="btn" data-toggle="modal">Agrega tu RSS|Feed</a></div>
 		     <div class="cajaLOGO">
-		       <a href="index.php" title="'.$nombre_sitio.'" class="logo" style="margin-top:-50px;"><img width="95" height="95" src="themes/'.$theme.'/img/logo.png" class="img-responsive" alt="Logo"></a></div>  
+		       <a href="index.php" title="'.$nombre_sitio.'" class="logo" style="margin-top:-50px;"><img width="95" height="95" src="themes/'.$theme.'/img/logo.png" class="img-responsive" alt="Logo"></a><small style="color="#fff">(Beta)</small></div>  
 			 <div>';
-			   REDES($twitter, $facebook, $youtube, $glus, $theme);
+			   REDES($twitter, $facebook, $youtube, $glus, $principal, $theme);
 	echo '</div>
 	  </div>
 	</nav>
