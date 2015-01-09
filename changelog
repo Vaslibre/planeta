@@ -1,13 +1,22 @@
-<<<<<<< HEAD
-commit 74aaacc8a3bfbcaabef8d130bc00fa926fd86c5f (HEAD, master)
+commit f783cc1294b9f9dd39c6d116472889eb994ed737 (HEAD, origin/master, origin/HEAD, master)
+Merge: 20449b9 dd4372c
 Author: xombra <xombra.com@gmail.com>
-Date:   Wed Jan 7 21:36:39 2015 -0430
+Date:   Thu Jan 8 21:08:12 2015 -0430
+
+    Merge branch 'master' of github.com:Vaslibre/planeta
+    
+    Conflicts:
+    	changelog
+    
+    * reparacion de backend.php
+
+commit dd4372c7b245fb40fec723e4c208b493b1154718
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:35:56 2015 -0430
 
     * changelog
 
-commit 18908ed689147ae05757a8945a139b6bbd48b426 (origin/master, origin/HEAD)
-=======
-commit 77dde98c6575b348269aa332382e24467e3bd1f0 (HEAD, origin/master, origin/HEAD, master)
+commit 77dde98c6575b348269aa332382e24467e3bd1f0
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 8 01:35:18 2015 -0430
 
@@ -37,8 +46,19 @@ Date:   Thu Jan 8 01:20:43 2015 -0430
 
     * se agrega el archivo para usar travis ci
 
+commit 20449b9db78a999537064d2cf1cab1f7bcb76bbd
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 21:39:57 2015 -0430
+
+    * changelog
+
+commit 74aaacc8a3bfbcaabef8d130bc00fa926fd86c5f
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 7 21:36:39 2015 -0430
+
+    * changelog
+
 commit 18908ed689147ae05757a8945a139b6bbd48b426
->>>>>>> dd4372c7b245fb40fec723e4c208b493b1154718
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 7 21:35:46 2015 -0430
 
