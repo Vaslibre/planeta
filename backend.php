@@ -1,11 +1,12 @@
 <?php
-#header("Content-Type: application/rss+xml");
+header('Content-Type: text/xml');
+header("Content-Type: application/rss+xml"); 
 include 'include/config.php';
 $expira = time() - $timecache;
-if (file_exists('backend.xml') && $expira < filemtime($urlcache)) {
-include 'backend.xml';
-exit;
-}
+#if (file_exists('backend.xml') && (filemtime($urlcache) <= filemtime('backend.xml'))) {
+#include 'backend.xml';
+#die();
+#}
 function convertir($cadena) 
 {$cadena= stripslashes($cadena); 
  $buscar = array('<br>', '<p>', '</p>', '<br />','<br>','&nbsp;','@','"','&iexcl;','&gt;','#160',
@@ -43,13 +44,15 @@ $ciclo++;
 krsort($entries);
 return $entries;
 }
-$xml = '';
+foreach ($feeds as $imagen => $url)
+{RSS($url,$imagen,$leer_cant_feed,$largo_lectura);}
 $urlplanet = substr($urlplanet,0,strlen($urlplanet)-1);
 $ahora = time();
 $fecha = date("r",$ahora);
 $year  = date("Y",$ahora);
 $icon  = $urlplanet.'/themes/'.$theme.'/img/rss.png';
-$xml = '<?xml version="1.0" encoding="ISO-8859-1"?>
+$xml = '';
+$xml = '<?xml version="1.0" encoding="ISO-8859-1" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">';
 $xml .= "\r\n<channel>\r
 <title>$nombre_sitio</title>\r
@@ -62,7 +65,7 @@ $xml .= "\r\n<channel>\r
 <docs>$urlplanet</docs>\r
 <generator>Script ViSeRProject http://viserproject.com</generator>\r
 <webMaster>$emailinfo ($nombre_sitio)</webMaster>\r
-<managingEditor>$emailinfo (($nombre_sitio)</managingEditor>\r
+<managingEditor>$emailinfo ($nombre_sitio)</managingEditor>\r
 <image>\r
 <title>$nombre_sitio</title>\r
 <url>$icon</url>\r
@@ -70,8 +73,6 @@ $xml .= "\r\n<channel>\r
 <description>$descripcion</description>\r
 </image>\r
 <ttl>120</ttl>\r\n";
-foreach ($feeds as $imagen => $url)
-{RSS($url,$imagen,$leer_cant_feed,$largo_lectura);}
 foreach ($entries as $timestamp => $entry) {
 $fecha = date("r",$entry['pubdate']);
 $entry['title'] = $entry['title'];
@@ -82,13 +83,14 @@ $xml .= "\n\r<entry>\r
 <guid>$entry[link]</guid>\r
 <pubDate>$fecha</pubDate>\r
 <description>\r
-<![CDATA[<img src=\"$urlplanet/img/avatar/$entry[image].png\" alt=\"$entry[image]\" align=\"left\" style=\"float:left; width:95px; height:95px;\">$entry[description]]]></description>\r
+<![CDATA[<img src=\"$urlplanet/img/avatar/$entry[image].png\" alt=\"$entry[image]\" align=\"left\" style=\"float:left; width:95px; height:95px; margin-right:10px;\">$entry[description]]]></description>\r
 </entry>\r\n";
 }
-$xml .= "</channel></feed>\n\r";
+$xml .= "</channel>\n\r
+</feed>\n\r";
 $xml = trim($xml);
 $filexml = fopen('backend.xml', 'w+');
 fwrite($filexml, $xml);
 fclose($filexml);
-include 'backend.xml';
+include 'backend.xml';  
 ?>

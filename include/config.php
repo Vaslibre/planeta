@@ -64,15 +64,16 @@ http://vaslibre.org.ve
     $leer_cant_feed  = 3;     # Mientras mas lea mas tardara en mostrar
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
-    #		"vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
+    #		
 	#	
     
     # Sitio feed / xml 
  	$feeds = array (
+        "vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
         "xombra"   		      => "http://xombra.com/backend.php",
 		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
-        "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
-        "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
+        "xanadu"         	  => "https://xanadulinux.wordpress.com/feed/",
+        "sinfallas"        	  => "https://sinfallas.wordpress.com/feed/",
         "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
 		"Mint"                => "http://blog.linuxmint.com/?feed=rss2",
 		"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/",

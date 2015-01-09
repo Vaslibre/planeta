@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 commit 74aaacc8a3bfbcaabef8d130bc00fa926fd86c5f (HEAD, master)
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 7 21:36:39 2015 -0430
@@ -5,6 +6,39 @@ Date:   Wed Jan 7 21:36:39 2015 -0430
     * changelog
 
 commit 18908ed689147ae05757a8945a139b6bbd48b426 (origin/master, origin/HEAD)
+=======
+commit 77dde98c6575b348269aa332382e24467e3bd1f0 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:35:18 2015 -0430
+
+    * se crea el archivo ToDo para colocar una lista de las pruebas unitarias que faltan
+
+commit f701e147b596dac32e5181464767fb0fa9a43373
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:25:01 2015 -0430
+
+    * changelog
+
+commit 007e18416d6808fc889e5af46bb686a9fdee32c4
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:24:40 2015 -0430
+
+    * se actualiza el readme para agregar el status de travis ci
+
+commit 2a4c9c0ca9e7b20c4976c1425df327e862491d59
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:21:02 2015 -0430
+
+    * changelog
+
+commit acbfa5de0b78c3ab62f3e90b6276d69233266946
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 01:20:43 2015 -0430
+
+    * se agrega el archivo para usar travis ci
+
+commit 18908ed689147ae05757a8945a139b6bbd48b426
+>>>>>>> dd4372c7b245fb40fec723e4c208b493b1154718
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 7 21:35:46 2015 -0430
 
