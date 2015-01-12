@@ -17,44 +17,7 @@ echo '
 </div>
 <div class="col-md-12 column">
 	<div style="margin-top:-40px">';
-	   foreach ($feeds as $imagen => $url) 
-	     { RSS($url,$imagen,$leer_cant_feed,$largo_lectura);  }
-	   krsort($entries); 
-	   foreach ($entries as $timestamp => $entry) {
-		   echo '
-	         <div class="row clearfix abre">
-
-		        <article>
-
-					<div class="col-md-2 column">
-						<img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" class="img-circle img-responsive img_blog" />
-					</div>
-					<div class="col-md-10 column">
-
-	 				   <div class="caja">
-
-						 <div class="cajatitulo">
-		                    <span class="fecha_post">Fecha:'.date("d/m/Y",$entry['pubdate']).'</span>
-						    <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
-						 <div>
-
-		                 <div class="cajacontenido">
-	 		                '.$entry['description'].'
-		                     <div class="bottomd">&nbsp;</div>
-		                 </div>
-
-					   </div>
-
-		            </div>
-
-		            <div class="bottomd">&nbsp;</div>
-
-		       </article>
-
-		       <div class="bottomd">&nbsp;</div>
-
-		    </div>'; 
-		} 
+	 $tags = RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds); 
 echo '
     </div>
 </div>';

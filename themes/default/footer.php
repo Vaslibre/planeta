@@ -24,6 +24,7 @@ echo '
       </address>
 	  &copy; 2014 - '.date("Y",time()).'  Dise&ntilde;o & Programaci&oacute;n: [ <a href="http://viserproject.com" target="_blank" title="Visitar ViserProject"><span>ViSerProject</span></a> ]<br />
 	      Código fuente: <a href="https://github.com/Vaslibre/planeta" target="_blank" title="Código Fuente del Planeta"><span>github.com</span></a>
+          <small style="color="#333;">(Beta)</small>
 	</div>
 </div>';
 ?>

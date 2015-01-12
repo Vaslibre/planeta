@@ -21,7 +21,6 @@ echo '
 <!DOCTYPE html>
 <html lang="'.$lenguaje.'">
  <head>
-  <link href="http://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css" />
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="themes/'.$theme.'/css/style.css" rel="stylesheet" type="text/css" />
   <title>'.$nombre_sitio.'</title>';
@@ -39,26 +38,18 @@ echo
 	<p>Debe habilitar el uso de Javascript, para poder usar muchas de las funciones del sitio</p>
   </noscript>
   <div class="container">
-			  <header>
-		        <div class="row clearfix">';  
+			  <header>';  
 		          include "themes/$theme/header.php";
-                  include "themes/$theme/modal.php";
               echo '
-		        </div>
 			  </header>
-			  <section>
-				<div class="row clearfix">';
+			  <section>';
 		          include "themes/$theme/content.php";
                echo ' 
-		        </div>
 			  </section>
-			  <footer>
-		        <div class="row clearfix">';
+			  <footer>';
 		           include "themes/$theme/footer.php";
                 echo '
-		        </div> 
-			  </footer>';
-  			   echo '
+			  </footer> 
 			  <div id="end">';
 	  		    COOKIES();
 			    HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
@@ -68,7 +59,9 @@ echo
   </div>
   <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script defer type="text/javascript" src="js/js.js"></script>
+  <script defer type="text/javascript" src="js/js.js"></script>';
+  include "themes/$theme/modal.php";
+echo '
 </body>
 </html>';
 BUFFER_FIN();
