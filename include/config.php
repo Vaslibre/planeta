@@ -13,7 +13,7 @@ http://vaslibre.org.ve
 
 #Valores del sistema
 
-   $theme = 'default';   # nombre del theme a usar
+   $theme = 'planetaVaSLibre';   # nombre del theme a usar - tambien esta "default"
 
 # Redes sociales
 

@@ -44,7 +44,6 @@ $GLOBALS['palabras'] = array(
 		  '/', '#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“',
 		  '1','2','3','4','5','6','7','8','9','0');
 
-
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
   unset($_POST,$_GET);
@@ -52,7 +51,8 @@ return;
 }
 
 function BUFFER_INICIO()
-{ $buffer = ob_start("compress_page");
+{ $buffer = ob_start("COMPRESS_PAGE");
+  #$buffer = ob_start();
   return $buffer;
 }
 
@@ -79,6 +79,7 @@ function CREA_CACHE($urlcache,$buffer)
 {  ob_end_flush();
    $filecached = fopen($urlcache, 'w+');
    $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
+   #$contenido = trim(ob_get_contents());
    fwrite($filecached, $contenido);
    fclose($filecached);  
 return;
@@ -338,6 +339,35 @@ if (VERIFICA_ONLINE($url)){
 return $entries;
 }
 
+function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
+{  $tags = '';
+  echo '
+<div class="feed">';
+           foreach ($feeds as $imagen => $url) 
+             { $entries = RSS($url,$imagen,$leer_cant_feed,$largo_lectura);  }
+           krsort($entries); 
+           foreach ($entries as $timestamp => $entry) {
+            echo '                   
+              <div class="feed-item">
+                 <article class="feed-content">
+                   <div class="pull-left">
+                      <a class="media-left" href="#">
+                       <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" style="margin-right:10px;" class="img-responsive img-circle">
+                      </a>
+                   </div>
+                   <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
+                   '.$entry['description'].'
+                   <hr/>
+                   <ul class="list-inline list-unstyled">
+                    <li><span><i class="fa fa-calendar"></i> '.date("d/m/Y",$entry['pubdate']).'</span></li>
+                   </ul>
+                  </article>                
+              </div>';
+              $tags .= $entry['title'].' '; 
+           }
+return $tags;
+}
+
 function URL() { 
   if (empty($_SERVER["HTTP_REFERER"])) { $_SERVER["HTTP_REFERER"] = '';}
   $valor = strip_tags($_SERVER["HTTP_REFERER"]);
@@ -348,7 +378,7 @@ return;
 }
 
 function VERIFICA_CACHE($urlcache,$expira,$vidafile)
-{ ob_start("compress_page");
+{ ob_start("COMPRESS_PAGE");
   if (file_exists($urlcache) && $vidafile >= $expira ) {
      include $urlcache; 
      die();
