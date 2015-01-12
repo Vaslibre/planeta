@@ -67,7 +67,7 @@ if (@mail($contacto,$asunto,$mensaje,$headers))
 if ($envio == 1)
  {  echo '
     <div class="well text-center bg-succes btn-success" role="success">
-     <p class=" btn-success">Hemos recibido su enlace feed, en las próximas horas o contactaremos.</p>
+     <p class=" btn-success">Hemos recibido su enlace feed, en las próximas horas lo contactaremos.</p>
     </div>';
  }
 else
