@@ -1,4 +1,17 @@
-commit 0db88565e411c89b16ae2f8b480bcc710ed68c33 (HEAD, origin/master, origin/HEAD, master)
+commit 187b035438f881484ef2382977f429e36564f5fc (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 13:19:47 2015 -0430
+
+    * Inclusion de funcion RSS_MOSTRAR()
+    * cambio a theme planetaVaSLibre
+
+commit 6bd400df551dc05d546ec136ef5e309e3f4d13d4
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 13:13:27 2015 -0430
+
+    * changelog
+
+commit 0db88565e411c89b16ae2f8b480bcc710ed68c33
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 12 13:12:25 2015 -0430
 
