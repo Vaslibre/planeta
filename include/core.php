@@ -250,21 +250,21 @@ function NUBE_TAGS($tags)
 	$result = array_unique($temp);
 	$rnd = count($result);
 	$rand_keys = array_rand($result, $rnd);
-    echo '<div class="tags">';
+    echo '<ul class="list-inline">';
 	for ($i=0;$i<=$rnd;$i++)
 	 { $tags[$i] = $result[$rand_keys[$i]]; }
 	for ($i=0;$i<$rnd;$i++)
 	{    srand((double)microtime()*1000000); 
 	     $ft = rand(1,4);
 	     switch($ft){
-		  case '1': echo '<span class="tag_nube1">'; break;
-		  case '2': echo '<span class="tag_nube2">'; break;
-		  case '3': echo '<span class="tag_nube3">'; break;
-		  case '4': echo '<span class="tag_nube4">'; break;
+		  case '1': echo '<li><button class="btn btn-primary btn-xs" role="button">'; break;
+		  case '2': echo '<li><button class="btn btn-success btn-xs" role="button">'; break;
+		  case '3': echo '<li><button class="btn btn-warning btn-xs" role="button">'; break;
+		  case '4': echo '<li><button class="btn btn-danger btn-xs" role="button">'; break;
 		 }
-		echo $tags[$i].' </span>';	 
+		echo $tags[$i].'</button></li>';	 
 	}
-        echo '</div>';
+        echo '</ul>';
 return;
 } 
 
