@@ -1,4 +1,24 @@
-commit 817b5325c5e54b32086d716417e5c092a5d2ff63 (HEAD, origin/master, origin/HEAD, master)
+commit 0db88565e411c89b16ae2f8b480bcc710ed68c33 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 13:12:25 2015 -0430
+
+    * Inclusion de Formulario de Contacto
+    * Inclusion de Nube de Tags
+    * Cambios en Plantilla Vaslibre
+
+commit f7fd25ae9063b65563548fc539d1542ac2a8b05e
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 09:42:25 2015 -0430
+
+    * Incluida nueva plantilla realizada por Abr4xas para el planeta
+
+commit e17a3611c6dab84cac90c3d5cf17f42c89af2005
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 09:28:30 2015 -0430
+
+    * changelog
+
+commit 817b5325c5e54b32086d716417e5c092a5d2ff63
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 12 09:27:27 2015 -0430
 
