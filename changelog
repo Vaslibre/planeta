@@ -1,4 +1,17 @@
-commit 187b035438f881484ef2382977f429e36564f5fc (HEAD, origin/master, origin/HEAD, master)
+commit b62aa28ac588d76b284fad377fa0c062a2fad0e9 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 13:46:11 2015 -0430
+
+    * Inclusion de formulario y envio de mensaje de contacto
+    * correción en texto de new_feed.php
+
+commit 86902d221a38b644d541c32fe616342d38f86a9d
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 13:21:20 2015 -0430
+
+    * changelog
+
+commit 187b035438f881484ef2382977f429e36564f5fc
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 12 13:19:47 2015 -0430
 
