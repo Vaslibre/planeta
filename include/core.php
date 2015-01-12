@@ -14,6 +14,37 @@ $ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();
 
+global $palabras;
+$GLOBALS['palabras'] = array(
+		  ' a ',' ah ', ' al ', ' alla ',' alo ',' ano ',' ante ',' anti ',' am ',' aquel ', ' aquellos ',' aquellas ',
+          ' atras ',' ay ',' ahora ',
+		  ' bajo ', ' bien ',' bueno ',
+		  ' cada ',' casi ',' con ', ' contra ', ' coma ', ' comer ',' como ', ' cómo ', ' cambiar ',' cuyo ',' .com ',' com ',
+		  ' da ',' dando ',' de ' , ' del ', ' dejar ',' desde ',' di ', ' dia ', 'dice',' donde ',' dijo ',' día ',
+		  ' e ', ' el ', ' ella ', ' ellas ', ' ello ',' ellos ',' en ' ,' entonces ', ' entre ', ' era ',' eran ',' es ', ' esa ',' ese ', 
+		  ' esas ',' eso ',' esos ',' esta ', ' estan ',' estas ',' esto ',' estos ',' está ',' eramos ',
+		  ' fue ',' fueron ',' fuese ',' fuesen ',' fui ',' fuimos ', ' full ',
+          ' gran ',' grande ',
+	      ' ha ', ' halla ', ' hallar ', ' hasta ', ' haya ',' hayan ',' hayamos ',' hayaron ',' hubo ',
+          ' i ',' iban ',' idem ',' ido ',' in ',' ir ',' irian ',' item ',
+          ' ja ',' jamas ',' je ',' ji ',' jo ',' juntos ',
+		  ' kill ',
+	  	  ' la ', ' las ', ' lanza ',' le ',' les ',' lo ', ' los ',
+		  ' mas ',  ' matar ', ' me ', ' mes ',' mejor ',  ' mi ',' mias ',' mios ', ' mis ',' mucho ',
+		  ' nada ',' nadie ',' ni ',' ninguno ',' no ', ' nos ',' nosotros ',' numero ',' numeros ',
+	 	  ' o ', ' ok ',' on ',' otras ',' otros ',
+		  ' para ',' paran ',' parte ',' peor ', ' pm ', ' por ',' poco ',' podran ',' pondra ',' pondran ',' porque ',' puede ',
+          ' pero ',' puedo ',' pueden ',' puedes ',' pudo ',' punto ',
+		  ' que ', ' quien ', ' quienes ',' quiere ',' quieren ',' quiero ',' quisiera ', ' quisieran ',' quisieras ',' quiso ',
+		  ' se ', ' sera ',' si ', 'sin', ' sobre ', ' solo ',' sólo ',' su ', ' sus ', 
+		  ' tambien ',' te ', ' the ', ' to ',' toda ',' todas ',' tras ',' tu ',' tus ',' tuyas ', 'tuyos ',
+	 	  ' u ',  ' un ', ' una ',' unas ',' uno ',' unos ',
+		  ' vamos ',' van ',' viene ',' vienen ',' vosotros ',' vive ',' voy ',' vuelve ', 
+		  ' y ', ' ya ',' yo ',
+		  '/', '#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“',
+		  '1','2','3','4','5','6','7','8','9','0');
+
+
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
   unset($_POST,$_GET);
@@ -201,6 +232,41 @@ if ($activar == 1) {
 return;
 }
 
+function NUBE_TAGS($tags)
+{ 	$busqueda = $GLOBALS['palabras'];
+	$search  = array('Á', 'É', 'Í', 'Ó', 'Ú', 'á', 'é', 'í', 'ó', 'ú', 'Ü', 'ü', 'Ñ', 'ñ','&');
+	$replace = array('a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'u', 'u', 'n', 'n',' ');
+	$tags = trim(strtolower($tags));
+	$html = array('&aacute;', '&eacute;', '&iacute;', '&oacute;', '&uacute;', '&ntilde;');
+	$str  = array('a', 'e', 'i', 'o', 'u', 'u', 'u', 'n');
+	$tags = str_replace($html, $str, $tags);
+	$tags = str_replace($search, $replace, $tags);
+	$tags = str_replace($busqueda,' ',$tags);
+	$tags = preg_replace('/\s\s+/',' ', $tags );
+	$tags = str_replace($busqueda,' ',$tags);
+	$temp = explode(' ',$tags);
+	$tags = array();
+	$result = array_unique($temp);
+	$rnd = count($result);
+	$rand_keys = array_rand($result, $rnd);
+    echo '<div class="tags">';
+	for ($i=0;$i<=$rnd;$i++)
+	 { $tags[$i] = $result[$rand_keys[$i]]; }
+	for ($i=0;$i<$rnd;$i++)
+	{    srand((double)microtime()*1000000); 
+	     $ft = rand(1,4);
+	     switch($ft){
+		  case '1': echo '<span class="tag_nube1">'; break;
+		  case '2': echo '<span class="tag_nube2">'; break;
+		  case '3': echo '<span class="tag_nube3">'; break;
+		  case '4': echo '<span class="tag_nube4">'; break;
+		 }
+		echo $tags[$i].' </span>';	 
+	}
+        echo '</div>';
+return;
+} 
+
 function LIMPIAR_VALORES()
 { $_SERVER['QUERY_STRING'] = trim(strip_tags($_SERVER['QUERY_STRING']));
   URL();
@@ -222,13 +288,11 @@ return;
 }
 
 function  REDES($twitter, $facebook, $youtube, $glus, $principal, $theme)
-{ 
- echo '<ul class="navbar-nav redes">';
+{ echo '<ul class="navbar-nav redes">';
   if (!empty($principal)) 
    { echo '<li>
             <a href="http://'.$principal.'" title="Visita nuestro Blog" target="_blank"><i><img src="themes/'.$theme.'/img/social/blog.png" alt="Blog" width="48" height="48" /></i>
             </a></li>'; }
-
   if (!empty($twitter)) 
    { echo '<li>
             <a href="https://twitter.com/'.$twitter.'" title="Siguenos en Twitter" target="_blank"><i><img src="themes/'.$theme.'/img/social/twitter.png" alt="Twitter" width="48" height="48" /></i>
@@ -287,7 +351,7 @@ function VERIFICA_CACHE($urlcache,$expira,$vidafile)
 { ob_start("compress_page");
   if (file_exists($urlcache) && $vidafile >= $expira ) {
      include $urlcache; 
-     exit;
+     die();
     }
 return;
 }
