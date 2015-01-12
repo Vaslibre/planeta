@@ -1,4 +1,16 @@
-commit f783cc1294b9f9dd39c6d116472889eb994ed737 (HEAD, origin/master, origin/HEAD, master)
+commit 817b5325c5e54b32086d716417e5c092a5d2ff63 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 09:27:27 2015 -0430
+
+    * Inclusion de funcion para la creación de bube de tags
+
+commit 8d0883a57ae4bd99a382f24aa4e7f20f57d55d8b
+Author: xombra <xombra.com@gmail.com>
+Date:   Thu Jan 8 21:09:10 2015 -0430
+
+    * changelog
+
+commit f783cc1294b9f9dd39c6d116472889eb994ed737
 Merge: 20449b9 dd4372c
 Author: xombra <xombra.com@gmail.com>
 Date:   Thu Jan 8 21:08:12 2015 -0430
