@@ -49,7 +49,7 @@ echo
  '<noscript>
 	<p>Debe habilitar el uso de Javascript, para poder usar muchas de las funciones del sitio</p>
   </noscript>
-  <div class="container">
+  <div class="container-fluid">
 	 <header>';  
 		  include "themes/$theme/header.php";
     echo'
