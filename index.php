@@ -11,6 +11,7 @@ Diseño: Angel Cruz (Abr4xas)
 VASLIBRE
 http://vaslibre.org.ve
 -------------------------------------------------------- */
+session_start();
 include 'include/config.php';
 include 'include/core.php';
 if (!is_dir("themes/$theme"))

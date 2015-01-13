@@ -44,6 +44,8 @@ $GLOBALS['palabras'] = array(
 		  '/', '#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“',
 		  '1','2','3','4','5','6','7','8','9','0');
 
+
+
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
   unset($_POST,$_GET);
@@ -79,10 +81,16 @@ function CREA_CACHE($urlcache,$buffer)
 {  ob_end_flush();
    $filecached = fopen($urlcache, 'w+');
    $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
-   #$contenido = trim(ob_get_contents());
    fwrite($filecached, $contenido);
    fclose($filecached);  
 return;
+}
+
+function CREAR_TOKEN($TokenForm) 
+{ $token = md5(uniqid(microtime(), true));
+  $token_time = time();
+  $_SESSION['csrf'][$TokenForm.'_token'] = array('token'=>$token, 'time'=>$token_time); 
+return $token;
 }
 
 function DECODE($origen) {
@@ -290,6 +298,21 @@ function LIMPIAR_VALORES()
 return;
 }
 
+function PUBLICIDAD($publicidad)
+{
+  foreach ($publicidad as $imagen => $enlace) {
+   $img[]  =  $imagen;
+   $link[] =  $enlace;
+  }
+   $hay  =  count($img)-1;
+   $rand =  mt_rand(0,$hay);
+ echo '
+  <div id="banner">
+     <a href="'.$link[$rand].'" target="_blank" title="Visitar:'.$link[$rand].'" ><img src="img/publicidad/'.$img[$rand].'.png" width="200" class="img-responsive img-center" alt="banner '.$img[$rand].'" /></a>
+   </div>';
+return;
+}
+
 function  REDES($twitter, $facebook, $youtube, $glus, $principal, $theme)
 { echo '<ul class="navbar-nav redes">';
   if (!empty($principal)) 
@@ -394,5 +417,15 @@ function VERIFICA_ONLINE($url)
   if (stristr ($headers[0],'200 OK'))
    { return true; }
   else { return false; }
+}
+
+function VERIFICA_TOKEN($TokenForm, $token) 
+{  if(!isset($_SESSION['csrf'][$TokenForm.'_token'])) {
+       return false;
+   }
+   if ($_SESSION['csrf'][$TokenForm.'_token']['token'] !== $token) {
+       return false;
+   }
+   return true;
 }
 ?>
