@@ -315,7 +315,7 @@ function RSS($url,$imagen,$leer_cant_feed,$largo_lectura)
 { global $entries;
 if (VERIFICA_ONLINE($url)){
 	$noticias = simplexml_load_file($url);
-	$lee=$leer_cant_feed;
+	$lee = $leer_cant_feed;
 	$ciclo = 1;
     $largo = $largo_lectura;
 	foreach ($noticias as $noticia) {  
