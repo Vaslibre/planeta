@@ -40,27 +40,27 @@ echo
   <div class="container">
 			  <header>';  
 		          include "themes/$theme/header.php";
-              echo '
+              echo'
 			  </header>
-			  <section>';
+              <section>';
 		          include "themes/$theme/content.php";
-               echo ' 
-			  </section>
+               echo'
+               </section>
 			  <footer>';
 		           include "themes/$theme/footer.php";
-                echo '
+                echo'
 			  </footer> 
 			  <div id="end">';
 	  		    COOKIES();
 			    HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais);
 			    GoogleAnalytics($UA, $dominio);
-			  echo '
+			  echo'
 			  </div>
   </div>
   <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script defer type="text/javascript" src="js/js.js"></script>';
-  include "themes/$theme/modal.php";
+  <script defer type="text/javascript" src="js/js.js"></script>
+  <script defer type="text/javascript" src="themes/'.$theme.'/js/custom.js"></script>';
 echo '
 </body>
 </html>';
