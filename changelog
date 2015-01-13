@@ -1,4 +1,17 @@
-commit d82832f36df34ad0ec458bfa0448fc0d35077be7 (HEAD, origin/master, origin/HEAD, master)
+commit 458929f405caec8ec78db51adc9f8d70025be0e5 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 13:52:08 2015 -0430
+
+    * Inclusion de publicidad
+    * mejora en js
+
+commit 2e44bed60ebfc984081e89636b526306808af8be
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 11:59:59 2015 -0430
+
+    * changelog
+
+commit d82832f36df34ad0ec458bfa0448fc0d35077be7
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 11:57:05 2015 -0430
 
