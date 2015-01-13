@@ -90,7 +90,16 @@ http://vaslibre.org.ve
     # solo 2 para las pruebas luego eliminar y activar el de arriba
   	$feeds = array (
         "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
-    	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
+    	"phenobarbital"     => "http://phenobarbital.wordpress.com/feed/"
  	);  
  
+ # Publicidad
+    $publicidad = array (
+        "xombra"     	   	  => "http://xombra.com",
+        "abr4xas"  		      => "http://blog.abr4xas.org",
+		"vaslibre"         	  => "http://vaslibre.org"
+	);
+
+    $ancho = 200;
+    $alto  = 324;
 ?>
