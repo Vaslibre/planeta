@@ -1,9 +1,30 @@
 <?php
+# Planet VaSlibre
+/* -------------------------------------------------------
+Script  bajo los términos y Licencia
+GNU GENERAL PUBLIC LICENSE
+Ver Terminos en:
+http://www.gnu.org/copyleft/gpl.html
+Desarrollo: Hector A. Mantellini (Xombra)
+
+VASLIBRE
+http://vaslibre.org.ve
+-------------------------------------------------------- */
+# Envio de nuevo Feed para su revision
+session_start();
 if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
    header("location:../error.html");
    die();
 }
 include 'config.php';
+include 'core.php';
+
+$token = $_POST['auth_token'];
+if(!VERIFICA_TOKEN('SeP', $token)){
+   echo '<div class="alert alert-danger"><p>'.$token.' expiro, <br /> Refresque e intente de nuevo</p></div>';
+   die();
+}
+
 $email    = filter_var(strip_tags(trim(strtolower($_POST['Email']))),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
 $ahora     = date("d-m-Y H:i"),time());
 $localidad = $_SERVER['REMOTE_ADDR'];

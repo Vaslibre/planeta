@@ -11,14 +11,20 @@ VASLIBRE
 http://vaslibre.org.ve
 -------------------------------------------------------- */
 # Envio de nuevo Feed para su revision
-
+session_start();
 if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
    header("location:../error.html");
    die();
 }
 
 include 'config.php';
+include 'core.php';
 
+$token = $_POST['auth_token'];
+if(!VERIFICA_TOKEN('SeP', $token)){
+   echo '<div class="alert alert-danger"><p>'.$token.' expiro, <br /> Refresque e intente de nuevo</p></div>';
+   die();
+}
 $email    = filter_var(strip_tags(trim(strtolower($_POST['inputEmail']))),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
 $urlfeed  = strip_tags(strtolower(trim($_POST['url'])));
 $ahora     = date("d-m-Y H:i"),time());
