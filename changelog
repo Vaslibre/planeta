@@ -1,4 +1,22 @@
-commit 458929f405caec8ec78db51adc9f8d70025be0e5 (HEAD, origin/master, origin/HEAD, master)
+commit 241d7e913808438025940f706cb960025dfb5b43 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 14:15:18 2015 -0430
+
+    * Inclusion de Token
+
+commit c586db2049e918fe623d88f3ba77b1400144b050
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 13:54:52 2015 -0430
+
+    * rotador de banner
+
+commit e0065464e53e2c06d1596ae448eb025b4aef34f2
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 13:53:24 2015 -0430
+
+    * changelog
+
+commit 458929f405caec8ec78db51adc9f8d70025be0e5
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 13:52:08 2015 -0430
 
