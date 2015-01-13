@@ -1,4 +1,64 @@
-commit b6bf966ec6a2cb3a9d1b450cade8e3ad7e7fab9a (HEAD, origin/master, origin/HEAD, master)
+commit ba70c1b3586575b11567b351db3a795114d8a5c4
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 21:47:12 2015 -0430
+
+    Cambios menores
+
+commit b11a6011fe76f5a53e64e7d16dca12b079b25842
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 21:11:39 2015 -0430
+
+    Cambios menores
+
+commit c9c4816e4e555613688e0564510005c01cee14cf
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 21:05:25 2015 -0430
+
+    Cambios menores
+
+commit de50eb8a6d67af909a2c491d955c473fdaab1dc4
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 20:54:35 2015 -0430
+
+    Agregando plantilla
+
+commit c2f8ea95041cb69d438d4879f7391854e348a65a
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 20:39:51 2015 -0430
+
+    Actualizando plantilla
+
+commit 7c915a01f7576b83fdcd8631d82335e443d13fa6
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 17:21:16 2015 -0430
+
+    Agregando plantilla
+
+commit f52dcff0205d7bbd0eb6ff13877e98c2fb5ca075
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 17:20:55 2015 -0430
+
+    Agregando plantilla
+
+commit a44aee3043c6c636eb41152a736af2e61a4ba7e3
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 17:05:44 2015 -0430
+
+    Agregando plantilla
+
+commit db2fe38e6ba3d6d46c01b10801db6fe32bb83ac9
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 17:03:03 2015 -0430
+
+    Actualizando plantilla
+
+commit de999d2c4eaebe4347f2d99413d6424f332f5a1a
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 16:09:21 2015 -0430
+
+    * changelog
+
+commit b6bf966ec6a2cb3a9d1b450cade8e3ad7e7fab9a
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 12 16:08:36 2015 -0430
 
@@ -171,7 +231,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
+commit e9b1531816c4933fc810e06895784a9fefadcad1
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
