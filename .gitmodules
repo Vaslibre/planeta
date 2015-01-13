@@ -1,0 +1,3 @@
+[submodule "themes/planetaVaSLibre"]
+	path = themes/planetaVaSLibre
+	url = git@github.com:abr4xas/planetaVaSLibre.git

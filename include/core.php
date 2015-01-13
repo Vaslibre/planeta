@@ -144,7 +144,9 @@ echo '<div id="hcard-'.$nombre_sitio.'" class="vcard">
 	         <span class="country-name">'.$pais.'</span>,
              <span class="postal-code">'.$postal.'</span> 
        </div> 
-       <div class="url"><a href="'.$urlplanet.'" title="'.$nombre_sitio.'">'.$urlplanet.'</a></div>
+       <div class="url">
+        <a href="'.$urlplanet.'" title="'.$nombre_sitio.'">'.$urlplanet.'</a>
+       </div>
 	   <div class="geo">GEO: 
 	    <span class="latitude">'.$latitud.'</span>, 
 	    <span class="longitude">'.$longitud.'</span>
@@ -356,7 +358,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
                       </a>
                    </div>
                    <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
-                   '.$entry['description'].'
+                   <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">
                     <li><span><i class="fa fa-calendar"></i> '.date("d/m/Y",$entry['pubdate']).'</span></li>
@@ -365,6 +367,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
               </div>';
               $tags .= $entry['title'].' '; 
            }
+ echo '</div>';
 return $tags;
 }
 
