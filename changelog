@@ -1,4 +1,10 @@
-commit 37868ff1ef5177344fd442c94316bc82fc9244c4 (HEAD, origin/master, origin/HEAD, master)
+commit 6712f7bf6ed6b4f6e500ea844ee58ccbee8a64a6
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 22:05:42 2015 -0430
+
+    * changelog
+
+commit 37868ff1ef5177344fd442c94316bc82fc9244c4
 Author: xombra <xombra.com@gmail.com>
 Date:   Mon Jan 12 22:04:57 2015 -0430
 
@@ -265,7 +271,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
+commit e9b1531816c4933fc810e06895784a9fefadcad1
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 

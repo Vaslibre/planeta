@@ -3,7 +3,6 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
    header("location:../error.html");
    die();
 }
-
 include 'config.php';
 $email    = filter_var(strip_tags(trim(strtolower($_POST['Email']))),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
 $ahora     = date("d-m-Y H:i"),time());
