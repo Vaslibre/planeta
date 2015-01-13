@@ -1,3 +1,21 @@
+commit de510eff12cebed7f7c58f6238bef9e0da23201d (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 11:10:19 2015 -0430
+
+    * eliminacion de archivo no necesario
+
+commit e9f3f24e8ecb941cf420afd7e73126ea72d09649
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 11:09:05 2015 -0430
+
+    * Cambios menores
+
+commit dfab7114456bedbba251453c1f54262637c6a6d8
+Author: abr4xas <me@abr4xas.org>
+Date:   Tue Jan 13 10:59:44 2015 -0430
+
+    Cambios menores
+
 commit 64373ad0bf95d8ec301f5f6c3080ef0c086e8559
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 10:20:57 2015 -0430
@@ -313,7 +331,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1
+commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
