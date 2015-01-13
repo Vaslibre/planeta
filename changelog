@@ -1,4 +1,16 @@
-commit de510eff12cebed7f7c58f6238bef9e0da23201d (HEAD, origin/master, origin/HEAD, master)
+commit b5f587fe685a2eca55db70c94712c8f63f856682 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 11:56:22 2015 -0430
+
+    * Validacion de theme que exista
+
+commit a7742ab15a04a36605e58a0f1b8b15bfd023aa87
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 11:10:47 2015 -0430
+
+    * changelog
+
+commit de510eff12cebed7f7c58f6238bef9e0da23201d
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 11:10:19 2015 -0430
 
