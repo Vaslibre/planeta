@@ -1,3 +1,31 @@
+commit 37868ff1ef5177344fd442c94316bc82fc9244c4 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 22:04:57 2015 -0430
+
+    * cambios en funcion de validacion de contacto
+
+commit da0263444778dff66c86dd8939e33c70c3e43346
+Merge: e1b29a1 08187b0
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 22:02:22 2015 -0430
+
+    Merge branch 'master' of github.com:Vaslibre/planeta
+    
+    Conflicts:
+    	themes/planetaVaSLibre
+
+commit e1b29a1cde04850bd1030f77599448fedc2d2559
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 12 22:01:35 2015 -0430
+
+    cambios
+
+commit 08187b061e0dece50f2794b2af40f8a5a51a5d36
+Author: abr4xas <me@abr4xas.org>
+Date:   Mon Jan 12 21:56:12 2015 -0430
+
+    Cambios menores
+
 commit c91da364be8599cdfccb8364cc197372e9fd1853
 Author: abr4xas <me@abr4xas.org>
 Date:   Mon Jan 12 21:54:35 2015 -0430
@@ -237,7 +265,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1
+commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
