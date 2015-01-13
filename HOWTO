@@ -1,20 +1,22 @@
-LEER:
-.- Carpeta cache permisos de escritura
-.- archivo backend.xml permiso de escritura
-.- Cambiar los valores conforme al sitio en include/config.php
-.- Cambiar valores por lo de su sitio en:
-	-- humans.txt
-    -- info.txt
-    -- socialmedia.txt
-.- Se sugiere dejar el avatar y enlace a sitio de VaSlibre img/avatar
-.- Los avatares deben tener la siguiente dimensión (95x95) y extension .png
-.- Los themes deben seguir las especificaciones que estan en themes/default
-   header.php
-   content.php
-   footer.php
-   modal.php -> En este caso sino posee ningún modal deje vacio
-.- Para cambiar el theme debe indicarlo en config.php en la variable $theme
-.- funcion RSS() en core.php es la que lee los sitios feeds
-.- Crear una accion en cron 
-	0	*/2	*	*	*	 php RUTA/backend.php
-
+# LEER:
+* Carpeta cache permisos de escritura
+* archivo backend.xml permiso de escritura
+* Cambiar los valores conforme al sitio en include/config.php
+* Cambiar valores por lo de su sitio en:
+    * humans.txt
+    * info.txt
+    * socialmedia.txt
+* Se sugiere dejar el avatar y enlace a sitio de VaSlibre img/avatar
+* Los avatares deben tener la siguiente dimensión (95x95) y extension .png
+* Los themes deben seguir las especificaciones que estan en themes/default
+    * ```header.php```
+    * ```content.php```
+    * ```footer.php```
+    * ```modal.php``` -> En este caso sino posee ningún modal deje vacio
+   
+* Para cambiar el theme debe indicarlo en config.php en la variable $theme
+* funcion RSS() en core.php es la que lee los sitios feeds
+* Crear una accion en cron 
+```bash
+0	*/2	*	*	*	 php RUTA/backend.php
+```

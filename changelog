@@ -1,4 +1,16 @@
-commit 241d7e913808438025940f706cb960025dfb5b43 (HEAD, origin/master, origin/HEAD, master)
+commit fffb8ea21335a20f365f4e5a63e454fe3f297a53
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 14:33:47 2015 -0430
+
+    * Inclusion y revision de Token
+
+commit f0d5a131a91d8282aeb30db663560717e350053c
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 14:16:43 2015 -0430
+
+    * changelog
+
+commit 241d7e913808438025940f706cb960025dfb5b43
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 14:15:18 2015 -0430
 
@@ -380,7 +392,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
+commit e9b1531816c4933fc810e06895784a9fefadcad1
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
