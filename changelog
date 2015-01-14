@@ -1,4 +1,16 @@
-commit 8c5baff6d721369468e0ca6e5987f25f670d5a41 (HEAD, origin/master, origin/HEAD, master)
+commit 254d8e54ac9f81fa1ae82196b89f8c474365497e (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 12:53:52 2015 -0430
+
+    * Inclusion de ViserProject
+
+commit 34296564ceff6ea442811fa69735dd30dfc39f57
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 12:15:05 2015 -0430
+
+    * changelog
+
+commit 8c5baff6d721369468e0ca6e5987f25f670d5a41
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 14 12:14:41 2015 -0430
 

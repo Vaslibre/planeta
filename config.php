@@ -83,7 +83,7 @@ http://vaslibre.org.ve
 		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
         "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
         "echevemaster"        => "http://echevemaster.org/feeds/all.rss.xml",
-        "macagua"             => "https://lcaballero.wordpress.com/feed/",
+
         "libreofficevzla"     => "http://libreoffice-ve.net/category/noticias/feed/",
 
 
