@@ -70,19 +70,20 @@ http://vaslibre.org.ve
     # Sitio feed / xml 
 	$feeds = array (
         "vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
-        "xombra"   		      => "http://xombra.com/backend.php",
-		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
+        "xombra"   		  => "http://xombra.com/backend.php",
+	"abr4xas"         	  => "http://blog.abr4xas.org/feed",
         "xanadu"         	  => "https://xanadulinux.wordpress.com/feed/",
         "sinfallas"        	  => "https://sinfallas.wordpress.com/feed/",
-        "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
-		"Mint"                => "http://blog.linuxmint.com/?feed=rss2",
-		"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/",
-		"no-photo"         	  => "http://richzendy.org/feed",
-		"tatica"         	  => "http://tatica.org/feed/?lang=es",
-		"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
-		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
+        "jeidi"               	  => "https://jeidienwp.wordpress.com/feed/",
+	"Mint"	                  => "http://blog.linuxmint.com/?feed=rss2",
+	"phenobarbital"           => "http://phenobarbital.wordpress.com/feed/",
+	"no-photo"         	  => "http://richzendy.org/feed",
+	"tatica"         	  => "http://tatica.org/feed/?lang=es",
+	"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
+	"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
         "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
-        "echevemaster"        => "http://echevemaster.org/feeds/all.rss.xml"
+        "echevemaster"            => "http://echevemaster.org/feeds/all.rss.xml",
+	"jjedi"			  => "https://jjedixdefault.wordpress.com/feed/"
 
 	); 
 
