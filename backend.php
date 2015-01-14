@@ -79,8 +79,8 @@ $entry['title'] = $entry['title'];
 $entry['description'] = $entry['description'];
 $xml .= "\n\r<entry>\r
 <title>$entry[title]</title>\r
-<link>$entry[link]</link>\r
-<guid>$entry[link]</guid>\r
+<link>$urlplanet/index.php?r=$entry[link]</link>\r
+<guid>$urlplanet/index.php?r=$entry[link]</guid>\r
 <pubDate>$fecha</pubDate>\r
 <description>\r
 <![CDATA[<img src=\"$urlplanet/img/avatar/$entry[image].png\" alt=\"$entry[image]\" align=\"left\" style=\"float:left; width:95px; height:95px; margin-right:10px;\">$entry[description]]]></description>\r

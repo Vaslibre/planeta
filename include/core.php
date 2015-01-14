@@ -13,7 +13,6 @@ http://vaslibre.org.ve
 $ExpStr = ENCABEZADO();
 LIMPIAR_VALORES();
 $buffer = BUFFER_INICIO();
-
 global $palabras;
 $GLOBALS['palabras'] = array(
 		  ' a ',' ah ', ' al ', ' alla ',' alo ',' ano ',' ante ',' anti ',' am ',' aquel ', ' aquellos ',' aquellas ',
@@ -21,11 +20,12 @@ $GLOBALS['palabras'] = array(
 		  ' bajo ', ' bien ',' bueno ',
 		  ' cada ',' casi ',' con ', ' contra ', ' coma ', ' comer ',' como ', ' cómo ', ' cambiar ',' cuyo ',' .com ',' com ',
 		  ' da ',' dando ',' de ' , ' del ', ' dejar ',' desde ',' di ', ' dia ', 'dice',' donde ',' dijo ',' día ',
-		  ' e ', ' el ', ' ella ', ' ellas ', ' ello ',' ellos ',' en ' ,' entonces ', ' entre ', ' era ',' eran ',' es ', ' esa ',' ese ', 
-		  ' esas ',' eso ',' esos ',' esta ', ' estan ',' estas ',' esto ',' estos ',' está ',' eramos ',
+		  ' e ', ' el ', ' ella ', ' ellas ', ' ello ',' ellos ',' en ' ,' entonces ', ' entre ', ' era ',' eran ',' es ', 
+          ' esa ',' ese ', ' esas ',' eso ',' esos ',' esta ', ' estan ',' estas ',' esto ',' estos ',' está ',' eramos ',
 		  ' fue ',' fueron ',' fuese ',' fuesen ',' fui ',' fuimos ', ' full ',
-          ' gran ',' grande ',
+          ' gran ',' grande ', ' gracias ',
 	      ' ha ', ' halla ', ' hallar ', ' hasta ', ' haya ',' hayan ',' hayamos ',' hayaron ',' hubo ',
+          ' hablemos ',' hablar ',
           ' i ',' iban ',' idem ',' ido ',' in ',' ir ',' irian ',' item ',
           ' ja ',' jamas ',' je ',' ji ',' jo ',' juntos ',
 		  ' kill ',
@@ -33,18 +33,17 @@ $GLOBALS['palabras'] = array(
 		  ' mas ',  ' matar ', ' me ', ' mes ',' mejor ',  ' mi ',' mias ',' mios ', ' mis ',' mucho ',
 		  ' nada ',' nadie ',' ni ',' ninguno ',' no ', ' nos ',' nosotros ',' numero ',' numeros ',
 	 	  ' o ', ' ok ',' on ',' otras ',' otros ',
-		  ' para ',' paran ',' parte ',' peor ', ' pm ', ' por ',' poco ',' podran ',' pondra ',' pondran ',' porque ',' puede ',
-          ' pero ',' puedo ',' pueden ',' puedes ',' pudo ',' punto ',
+		  ' para ',' paran ',' parte ',' peor ', ' pm ', ' por ',' poco ',' podran ',' pondra ',' pondran ',' porque ',
+          ' puede ', ' pero ',' puedo ',' pueden ',' puedes ',' pudo ',' punto ',
 		  ' que ', ' quien ', ' quienes ',' quiere ',' quieren ',' quiero ',' quisiera ', ' quisieran ',' quisieras ',' quiso ',
 		  ' se ', ' sera ',' si ', 'sin', ' sobre ', ' solo ',' sólo ',' su ', ' sus ', 
-		  ' tambien ',' te ', ' the ', ' to ',' toda ',' todas ',' tras ',' tu ',' tus ',' tuyas ', 'tuyos ',
+		  ' t ', ' tambien ',' te ', ' the ', ' tiene ', ' tienen ',' to ',' toda ',' todas ',' tras ',' tu ',
+          ' tus ',' tuyas ', 'tuyos ',
 	 	  ' u ',  ' un ', ' una ',' unas ',' uno ',' unos ',
-		  ' vamos ',' van ',' viene ',' vienen ',' vosotros ',' vive ',' voy ',' vuelve ', 
+		  ' v ', ' vamos ',' van ',' viene ',' vienen ',' vosotros ',' vive ',' voy ',' vuelve ', 
 		  ' y ', ' ya ',' yo ',
-		  '/', '#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“',
+		  '/', '#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“','...',
 		  '1','2','3','4','5','6','7','8','9','0');
-
-
 
 function BORRAR_VARIABLES()
 { $_GET = $_POST = array(); 
@@ -53,8 +52,7 @@ return;
 }
 
 function BUFFER_INICIO()
-{ $buffer = ob_start("COMPRESS_PAGE");
-  #$buffer = ob_start();
+{ $buffer = trim(ob_start("COMPRESS_PAGE"));
   return $buffer;
 }
 
@@ -80,7 +78,7 @@ function COMPRESS_PAGE($buffer)
 function CREA_CACHE($urlcache,$buffer)
 {  ob_end_flush();
    $filecached = fopen($urlcache, 'w+');
-   $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
+   $contenido  = trim(COMPRESS_PAGE(ob_get_contents()));
    fwrite($filecached, $contenido);
    fclose($filecached);  
 return;
@@ -126,18 +124,16 @@ function getCleanParselyPageValue($val) {
  return $val;
 }
 
-function GoogleAnalytics($UA, $dominio)
-{ echo "
-  <script>
-   (function(i,s,o,g,r,a,m)
-    {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-   ga('create', '$UA', '$dominio');
-   ga('require', 'displayfeatures');
-   ga('send', 'pageview');
-  </script>";
+function GoogleAnalytics($UA)
+{ 
+echo "<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', '$UA', 'auto');
+	ga('send', 'pageview');
+</script>";
 return;
 }
 
@@ -164,8 +160,7 @@ return;
 }
 
 function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme)
-{ echo '
-    <meta charset="utf-8">
+{ echo '<meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta http-equiv="pragma" content="cache">
@@ -192,7 +187,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
 	<meta name="description" content="'.$descripcion.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
@@ -270,7 +265,7 @@ function NUBE_TAGS($tags)
 		  case '1': echo '<li><button class="btn btn-primary btn-xs" role="button">'; break;
 		  case '2': echo '<li><button class="btn btn-success btn-xs" role="button">'; break;
 		  case '3': echo '<li><button class="btn btn-warning btn-xs" role="button">'; break;
-		  case '4': echo '<li><button class="btn btn-danger btn-xs" role="button">'; break;
+		  case '4': echo '<li><button class="btn btn-danger  btn-xs" role="button">'; break;
 		 }
 		echo $tags[$i].'</button></li>';	 
 	}
@@ -380,7 +375,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
                        <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" style="margin-right:10px;" class="img-responsive img-circle">
                       </a>
                    </div>
-                   <h2><a href="'.$entry['link'].'" target="_blank" title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
+                   <h2><a href="index.php?r='.$entry['link'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
                    <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">
@@ -409,6 +404,20 @@ function VERIFICA_CACHE($urlcache,$expira,$vidafile)
      include $urlcache; 
      die();
     }
+return;
+}
+
+function VER_FEED($urlsitio,$urlplanet,$nombre_sitio)
+{  $urlcorta = explode('/',$urlsitio);
+echo '
+<nav>
+  <div>
+    <strong>Ir a:</strong> <a href="'.$urlplanet.'" rel="'.$urlplanet.'" target="_self">'.$nombre_sitio.'</a> | 
+    <strong>Ver desde sitio:</strong> <a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a>
+   </div>
+</nav> 
+<iframe src="'.$urlsitio.'" width="100%" height="100%" frameborder="0" scrolling="yes" id="iframe"></iframe>
+';
 return;
 }
 

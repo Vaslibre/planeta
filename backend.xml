@@ -1,242 +1,62 @@
-<?xml version="1.0" encoding="ISO-8859-1"  standalone= "yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
-<title>Planet VaSlibre</title>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<channel>
+<title>Planeta VaSlibre</title>
 <link>http://planeta.vaslibre.org.ve</link>
 <description>Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones</description>
 <language>spa</language>
-<copyright>Copyleft 2014 -2015, Planet VaSlibre</copyright>
-<pubDate>Sun, 04 Jan 2015 22:29:52 -0430</pubDate>
-<lastBuildDate>Sun, 04 Jan 2015 22:29:52 -0430</lastBuildDate>
+<copyright>Copyleft 2014 -2015, Planeta VaSlibre</copyright>
+<pubDate>Wed, 14 Jan 2015 11:48:53 -0430</pubDate>
+<lastBuildDate>Wed, 14 Jan 2015 11:48:53 -0430</lastBuildDate>
 <docs>http://planeta.vaslibre.org.ve</docs>
 <generator>Script ViSeRProject http://viserproject.com</generator>
-<webMaster>webmaster@vaslibre.org.ve (Planet VaSlibre)</webMaster>
-<managingEditor>webmaster@vaslibre.org.ve ((Planet VaSlibre)</managingEditor>
+<webMaster>webmaster@vaslibre.org.ve (Planeta VaSlibre)</webMaster>
+<managingEditor>webmaster@vaslibre.org.ve (Planeta VaSlibre)</managingEditor>
 <image>
-<title>Planet VaSlibre</title>
-<url>http://planeta.vaslibre.org.ve/img/rss.png</url>
+<title>Planeta VaSlibre</title>
+<url>http://planeta.vaslibre.org.ve/themes/planetaVaSLibre/img/rss.png</url>
 <link>http://planeta.vaslibre.org.ve</link>
 <description>Planeta VaSlibre, los principales FEEDS de sitios GNU Linux, Distribuciones</description>
 </image>
 <ttl>120</ttl>
-<atom:link href="http://www.vaslibre.org.ve/backend.php" rel="self" type="application/rss+xml" />
-<item>
 
-<title>Garimpeiros digitales</title>
-<link>http://phenobarbital.wordpress.com/2015/01/03/garimpeiros-digitales/</link>
-<guid>http://phenobarbital.wordpress.com/2015/01/03/garimpeiros-digitales/</guid>
-<pubDate>Sun, 04 Jan 2015 02:10:28 -0430</pubDate>
+<entry>
+<title>Fish, la terminal con esteroides</title>
+<link>http://planeta.vaslibre.org.ve/index.php?r=http://www.xombra.com/index.php?do/articulos/nota/284/op/5/t/fish-la-terminal-con-esteroides</link>
+<guid>http://planeta.vaslibre.org.ve/index.php?r=http://www.xombra.com/index.php?do/articulos/nota/284/op/5/t/fish-la-terminal-con-esteroides</guid>
+<pubDate>Wed, 14 Jan 2015 01:37:46 -0430</pubDate>
 <description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/phenobarbital.png" alt="phenobarbital" align="left" style="float:left; width:95px; height:95px;">Introducción ?Qué es minar?, ?como es eso de echar pico y pala en una red?, ?por qué nace Bitcoin?, ?debería estar minando?, sería interesante conocer para #8220;al menos#8221; estar informado y que no te agarre por sorpresa, aquí algunos conceptos previos: Glosario: Criptografía: Se trata de un ámbito de la criptología, dedicado a la construcción de [#8230;]...]]></description>
-</item>
-<item>
+<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/xombra.png" alt="xombra" align="left" style="float:left; width:95px; height:95px; margin-right:10px;">Desde el blog del amigo sinfallas encontré este post bastante interesante sobre Fish (desde uso Fish, ha sido más rápido trabajar con la terminal).
+A continuación el post:
+Fish es un shell de l?...]]></description>
+</entry>
 
-<title>¡Feliz año 2015!</title>
-<link>http://phenobarbital.wordpress.com/2015/01/03/feliz-ano-2015/</link>
-<guid>http://phenobarbital.wordpress.com/2015/01/03/feliz-ano-2015/</guid>
-<pubDate>Sat, 03 Jan 2015 14:42:04 -0430</pubDate>
+<entry>
+<title>VaSlibre tiene PLANETA!</title>
+<link>http://planeta.vaslibre.org.ve/index.php?r=http://www.xombra.com/index.php?do/noticias/nota/6713/op/4/t/vaslibre-tiene-planeta</link>
+<guid>http://planeta.vaslibre.org.ve/index.php?r=http://www.xombra.com/index.php?do/noticias/nota/6713/op/4/t/vaslibre-tiene-planeta</guid>
+<pubDate>Wed, 14 Jan 2015 01:07:21 -0430</pubDate>
 <description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/phenobarbital.png" alt="phenobarbital" align="left" style="float:left; width:95px; height:95px;">Reinicio actividades en 2015 deseándole a mis lectores un feliz año 2015, esperamos seguir contando con su presencia por estos predios digitales y yo espero seguir escribiendo para ganarme su aprecio. #160; Feliz y venturoso 2015! #8230; y ya saben Happy Hacking!...]]></description>
-</item>
-<item>
+<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/xombra.png" alt="xombra" align="left" style="float:left; width:95px; height:95px; margin-right:10px;">Los amigos de VaSlibre colocaron online nuevamente al Planeta de noticias del Grupo, (http://planeta.vaslibre.org.ve/)...]]></description>
+</entry>
 
-<title>Historia del proyecto GNU</title>
-<link>http://jeidienwp.wordpress.com/2015/01/02/historia-del-proyecto-gnu/</link>
-<guid>http://jeidienwp.wordpress.com/2015/01/02/historia-del-proyecto-gnu/</guid>
-<pubDate>Fri, 02 Jan 2015 22:20:47 -0430</pubDate>
+<entry>
+<title>Reinauguracion del Planeta VaSlibre</title>
+<link>http://planeta.vaslibre.org.ve/index.php?r=http://vaslibre.org.ve/index.php?id/378/go/5</link>
+<guid>http://planeta.vaslibre.org.ve/index.php?r=http://vaslibre.org.ve/index.php?id/378/go/5</guid>
+<pubDate>Wed, 14 Jan 2015 00:02:02 -0430</pubDate>
 <description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/jeidi.png" alt="jeidi" align="left" style="float:left; width:95px; height:95px;">Originalmente publicado en El Blog de Sinfallas:El proyecto GNU fue iniciado por Richard Stallman con el objetivo de crear un sistema operativo#8230;...]]></description>
-</item>
-<item>
+<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/vaslibre.png" alt="vaslibre" align="left" style="float:left; width:95px; height:95px; margin-right:10px;">Hoy 13 de enero del 2015, nuestro grupo a colocado el Planeta de noticias (http://planeta.vaslibre.org.ve/). En el se mostraran las ultimas tres (03) noticias de cada blog de usuario incluido en el Feed de noticias....]]></description>
+</entry>
 
-<title>Historia del núcleo Linux</title>
-<link>http://jeidienwp.wordpress.com/2015/01/02/historia-del-nucleo-linux/</link>
-<guid>http://jeidienwp.wordpress.com/2015/01/02/historia-del-nucleo-linux/</guid>
-<pubDate>Fri, 02 Jan 2015 22:20:41 -0430</pubDate>
+<entry>
+<title>I Jornada de Ingenieria y Arquitectura UJAP - Carabobo</title>
+<link>http://planeta.vaslibre.org.ve/index.php?r=http://vaslibre.org.ve/index.php?id/377/go/5</link>
+<guid>http://planeta.vaslibre.org.ve/index.php?r=http://vaslibre.org.ve/index.php?id/377/go/5</guid>
+<pubDate>Sun, 16 Nov 2014 21:34:54 -0430</pubDate>
 <description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/jeidi.png" alt="jeidi" align="left" style="float:left; width:95px; height:95px;">Originalmente publicado en El Blog de Sinfallas:Linus Benedit Torvalds nació en Helsinki, Finlándia, en el año de 1969. Su abuelo, matemático y#8230;...]]></description>
-</item>
-<item>
+<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/vaslibre.png" alt="vaslibre" align="left" style="float:left; width:95px; height:95px; margin-right:10px;">La Comunidad Venezolana de Fedora fue invitada a: Jornada de Arquitectura e Ingenieria de la Universidad Jose Antonio Paez, Los profesores Yi Min Shum Xie y Luis de la facultad de Ingenieria de TI, nos contactaron para participar en el evento....]]></description>
+</entry>
+</channel>
 
-<title>Hablemos un poco sobre los media query</title>
-<link>http://blog.abr4xas.org/media-query.html</link>
-<guid>http://blog.abr4xas.org/media-query.html</guid>
-<pubDate>Thu, 01 Jan 2015 10:20:00 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/abr4xas.png" alt="abr4xas" align="left" style="float:left; width:95px; height:95px;">
-En desarrollo web, Media Queries es un módulo CSS3 que permite adaptar la representación del contenido a características del dispositivo como la resolución de pantalla (por ejemplo, un smartphone frente a pantallas de alta definición) o la presencia de características de accesibilidad como el braille. Se convirtió en un estándar recomendado por la W3C en Junio del 2012.1 y es un principio básico de la tecnología de Diseño web adaptativo.
-
-wikipedia
-Entrando en materia
-Las Media queries consisten de un media type y una o mas expresio...]]></description>
-</item>
-<item>
-
-<title>Feliz Año Nuevo!!!</title>
-<link>http://xanadulinux.wordpress.com/2015/01/01/feliz-ano-nuevo/</link>
-<guid>http://xanadulinux.wordpress.com/2015/01/01/feliz-ano-nuevo/</guid>
-<pubDate>Thu, 01 Jan 2015 04:30:42 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/xanadu.png" alt="xanadu" align="left" style="float:left; width:95px; height:95px;">Final de año del 2014, un buen momento para la reflexionar sobre lo que vivimos y lo que esperamos para el año 2015. Feliz Año Nuevo, nuestros mejores deseos y calurosos abrazos #8230;...]]></description>
-</item>
-<item>
-
-<title>Feliz Año Nuevo!!!</title>
-<link>http://sinfallas.wordpress.com/2015/01/01/feliz-ano-nuevo/</link>
-<guid>http://sinfallas.wordpress.com/2015/01/01/feliz-ano-nuevo/</guid>
-<pubDate>Thu, 01 Jan 2015 04:30:23 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/sinfallas.png" alt="sinfallas" align="left" style="float:left; width:95px; height:95px;">Para el año que comienza te deseo que las rutinas se transformen en sorpresas, los enfados en sonrisas, las tristezas en esperanzas y que tu bandera sea el amor, la esperanza y la paz. ¡Feliz Año Nuevo!...]]></description>
-</item>
-<item>
-
-<title>Estrenamos redes sociales!!!</title>
-<link>http://xanadulinux.wordpress.com/2014/12/30/estrenamos-redes-sociales/</link>
-<guid>http://xanadulinux.wordpress.com/2014/12/30/estrenamos-redes-sociales/</guid>
-<pubDate>Wed, 31 Dec 2014 02:09:28 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/xanadu.png" alt="xanadu" align="left" style="float:left; width:95px; height:95px;">Hoy estrenamos nuestra presencia en dos de las redes redes sociales de Google. Google+ Youtube Completando la lista junto a: Twitter Facebook Tumblr Google Groups Únete a cualquiera de nuestras redes sociales y comparte con el equipo de Xanadu GNU/Linux y ayúdanos a mejorar nuestra distribución. #160; Tagged: socialmedia...]]></description>
-</item>
-<item>
-
-<title>Historia del núcleo Linux</title>
-<link>http://sinfallas.wordpress.com/2014/12/30/historia-del-nucleo-linux/</link>
-<guid>http://sinfallas.wordpress.com/2014/12/30/historia-del-nucleo-linux/</guid>
-<pubDate>Tue, 30 Dec 2014 12:30:45 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/sinfallas.png" alt="sinfallas" align="left" style="float:left; width:95px; height:95px;">Linus Benedit Torvalds nació en Helsinki, Finlándia, en el año de 1969. Su abuelo, matemático y estadista le compró un Comodore en 1980 y fue quien #8220;enganchó#8221; a Linus al mundo de los computadores. En 1988 Linus Torvalds entra a #8230; Sigue leyendo #8594;...]]></description>
-</item>
-<item>
-
-<title>Un año más? gracias a todos!</title>
-<link>http://tatica.org/2014/12/29/year-2014/</link>
-<guid>http://tatica.org/2014/12/29/year-2014/</guid>
-<pubDate>Mon, 29 Dec 2014 20:47:13 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/tatica.png" alt="tatica" align="left" style="float:left; width:95px; height:95px;">Este año ha sido significativamente interesante a nivel personal. Se ha convertido en un año de aprender a vivir con transiciones y un año en el cual la preparación y el sacrificio han tenido un significado especial. Usualmente hago un resumen de lo que ha sido mi año, y pese a que he estado super ocupada, no quería dejar pasar la ocasión. El 2014 ha sido un año de#8230; #8230; aprender a vivir lejos de la familia una vez más, pero esta vez manteniendo el contacto como nunca antes. #8230; disfrutar de la calma de un nuevo lugar para...]]></description>
-</item>
-<item>
-
-<title>Creando tiles de Windows 8.1 para nuestro sitio web</title>
-<link>http://blog.abr4xas.org/windows-8-tile.html</link>
-<guid>http://blog.abr4xas.org/windows-8-tile.html</guid>
-<pubDate>Sun, 28 Dec 2014 10:20:00 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/abr4xas.png" alt="abr4xas" align="left" style="float:left; width:95px; height:95px;">Las tiles son pequeños recuadros que conforman una pantalla de inicio bastante dinámica mostrando en llamativos 
-colores la información necesaria para mostrar lo que sucede en nuestras aplicaciones instaladas.
-En esta oportunidad, vamos a aprender como crear unas tiles personalizadas para nuestro sitio web:
-Facil
-No es cosa del otro mundo ni complicada hacer solo debemos ir a este sitio web y seguir
-los pasos que nos piden.
-
-Title
-Que es el titulo de nuestro sitio web
-Background color 
-Que no es mas que el color de fondo del tile
-Subir una...]]></description>
-</item>
-<item>
-
-<title>Linux Mint 17.1 ?Rebecca? KDE RC released!</title>
-<link>http://blog.linuxmint.com/?p=2745</link>
-<guid>http://blog.linuxmint.com/?p=2745</guid>
-<pubDate>Wed, 17 Dec 2014 11:37:28 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/Mint.png" alt="Mint" align="left" style="float:left; width:95px; height:95px;">The team is proud to announce the release of Linux Mint 17.1 ?Rebecca? KDE RC. Linux Mint 17.1 Rebecca KDE Edition Linux Mint 17.1 is a long term support release which will be supported until 2019. It comes with updated software and brings refinements and many new features to make your desktop even more comfortable [...]...]]></description>
-</item>
-<item>
-
-<title>Linux Mint 17.1 ?Rebecca? Xfce RC released!</title>
-<link>http://blog.linuxmint.com/?p=2742</link>
-<guid>http://blog.linuxmint.com/?p=2742</guid>
-<pubDate>Wed, 17 Dec 2014 11:23:49 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/Mint.png" alt="Mint" align="left" style="float:left; width:95px; height:95px;">The team is proud to announce the release of Linux Mint 17.1 ?Rebecca? Xfce RC. Linux Mint 17.1 Rebecca Xfce Edition Linux Mint 17.1 is a long term support release which will be supported until 2019. It comes with updated software and brings refinements and many new features to make your desktop even more comfortable [...]...]]></description>
-</item>
-<item>
-
-<title>Usando el registro de Safe Creative en Facebook para solucionar plagio</title>
-<link>http://es.safecreative.net/2014/11/24/usando-el-registro-de-safe-creative-en-facebook-para-solucionar-plagio/</link>
-<guid>http://es.safecreative.net/2014/11/24/usando-el-registro-de-safe-creative-en-facebook-para-solucionar-plagio/</guid>
-<pubDate>Mon, 24 Nov 2014 12:58:14 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/safecreative.png" alt="safecreative" align="left" style="float:left; width:95px; height:95px;">Hoy en día se puede decir que casi más importante que ganar un juicio es no tener que llegar a uno. Con temas de plagios este tipo de procesos son...]]></description>
-</item>
-<item>
-
-<title>Fedora en el CGSOL 2014 Guatemala</title>
-<link>http://www.richzendy.org/2014/11/19/fedora-en-el-cgsol-2014-guatemala.html</link>
-<guid>http://www.richzendy.org/2014/11/19/fedora-en-el-cgsol-2014-guatemala.html</guid>
-<pubDate>Wed, 19 Nov 2014 22:50:26 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/no-photo.png" alt="no-photo" align="left" style="float:left; width:95px; height:95px;">Aprovechando una visita a Guatemala por motivos personales, coincidió con el congreso de Software libre de Guatemala 2014 en la ciudad de Xela, por lo cual me comunique con algunos amigos de la comunidad local y les pedí un espacio para hablar del proyecto Fedora. #160; Acá tengo la presentación usada (basada en una de [#8230;]...]]></description>
-</item>
-<item>
-
-<title>Nuevo diseño de Safe Creative</title>
-<link>http://es.safecreative.net/2014/11/11/nuevo-diseno-de-safe-creative/</link>
-<guid>http://es.safecreative.net/2014/11/11/nuevo-diseno-de-safe-creative/</guid>
-<pubDate>Tue, 11 Nov 2014 09:58:17 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/safecreative.png" alt="safecreative" align="left" style="float:left; width:95px; height:95px;">#160; ¡Ya está disponible el nuevo diseño de Safe Creative! Esperamos que os guste y os sea más fácil usar la plataforma. Ahora con panel de control con un resumen...]]></description>
-</item>
-<item>
-
-<title>Usa la garantía de tu laptop o computadora</title>
-<link>http://www.richzendy.org/2014/10/20/usa-la-garantia-de-tu-laptop-o-computadora.html</link>
-<guid>http://www.richzendy.org/2014/10/20/usa-la-garantia-de-tu-laptop-o-computadora.html</guid>
-<pubDate>Mon, 20 Oct 2014 20:19:43 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/no-photo.png" alt="no-photo" align="left" style="float:left; width:95px; height:95px;">En latinoamerica estamos tan acostumbrados al mal servicio y que el ejecutar una garantía sobre una compra sea un camino penoso,  que por lo general nos olvidamos que existen, de plano se nos daña algo y lo tiramos a la basura o pagamos un soporte técnico local de reparación, sin embargo muy poca gente sabe [#8230;]...]]></description>
-</item>
-<item>
-
-<title>Inkscape: Donde cada elemento es una capa</title>
-<link>http://tatica.org/2014/10/01/inkscape-layer-capa/</link>
-<guid>http://tatica.org/2014/10/01/inkscape-layer-capa/</guid>
-<pubDate>Wed, 01 Oct 2014 13:57:38 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/tatica.png" alt="tatica" align="left" style="float:left; width:95px; height:95px;">?Te has preguntado en que se diferencia Inkscape de GIMP? Una de las principales razones por las cuales Inkscape es más utilizada para elaborar publicidad, es porque trata a cada elemento como una capa individual, esto permite que al elaborar un arte central, puedas simplemente reorganizar los elementos que lo componen para realizar un nuevo diseño, por lo tienes que olvídate de borrar y parchar nada. En Gimp, si dibujamos varias figuras y no colocamos cada una en una capa, cuando queramos separarlas, no podremos, ya que todos los component...]]></description>
-</item>
-<item>
-
-<title>UbuConLa 2014</title>
-<link>http://www.ubuntu.org.ve/node/1041</link>
-<guid>http://www.ubuntu.org.ve/node/1041</guid>
-<pubDate>Sat, 19 Apr 2014 17:23:56 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/ubuntu.png" alt="ubuntu" align="left" style="float:left; width:95px; height:95px;">?Qué es UbuConLA?
-Un acontecimiento internacional, anual e itinerante para Latinoamérica surgido a partir de una idea común entre miembros de los grupos comunitarios locales de Ubuntu en Argentina y Uruguay,a los que se sumaron grupos locales de otros países como Colombia, Brasil, Perú,México y Venezuela.
-
-UbuConLa es la edición Latinoaméricana de UbuCon, donde se reunen miembros de todas partes del mundo para trabajar en equipos sobre le proyetco Ubuntu,  es en este evento donde además de compartr el conocimientos con una serie de c...]]></description>
-</item>
-<item>
-
-<title>FLISoL 2014</title>
-<link>http://www.ubuntu.org.ve/node/861</link>
-<guid>http://www.ubuntu.org.ve/node/861</guid>
-<pubDate>Mon, 07 Apr 2014 13:36:39 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/ubuntu.png" alt="ubuntu" align="left" style="float:left; width:95px; height:95px;">El Festival Latinoamericano de Instalación de Software Libre (FLISoL), es el evento de difusión de Software Libre mas grande de toda Latinoamerica y otros paises del mundo. Este evento tiene como principal objetivo promover el uso de herramientas y sistemas operativos del mundo del Software Libre al público general, logrando de esta manera llevar el conocimiento a las masas y captar la participación de los asistentes en los diversos proyectos y comunidades del Software Libre.
-Este evento se viene realizando desde el 2005, y ha ido creciendo...]]></description>
-</item>
-<item>
-
-<title>Copiando archivos a tu Android Nexus 7 desde GNU/Linux</title>
-<link>http://www.alvaro.web.ve/copiando-archivos-a-tu-android-nexus-7-desde-gnulinux/</link>
-<guid>http://www.alvaro.web.ve/copiando-archivos-a-tu-android-nexus-7-desde-gnulinux/</guid>
-<pubDate>Tue, 23 Oct 2012 17:57:56 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/cachoycapote.png" alt="cachoycapote" align="left" style="float:left; width:95px; height:95px;">Copiar tus archivos de musica, eBook o videos a tu Nexus 7 o cualquier otro tablet con Android puede ser trivial para algunos mas no para el usuario común; aun siendo trivial para un informático utilizar ADB (http://www.emezeta.com/articulos/10-operaciones-utiles-para-android-via-adb) para copiar archivos puede convertirse en un fastidio instalar todo Android-SDK solo para copiar archivos. Por suerte en el Nexus 7 y al parecer desde Android ICS esta incorporado el soporte para MTP (Media Transfer Protocol) que a su vez puede ser utilizado en ...]]></description>
-</item>
-<item>
-
-<title>RiSol</title>
-<link>http://www.alvaro.web.ve/risol/</link>
-<guid>http://www.alvaro.web.ve/risol/</guid>
-<pubDate>Mon, 13 Aug 2012 15:54:42 -0430</pubDate>
-<description>
-<![CDATA[<img src="http://planeta.vaslibre.org.ve/img/avatar/cachoycapote.png" alt="cachoycapote" align="left" style="float:left; width:95px; height:95px;">RiSol #8211; Rise Como muchas de las cosas en el mundo [#8230;]...]]></description>
-</item>
-</channel>
-
-</rss>
+</feed>
