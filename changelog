@@ -1,4 +1,22 @@
-commit 3c5fa0b4a8224aa6cc77e9ffa735dc3513957827 (HEAD, origin/master, origin/HEAD, master)
+commit 33836bbe3fcfe87963b2e4800f6a4739c30f9653 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Jan 13 23:42:55 2015 -0430
+
+    * se elemina la imagen del estado en travis ci hasta que se hagan las pruebas unitarias
+
+commit 63a27f5788515f78e19a665022ef8cd1a3b958f1
+Author: abr4xas <me@abr4xas.org>
+Date:   Tue Jan 13 20:21:41 2015 -0430
+
+    Agregado Jjedi_ve al planet
+
+commit c58a7f98e939d136adc9adf39921ca07c237bcae
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 20:17:20 2015 -0430
+
+    * changelog
+
+commit 3c5fa0b4a8224aa6cc77e9ffa735dc3513957827
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 20:16:44 2015 -0430
 
