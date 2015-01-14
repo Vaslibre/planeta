@@ -1,4 +1,28 @@
-commit d67e880fd5ea209b4ff8ed7d11486ff54c9c7e2c (HEAD, origin/master, origin/HEAD, master)
+commit 3c5fa0b4a8224aa6cc77e9ffa735dc3513957827 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 20:16:44 2015 -0430
+
+    * solucionado bug en mostrar notas
+
+commit 05a91e13ba526d1eacbf3fec525d46da1ce0d747
+Author: abr4xas <me@abr4xas.org>
+Date:   Tue Jan 13 19:26:32 2015 -0430
+
+    Agregado hackergotchi de @Jjedi_ve
+
+commit 2f982e173a6aabf8cd98624898feb5e74ac6be7f
+Author: abr4xas <me@abr4xas.org>
+Date:   Tue Jan 13 18:46:01 2015 -0430
+
+    Actualizado
+
+commit 8d04c0cd9223c134f777468402372340095038c1
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 13 17:15:42 2015 -0430
+
+    * changelog
+
+commit d67e880fd5ea209b4ff8ed7d11486ff54c9c7e2c
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 13 17:15:11 2015 -0430
 
