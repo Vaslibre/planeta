@@ -389,7 +389,7 @@ return $tags;
 }
 
 function SUBSCRIPCIONES($feeds)
-{echo '<ul>';
+{echo '<ul class="list-unstyled">';
    foreach ($feeds as $imagen => $enlace) {
    $enlaceC = explode('/',$enlace);
    $enlaceC = str_replace('www','',$enlaceC[2]);
@@ -417,16 +417,32 @@ function VERIFICA_CACHE($urlcache,$expira,$vidafile)
 return;
 }
 
-function VER_FEED($urlsitio,$urlplanet,$nombre_sitio)
+function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$titulonoticia)
 {  $urlcorta = explode('/',$urlsitio);
 echo '
 <nav>
-  <div>
-    <strong>Ir a:</strong> <a href="'.$urlplanet.'" rel="'.$urlplanet.'" target="_self">'.$nombre_sitio.'</a> | 
-    <strong>Ver desde sitio:</strong> <a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a>
-   </div>
-</nav> 
-<iframe src="'.$urlsitio.'" width="100%" height="100%" frameborder="0" scrolling="yes" id="iframe"></iframe>
+    <ul class="list-inline">
+      <li><strong>Regresar a:</strong> <a href="'.$urlplanet.'" rel="'.$urlplanet.'" target="_self">'.$nombre_sitio.'</a></li>
+      <li><strong>Ver desde sitio:</strong><a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a></li>       
+      <li>Compartir en:
+        <a href="http://www.facebook.com/sharer.php?u='.$urlplanet.'index.php?r='.$urlsitio.'&t=Lee en Planeta VaSLibre%20'.$titulonoticia.'" target="_blank" title="Compartir en facebook">
+            <img src="img/icon/02_facebook.png" alt="Compartir en facebook" class="share" />
+        </a>
+      </li>
+      <li>Compartir en:
+        <a href="http://twitter.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'&text='.$titulonoticia.'%20via @vaslibre" target="_blank" title="Compartir en twiiter">
+            <img src="img/icon/01_twitter.png" alt="Compartir en twitter" class="share" />
+        </a>
+      </li>
+      <li>Compartir en:
+        <a href="https://plus.google.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'" target="_blank" title="Compartir en G+">                <img src="img/icon/14_google+.png" alt="Compartir en G+" class="share" />
+        </a>    
+      </li>
+    </ul>
+</nav>
+<div class="marco">
+    <iframe src="'.$urlsitio.'" frameborder="0" scrolling="yes" id="iframe"></iframe>
+</div>
 ';
 return;
 }

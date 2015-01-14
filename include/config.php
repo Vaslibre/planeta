@@ -1,7 +1,7 @@
 <?php
 # Planet VaSlibre
 /* -------------------------------------------------------
-Script  bajo los términos y Licencia
+Script  bajo los tÃˆrminos y Licencia
 GNU GENERAL PUBLIC LICENSE
 Ver Terminos en:
 http://www.gnu.org/copyleft/gpl.html
@@ -25,7 +25,7 @@ http://vaslibre.org.ve
 # Sitio
 
    $nombre_sitio = 'Planeta VaSlibre';
-   $lenguaje     = 'es'; # esp = español | eng = ingles
+   $lenguaje     = 'es'; # esp = espaÃ’ol | eng = ingles
    $dominio      = 'vaslibre.org.ve';
    $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
    $emailinfo    = 'webmaster@vaslibre.org.ve'; # direccion email que aparecera en el envio de email (debe existir)
