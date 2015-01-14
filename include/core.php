@@ -352,7 +352,7 @@ if (VERIFICA_ONLINE($url)){
 		        $description =  strip_tags(substr($reg->description,0,$largo)).'...';
 		        $timestamp   =  strtotime(substr($reg->pubDate,0,25));
 		        $entries[$timestamp]['pubdate'] = $timestamp;
-		        $entries[$timestamp]['title']   = $title;
+		        $entries[$timestamp]['title']   = strip_tags($title);
 		        $entries[$timestamp]['link']    = $link;
 		        $entries[$timestamp]['image']   = $imagen;
 		        $entries[$timestamp]['description'] = $description;
