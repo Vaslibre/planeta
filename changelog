@@ -1,4 +1,17 @@
-commit 33836bbe3fcfe87963b2e4800f6a4739c30f9653 (HEAD, origin/master, origin/HEAD, master)
+commit 4fc9284ecc9eda1fb9cb8e9cec5959c8d296b76d (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 09:31:54 2015 -0430
+
+    * optimizacion de js.js
+    * optimizacion de imagenes
+
+commit f50bf25597dec83c0c8c7410e394ce126b66d2b9
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Jan 13 23:43:34 2015 -0430
+
+    * changelog
+
+commit 33836bbe3fcfe87963b2e4800f6a4739c30f9653
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Tue Jan 13 23:42:55 2015 -0430
 
