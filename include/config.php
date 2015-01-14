@@ -60,8 +60,8 @@ http://vaslibre.org.ve
 
    # valores para Feed
 
-    $largo_lectura   = 550;   # cantidad maxima de caracteres de texto por nota en cada feed
-    $leer_cant_feed  = 3;     # Mientras mas lea mas tardara en mostrar
+    $largo_lectura   = 570;   # cantidad maxima de caracteres de texto por nota en cada feed
+    $leer_cant_feed  = 2;     # Mientras mas lea mas tardara en mostrar
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
     #		
@@ -69,21 +69,25 @@ http://vaslibre.org.ve
     
     # Sitio feed / xml 
 	$feeds = array (
-        "vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
+        "vaslibre"     	  => "http://vaslibre.org.ve/backend.php",
         "xombra"   		  => "http://xombra.com/backend.php",
-	"abr4xas"         	  => "http://blog.abr4xas.org/feed",
-        "xanadu"         	  => "https://xanadulinux.wordpress.com/feed/",
-        "sinfallas"        	  => "https://sinfallas.wordpress.com/feed/",
-        "jeidi"               	  => "https://jeidienwp.wordpress.com/feed/",
-	"Mint"	                  => "http://blog.linuxmint.com/?feed=rss2",
-	"phenobarbital"           => "http://phenobarbital.wordpress.com/feed/",
-	"no-photo"         	  => "http://richzendy.org/feed",
-	"tatica"         	  => "http://tatica.org/feed/?lang=es",
-	"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
-	"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
-        "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
-        "echevemaster"            => "http://echevemaster.org/feeds/all.rss.xml",
-	"jjedi"			  => "https://jjedixdefault.wordpress.com/feed/"
+	    "abr4xas"         => "http://blog.abr4xas.org/feed",
+        "xanadu"          => "https://xanadulinux.wordpress.com/feed/",
+        "sinfallas"       => "https://sinfallas.wordpress.com/feed/",
+        "jeidi"           => "https://jeidienwp.wordpress.com/feed/",
+	    "Mint"	          => "http://blog.linuxmint.com/?feed=rss2",
+	    "phenobarbital"   => "http://phenobarbital.wordpress.com/feed/",
+	    "no-photo"        => "http://richzendy.org/feed",
+	    "tatica"          => "http://tatica.org/feed/?lang=es",
+	    "safecreative"    => "http://feeds.feedburner.com/es_blog_safecreative",
+	    "ubuntu"          => "http://www.ubuntu.org.ve/rss.xml",
+        "cachoycapote"    => "http://www.alvaro.web.ve/feed/",
+        "echevemaster"    => "http://echevemaster.org/feeds/all.rss.xml",
+	    "jjedi"			  => "https://jjedixdefault.wordpress.com/feed/",
+	    "willicab"		  => "http://blog.willicab.com.ve/feed/",
+        "libreofficevzla" => "http://libreoffice-ve.net/category/noticias/feed/",
+        "viser"		      => "http://viserproject.com/backend.php"
+
 
 	); 
 
@@ -98,7 +102,8 @@ http://vaslibre.org.ve
     $publicidad = array (
         "xombra"     	   	  => "http://xombra.com",
         "abr4xas"  		      => "http://blog.abr4xas.org",
-		"vaslibre"         	  => "http://vaslibre.org"
+		"vaslibre"         	  => "http://vaslibre.org",
+        "viser"               => "http://viserproject.com"
 	);
 
     $ancho = 200;
