@@ -1,9 +1,6 @@
 # Planeta VasLibre
 
 
-![Status](https://api.travis-ci.org/Vaslibre/planeta.svg) 
-
-
 Planeta RSS/FEED, Desarrollado en PHP
 
 Planeta VaSlibre es un lector noticias en formatos RSS (Really Simple Syndication), Atom y otros derivados de ```XML``` como ```RDF/XML```. 
