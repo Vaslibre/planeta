@@ -423,18 +423,19 @@ echo '
 <nav>
     <ul class="list-inline">
       <li><strong>Regresar a:</strong> <a href="'.$urlplanet.'" rel="'.$urlplanet.'" target="_self">'.$nombre_sitio.'</a></li>
-      <li><strong>Ver desde sitio:</strong><a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a></li>       
-      <li>Compartir en:
+      <li><strong>Ver desde sitio:</strong> <a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a></li> 
+      <li>Compartir en:</li>
+      <li>
         <a href="http://www.facebook.com/sharer.php?u='.$urlplanet.'index.php?r='.$urlsitio.'&t=Lee en Planeta VaSLibre%20'.$titulonoticia.'" target="_blank" title="Compartir en facebook">
             <img src="img/icon/02_facebook.png" alt="Compartir en facebook" class="share" />
         </a>
       </li>
-      <li>Compartir en:
+      <li>
         <a href="http://twitter.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'&text='.$titulonoticia.'%20via @vaslibre" target="_blank" title="Compartir en twiiter">
             <img src="img/icon/01_twitter.png" alt="Compartir en twitter" class="share" />
         </a>
       </li>
-      <li>Compartir en:
+      <li>
         <a href="https://plus.google.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'" target="_blank" title="Compartir en G+">                <img src="img/icon/14_google+.png" alt="Compartir en G+" class="share" />
         </a>    
       </li>
