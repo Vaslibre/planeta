@@ -1,4 +1,22 @@
-commit 4fc9284ecc9eda1fb9cb8e9cec5959c8d296b76d (HEAD, origin/master, origin/HEAD, master)
+commit 8c5baff6d721369468e0ca6e5987f25f670d5a41 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 12:14:41 2015 -0430
+
+    * Inclusion de suscripciones
+
+commit c9eab4247bc1add81f40ab6a9ebe61e561bfda8b
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 11:51:34 2015 -0430
+
+    * Preparacion para el redireccionamiento
+
+commit 6fb1286398b86fe834968358cc7139447775e5e1
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 09:32:41 2015 -0430
+
+    * changelog
+
+commit 4fc9284ecc9eda1fb9cb8e9cec5959c8d296b76d
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 14 09:31:54 2015 -0430
 
