@@ -143,10 +143,10 @@ echo '<div id="hcard-'.$nombre_sitio.'" class="vcard">
 	   </span>
            <div class="org">'.$nombre_sitio.'</div> 
 	   <div class="adr">
-             <span class="locality">'.$ciudad.'</span>,
-             <span class="region">'.$provincia.'</span>, 
-	         <span class="country-name">'.$pais.'</span>,
-             <span class="postal-code">'.$postal.'</span> 
+          <span class="locality">'.$ciudad.'</span>,
+          <span class="region">'.$provincia.'</span>, 
+	      <span class="country-name">'.$pais.'</span>,
+          <span class="postal-code">'.$postal.'</span> 
        </div> 
        <div class="url">
         <a href="'.$urlplanet.'" title="'.$nombre_sitio.'">'.$urlplanet.'</a>
@@ -294,8 +294,7 @@ return;
 }
 
 function PUBLICIDAD($publicidad)
-{
-  foreach ($publicidad as $imagen => $enlace) {
+{foreach ($publicidad as $imagen => $enlace) {
    $img[]  =  $imagen;
    $link[] =  $enlace;
   }
@@ -387,6 +386,17 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
            }
  echo '</div>';
 return $tags;
+}
+
+function SUBSCRIPCIONES($feeds)
+{echo '<ul>';
+   foreach ($feeds as $imagen => $enlace) {
+   $enlaceC = explode('/',$enlace);
+   $enlaceC = str_replace('www','',$enlaceC[2]);
+   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlace[2].'" >'.$enlaceC.'</a></li>';
+  }
+ echo '</ul>';
+return;
 }
 
 function URL() { 

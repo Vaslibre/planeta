@@ -15,17 +15,18 @@ session_start();
 include 'include/config.php';
 include 'include/core.php';
 if(!empty($_GET["r"]))
-{  
-  $urlsitio = trim($_GET["r"]);
+{ $urlsitio = trim($_GET["r"]);
   echo '<html lang="'.$lenguaje.'">
-  <head>
-   <link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
+  <head><link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
    GoogleAnalytics($UA);
    META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme); 
   echo ' 
   </head><body>';
+  flush();
   VER_FEED($urlsitio,$urlplanet,$nombre_sitio);
   echo '</body><html>';
+  BUFFER_FIN();
+  BORRAR_VARIABLES();
   die();
    }
 if (!is_dir("themes/$theme"))
