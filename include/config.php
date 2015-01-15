@@ -60,7 +60,7 @@ http://vaslibre.org.ve
 
    # valores para Feed
 
-    $largo_lectura   = 570;   # cantidad maxima de caracteres de texto por nota en cada feed
+    $largo_lectura   = 600;   # cantidad maxima de caracteres de texto por nota en cada feed
     $leer_cant_feed  = 3;     # Mientras mas lea mas tardara en mostrar
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 

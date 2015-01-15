@@ -216,7 +216,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali">
 	<meta name="description" content="'.$descripcion.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
@@ -297,13 +297,13 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali">
 	<meta name="description" content="'.$descripcion.' - '.$title.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
 	<meta name="medium" content="mult">
     <meta name="twitter:creator" content="@'.$twitter.'">
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="'.$nombre_sitio.' | '.$title.'">
 	<meta name="twitter: description" content="'.$nombre_sitio.' | '.$title.'"> 
 	<meta name="twitter: url" content="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
@@ -391,10 +391,7 @@ function PUBLICIDAD($publicidad)
   }
    $hay  =  count($img)-1;
    $rand =  mt_rand(0,$hay);
- echo '
-  <div id="banner">
-     <a href="'.$link[$rand].'" target="_blank" title="Visitar:'.$link[$rand].'" ><img src="img/publicidad/'.$img[$rand].'.png" width="200" class="img-responsive img-center" alt="banner '.$img[$rand].'" /></a>
-   </div>';
+ echo '<a href="'.$link[$rand].'" target="_blank" title="Visitar:'.$link[$rand].'" ><img src="img/publicidad/'.$img[$rand].'.png"  class="img-responsive img-center" alt="banner '.$img[$rand].'" /></a>';
 return;
 }
 
@@ -463,14 +460,14 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
                  <article class="feed-content">
                    <div class="pull-left">
                       <a class="media-left" href="#">
-                       <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" style="margin-right:10px;" class="img-responsive img-circle">
+            <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" class="img-responsive img-circle avatar">
                       </a>
                    </div>
                    <h2><a href="'.$entry['link'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
                    <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">
-                    <li><img src="themes/'.$theme.'/images/calendar.png" title="calendar" class="calendar"/>&nbsp;'.date("d/m/Y",$entry['pubdate']).'</span></li>
+                    <li><img src="themes/'.$theme.'/images/calendar.png" alt="calendar" title="calendar" class="calendar"/>&nbsp;'.date("d/m/Y",$entry['pubdate']).'</span></li>
                    </ul>
                   </article>                
               </div>';
