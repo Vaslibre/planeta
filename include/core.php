@@ -133,9 +133,7 @@ return;
 }
 
 function GPLUS()
-{
-echo "
-<g:plusone annotation=\"inline\"></g:plusone>
+{ echo "<g:plusone annotation=\"inline\"></g:plusone>
 <script type=\"text/javascript\">
   window.___gcfg = {lang: 'es-419'};
    (function() {
