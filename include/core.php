@@ -367,13 +367,13 @@ function NUBE_TAGS($tags)
 	{    srand((double)microtime()*1000000); 
 	     $ft = rand(1,5);
 	     switch($ft){
-		  case '1': echo '<li><button class="btn btn-primary btn-xs" role="button">'; break;
-		  case '2': echo '<li><button class="btn btn-success btn-xs" role="button">'; break;
-		  case '3': echo '<li><button class="btn btn-warning btn-xs" role="button">'; break;
-		  case '4': echo '<li><button class="btn btn-danger  btn-xs" role="button">'; break;
-          case '5': echo '<li><button class="btn btn-info  btn-xs" role="button">';   break;     
+		  case '1': echo '<li><p class="btn btn-primary btn-xs abre" role="button">'; break;
+		  case '2': echo '<li><p class="btn btn-success btn-xs abre" role="button">'; break;
+		  case '3': echo '<li><p class="btn btn-warning btn-xs abre" role="button">'; break;
+		  case '4': echo '<li><p class="btn btn-danger  btn-xs abre" role="button">'; break;
+          case '5': echo '<li><p class="btn btn-info  btn-xs abre" role="button">';   break;     
 		 }
-		echo $tags[$i].'</button></li>';	 
+		echo $tags[$i].'</p></li>';	 
 	}
         echo '</ul>';
 return;
