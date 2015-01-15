@@ -509,8 +509,9 @@ function VERIFICA_CACHE($urlcache,$expira,$vidafile)
 return;
 }
 
-function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme)
-{  $title = urlencode(str_replace('%20',' ',$title));
+function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme,$enlace)
+{  $enlace = $urlplanet.'index.php?r='.$enlace;
+   $title = urlencode(str_replace('%20',' ',$title));
    $urlcorta = explode('/',$urlsitio);
    $url=$urlplanet.'index.php?r='.$urlsitio.'|'.$title;
    $imagen=$urlplanet.'img/logo.png';
@@ -524,17 +525,17 @@ echo '
       <li><strong>Ver desde sitio:</strong> <a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a></li> 
      <li>Compartir en:</li>
       <li>
-       <a href="http://www.facebook.com/sharer.php?u='.$url.'&image='.$imagen.'" target="_blank" title="Compartir en facebook"> 
+       <a href="http://www.facebook.com/sharer.php?u='.$enlace.'" target="_blank" title="Compartir en facebook"> 
            <img src="img/icon/02_facebook.png" alt="Compartir en facebook" class="share" />
         </a>
       </li>
       <li>
-        <a href="http://twitter.com/?status='.$title.'%20via @vaslibre '.$url.'" target="_blank" title="Compartir en twiiter">
+        <a href="http://twitter.com/?status='.$title.'%20via @vaslibre '.$enlace.'" target="_blank" title="Compartir en twiiter">
           <img src="img/icon/01_twitter.png" alt="Compartir en twitter" class="share" />
         </a>
       </li>
       <li>
-        <a href="https://plus.google.com/share?url='.$url.'" target="_blank" title="Compartir en G+"> 
+        <a href="https://plus.google.com/share?url='.$enlace.'" target="_blank" title="Compartir en G+"> 
           <img src="img/icon/14_google+.png" alt="Compartir en G+" class="share" />
         </a>    
       </li>  

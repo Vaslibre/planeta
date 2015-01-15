@@ -19,6 +19,7 @@ if(!empty($_GET["r"]))
   echo '<html lang="'.$lenguaje.'">
   <head><link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
    GoogleAnalytics($UA);
+   $enlace = $urlsitio;
    $urlsitio = base64_decode($urlsitio);
    $tok = explode('|',$urlsitio);
    $title = str_replace(' ','-',$tok[1]);
@@ -27,7 +28,7 @@ if(!empty($_GET["r"]))
   echo ' 
   </head><body>';
   flush();
-  VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme);
+  VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme,$enlace);
   echo '</body><html>';
   BUFFER_FIN();
   BORRAR_VARIABLES();
@@ -73,7 +74,10 @@ echo
     echo'
 	 </header>
      <section>';
-		 include "themes/$theme/content.php";
+         if (!isset($_GET["d"])) {
+		   include "themes/$theme/content.php"; }
+         else 
+           { include 'include/politicas.php'; } 
      echo'
       </section>
 	  <footer>';

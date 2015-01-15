@@ -10,6 +10,8 @@ $xml .= "
 <title>Feed List $nombre_sitio</title>\r\n
 </head>\r\n
 <body>\r\n\r\n";
+$urlplanet = substr($urlplanet,0,strlen($urlplanet)-1);
+$xml .= "<outline text=\"$nombre_sitio\" title=\"$nombre_sitio\" type=\"rss\" xmlUrl=\"$urlplanet/backend.xml\"/>\r\n";
 foreach ($feeds as $imagen => $enlace) {
    $xml .= "<outline text=\"$imagen\" title=\"$imagen\" type=\"rss\" xmlUrl=\"$enlace\"/>\r\n";
   }
