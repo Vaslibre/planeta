@@ -1,4 +1,28 @@
-commit 53f162a0633f6b00e44af37e4893a9399572c641 (HEAD, origin/master, origin/HEAD, master)
+commit 09bbdbead01d9eb5c3425c9c93c179bbc2fca8a4 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 22:49:09 2015 -0430
+
+    * inclusion opml
+
+commit bb80dcae9235451444c667d45a187a03ce23c9c1
+Author: abr4xas <me@abr4xas.org>
+Date:   Wed Jan 14 21:49:09 2015 -0430
+
+    Actualizando estilos de la pagina
+
+commit ffa3071604ebf4f58a0ed86e05b83f9168914ca9
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 20:25:45 2015 -0430
+
+    * cambios
+
+commit 4fcca392e25b12e06c5b977c7acd9bfc1e2b427c
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 20:20:43 2015 -0430
+
+    * changelog
+
+commit 53f162a0633f6b00e44af37e4893a9399572c641
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 14 20:20:10 2015 -0430
 
