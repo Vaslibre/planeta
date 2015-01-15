@@ -269,7 +269,7 @@ return;
 
 function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme)
 { $titleurl = $title;
-  $title = str_replace('%20',' ',$title);
+  $title = str_replace('-',' ',$title);
  echo '<meta charset="utf-8">
     <title>'.$nombre_sitio.' | '.$title.'</title>
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -458,6 +458,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
              { $entries = RSS($url,$imagen,$leer_cant_feed,$largo_lectura);  }
            krsort($entries); 
            foreach ($entries as $timestamp => $entry) {
+            $entry['link'] =  "index.php?r=".base64_encode("$entry[link]|$entry[title]");  
             echo '                   
               <div class="feed-item">
                  <article class="feed-content">
@@ -466,7 +467,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
                        <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" style="margin-right:10px;" class="img-responsive img-circle">
                       </a>
                    </div>
-                   <h2><a href="index.php?r='.$entry['link'].'|'.$entry['title'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
+                   <h2><a href="'.$entry['link'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
                    <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">

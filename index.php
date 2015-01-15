@@ -19,8 +19,9 @@ if(!empty($_GET["r"]))
   echo '<html lang="'.$lenguaje.'">
   <head><link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
    GoogleAnalytics($UA);
+   $urlsitio = base64_decode($urlsitio);
    $tok = explode('|',$urlsitio);
-   $title = str_replace(' ','%20',$tok[1]);
+   $title = str_replace(' ','-',$tok[1]);
    $urlsitio = $tok[0];
    METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme);
   echo ' 

@@ -2,23 +2,17 @@
 header('Content-Type: text/xml');
 header("Content-Type: application/rss+xml"); 
 include 'include/config.php';
-$expira = time() - $timecache;
-#if (file_exists('backend.xml') && (filemtime($urlcache) <= filemtime('backend.xml'))) {
-#include 'backend.xml';
-#die();
-#}
 function convertir($cadena) 
-{$cadena= stripslashes($cadena); 
- $buscar = array('<br>', '<p>', '</p>', '<br />','<br>','&nbsp;','@','"','&iexcl;','&gt;','#160',
- '<','>','&lt;','&amp;','&','¿','#8211;','#8221;','#8220;','#8230;','#8594;','&quot;','&apos;',"'",'[]');
- $reemplazar = '';
- $cadena = str_replace($buscar, $reemplazar, $cadena);
- $buscar = array('á', 'é', 'í', 'ó','ú','ñ');
- $reemplazar = array('a', 'e', 'i', 'o','u','n');
- $cadena = str_replace($buscar, $reemplazar, $cadena);
- $buscar = array('&aacute;', '&eacute;', '&iacute;', '&oacute;', '&uacute;','&ntilde;');
- $cadena_arreglada = str_replace($buscar, $reemplazar, $cadena);
- return ($cadena_arreglada);
+{  $cadena= stripslashes($cadena); 
+   $buscar = array('<br>', '<p>', '</p>', '<br />','&nbsp;','@','"');
+   $reemplazar = array(' ');
+   $cadena = str_replace($buscar, $reemplazar, $cadena);
+   $buscar = array('Ã¡', 'Ã©', 'Ã­', 'Ã³','Ãº');
+   $reemplazar = array('a', 'e', 'i', 'o','u');
+   $cadena = str_replace($buscar, $reemplazar, $cadena);
+   $buscar = array('&aacute;', '&eacute;', '&iacute;', '&oacute;', '&uacute;');
+   $cadena_arreglada = str_replace($buscar, $reemplazar, $cadena);
+   return ($cadena_arreglada);
 }
 function RSS($url,$imagen,$leer_cant_feed,$largo_lectura)
 { global $entries;
@@ -52,46 +46,54 @@ $fecha = date("r",$ahora);
 $year  = date("Y",$ahora);
 $icon  = $urlplanet.'/themes/'.$theme.'/img/rss.png';
 $xml = '';
-$xml = '<?xml version="1.0" encoding="ISO-8859-1" ?>
-<feed xmlns="http://www.w3.org/2005/Atom">';
-$xml .= "\r\n<channel>\r
-<title>$nombre_sitio</title>\r
-<link>$urlplanet</link>\r
-<description>$descripcion</description>\r
-<language>$lang</language>\r
-<copyright>Copyleft 2014 -$year, $nombre_sitio</copyright>\r
-<pubDate>$fecha</pubDate>\r
-<lastBuildDate>$fecha</lastBuildDate>\r
-<docs>$urlplanet</docs>\r
-<generator>Script ViSeRProject http://viserproject.com</generator>\r
-<webMaster>$emailinfo ($nombre_sitio)</webMaster>\r
-<managingEditor>$emailinfo ($nombre_sitio)</managingEditor>\r
-<image>\r
-<title>$nombre_sitio</title>\r
-<url>$icon</url>\r
-<link>$urlplanet</link>\r
-<description>$descripcion</description>\r
-</image>\r
-<ttl>120</ttl>\r\n";
+$xml = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n\r"; 
+$xml .= '<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/">'."\n\r";
+$xml .= "<channel>\n\r
+  <title>$nombre_sitio</title>\r
+  <link>$urlplanet</link>\r
+  <description>$descripcion</description>\r
+  <language>$lenguaje</language>\r
+  <copyright>Copyleft 2014 $year, $nombre_sitio</copyright>\r
+  <pubDate>$fecha</pubDate>\r
+  <lastBuildDate>$fecha</lastBuildDate>\r
+  <docs>$urlplanet</docs>\r
+  <generator>Script ViSeRProject http://viserproject.com</generator>\n\r
+  <webMaster>$emailinfo ($nombre_sitio)</webMaster>\r
+  <managingEditor>$emailinfo ($nombre_sitio)</managingEditor>\r
+  <image>\r
+  <title>$nombre_sitio</title>\r
+  <url>$icon</url>\r
+  <link>$urlplanet</link>\r
+  <description>$descripcion</description>\r
+  </image>\r
+ <atom:link href=\"$urlplanet/backend.xml\" rel=\"self\" type=\"application/rss+xml\" />
+  <ttl>600</ttl>\n\r";
 foreach ($entries as $timestamp => $entry) {
-$urltitle = str_replace(' ','%20',$entry['title']);
-$fecha = date("r",$entry['pubdate']);
-$entry['title'] = $entry['title'];
-$entry['description'] = $entry['description'];
-$xml .= "\n\r<entry>\r
+$urltitle = urlencode($entry['title']);
+$fecha    = date("r",$entry['pubdate']);
+$entry['title'] = trim(strip_tags($entry['title']));
+$entry['description'] = trim(strip_tags($entry['description']));
+$url_nota = "$urlplanet/index.php?r=".base64_encode("$entry[link]|$urltitle");
+$xml .= "\n\r<item>\r
 <title>$entry[title]</title>\r
-<link>$urlplanet/index.php?r=$entry[link]|$urltitle</link>\r
-<guid>$urlplanet/index.php?r=$entry[link]|$urltitle</guid>\r
+<link>$url_nota</link>\r
+<guid>$url_nota</guid>\r
 <pubDate>$fecha</pubDate>\r
 <description>\r
-<![CDATA[<img src=\"$urlplanet/img/avatar/$entry[image].png\" alt=\"$entry[image]\" align=\"left\" style=\"float:left; width:95px; height:95px; margin-right:10px;\">$entry[description]]]></description>\r
-</entry>\r\n";
+<![CDATA[<img src=\"$urlplanet/img/avatar/$entry[image].png\" alt=\"$entry[image]\" align=\"left\" style=\"float:left; width:95px; height:95px; margin-right:13px; margin-bottom:12px;\">$entry[description]]]></description>\r
+</item>\r\n";
 }
 $xml .= "</channel>\n\r
-</feed>\n\r";
+</rss>\n\r";
 $xml = trim($xml);
 $filexml = fopen('backend.xml', 'w+');
 fwrite($filexml, $xml);
 fclose($filexml);
-include 'backend.xml';  
+#include 'backend.xml';  
 ?>
