@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<opml version="1.0">
+
+<head>
+
+<title>Feed List Planeta VaSlibre</title>
+
+</head>
+
+<body>
+
+<outline text="vaslibre" title="vaslibre" type="rss" xmlUrl="http://vaslibre.org.ve/backend.php"/>
+<outline text="xombra" title="xombra" type="rss" xmlUrl="http://xombra.com/backend.php"/>
+
+</body>
+
+</opml>

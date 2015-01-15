@@ -168,6 +168,26 @@ echo '<div id="hcard-'.$nombre_sitio.'" class="vcard">
 return;
 }
 
+function LIMPIAR_VALORES()
+{ $_SERVER['QUERY_STRING'] = trim(strip_tags($_SERVER['QUERY_STRING']));
+  URL();
+  if (!empty($_GET)){ 
+  foreach($_GET as $variable=>$valor){
+     $_GET[$variable] = $_GET[$variable];
+     $_GET[$variable] = str_replace("'","\'",$_GET[$variable]);
+     $_GET[$variable] = DECODE($_GET[$variable]);
+     $_GET[$variable] = filter_var(trim($_GET[$variable]),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
+  }}
+  if (!empty($_POST) ){
+  foreach($_POST as $variable=>$valor){
+     $_POST[$variable] = $_POST[$variable];
+     $_POST[$variable] = str_replace("'","\'",$_POST[$variable]);
+     $_POST[$variable] = DECODE($_POST[$variable]);
+     $_POST[$variable] = filter_var(trim($_POST[$variable]),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
+  }}
+return;
+}
+
 function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme)
 { echo '<meta charset="utf-8">
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -359,25 +379,11 @@ function NUBE_TAGS($tags)
 return;
 } 
 
-function LIMPIAR_VALORES()
-{ $_SERVER['QUERY_STRING'] = trim(strip_tags($_SERVER['QUERY_STRING']));
-  URL();
-  if (!empty($_GET)){ 
-  foreach($_GET as $variable=>$valor){
-     $_GET[$variable] = $_GET[$variable];
-     $_GET[$variable] = str_replace("'","\'",$_GET[$variable]);
-     $_GET[$variable] = DECODE($_GET[$variable]);
-     $_GET[$variable] = filter_var(trim($_GET[$variable]),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
-  }}
-  if (!empty($_POST) ){
-  foreach($_POST as $variable=>$valor){
-     $_POST[$variable] = $_POST[$variable];
-     $_POST[$variable] = str_replace("'","\'",$_POST[$variable]);
-     $_POST[$variable] = DECODE($_POST[$variable]);
-     $_POST[$variable] = filter_var(trim($_POST[$variable]),FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
-  }}
+function OPML()
+{ include 'openml.php';
 return;
 }
+
 
 function PUBLICIDAD($publicidad)
 {foreach ($publicidad as $imagen => $enlace) {
