@@ -476,6 +476,27 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
  echo '</div>';
 return $tags;
 }
+function RSS_IMG(){
+echo'<h3>Agreganos a tu web</h3>
+
+    <p><img src="img/planeta_vaslibre_80x15.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS"></p>
+        <pre>        
+        &lt;a href="http://planeta.vaslibre.org.ve" title="Planeta VaSlibre" target="_blank"&gt;&lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_80x15.png" width="80" height="15" alt="Planeta Vaslibre RSS"/&gt;&lt;/a&gt;
+        </pre>  
+    <p>
+        <img src="img/planeta_vaslibre_rss_200x200.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS">
+        <pre>        
+        &lt;a href="http://planeta.vaslibre.org.ve" title="Planeta VaSlibre" target="_blank"&gt;&lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_rss_200x200.png" width="200" height="200" alt="Planeta Vaslibre RSS"/&gt;&lt;/a&gt;
+        </pre>        
+    </p>
+    
+    <hr />';
+return;
+}
+
+
+
+
 
 function SUBSCRIPCIONES($feeds)
 {echo '<ul>';
