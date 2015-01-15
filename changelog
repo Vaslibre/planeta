@@ -1,4 +1,23 @@
-commit 09bbdbead01d9eb5c3425c9c93c179bbc2fca8a4 (HEAD, origin/master, origin/HEAD, master)
+commit a8a4184c2b15dde3a7e5ad3d1d7a663791527fec
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 11:56:15 2015 -0430
+
+    Actualizacion de enlace de descarga OPML
+    Correccion de bug en backend sanitizacion de url feed
+
+commit 490bf694bd80c6357e4b6f388f4dbec4d452f7f1
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 11:33:36 2015 -0430
+
+    Actualizando estilo de la pagina
+
+commit 59dc3b912d020e18f3fe3bc6836e1fbc2421b0e0
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 22:50:41 2015 -0430
+
+    * changelog
+
+commit 09bbdbead01d9eb5c3425c9c93c179bbc2fca8a4
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 14 22:49:09 2015 -0430
 
@@ -585,7 +604,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
+commit e9b1531816c4933fc810e06895784a9fefadcad1
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
