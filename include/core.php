@@ -127,14 +127,25 @@ function getCleanParselyPageValue($val) {
 function GoogleAnalytics($UA)
 { 
 echo "<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	ga('create', '$UA', 'auto');
-	ga('send', 'pageview');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', '$UA', 'auto'); ga('send', 'pageview');
 </script>";
 return;
+}
+
+function GPLUS()
+{
+echo "
+<g:plusone annotation=\"inline\"></g:plusone>
+<script type=\"text/javascript\">
+  window.___gcfg = {lang: 'es-419'};
+   (function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/plusone.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+";
+
 }
 
 function HCARD($latitud,$longitud,$nombre_sitio,$urlplanet,$ciudad,$provincia,$pais) {
@@ -187,7 +198,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
 	<meta name="description" content="'.$descripcion.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
@@ -196,7 +207,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="twitter:title" content="'.$nombre_sitio.'">
 	<meta name="twitter: description" content="'.$nombre_sitio.'"> 
 	<meta name="twitter: url" content="'.$urlplanet.'">
-	<meta name="twitter:imagen" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png">
+	<meta name="twitter:imagen" content="'.$urlplanet.'img/logo.png">
 	<meta name="abstract" content="'.$nombre_sitio.'">
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -205,14 +216,14 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta property="og:description" content="'.$descripcion.'">
 	<meta property="og:url" content="'.$urlplanet.'">
 	<meta property="og:site_name" content="'.$nombre_sitio.'">
-	<meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/img/logo.png">
+	<meta property="og:image" content="'.$urlplanet.'img/logo.png">
 	<meta property="og:locale" content="es_VE">
 	<meta property="og:image:width" content="350">
 	<meta property="og:image:height" content="350">
-    <link rel="apple-touch-icon" href="themes/'.$theme.'/img/apple.png">
-    <link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png">
-	<link rel="icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="themes/'.$theme.'/img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml">
     <link rel="canonical" href="'.$urlplanet.'">
 	<link rel="socialmedia" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia">
@@ -221,12 +232,12 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
   $parselyPage = array();
   $parselyPage["title"]     = $nombre_sitio;
   $parselyPage["link"]      = $urlplanet;
-  $parselyPage["image_url"] = $urlplanet.'/themes/'.$theme.'/img/logo.png';
+  $parselyPage["image_url"] = $urlplanet.'img/logo.png';
   $parselyPage["type"]      = "post";
   $parselyPage["post_id"]   = $post_id;  
   $parselyPage["pub_date"]  = gmdate("M d Y H:i:s",time());
   $parselyPage["author"]    = getCleanParselyPageValue($nombre_sitio);
-  $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'" />';
+  $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'">';
 if ($activar == 1) { 
 	echo '
     <meta name="wot-verification" content="'.$wot.'">
@@ -235,6 +246,82 @@ if ($activar == 1) {
     <meta name="google-site-verification" content="'.$google.'">
 	<meta name="alexaVerifyID" content="'.$alexa.'">';
 	}
+return;
+}
+
+function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme)
+{ $titleurl = $title;
+  $title = str_replace('%20',' ',$title);
+ echo '<meta charset="utf-8">
+    <title>'.$nombre_sitio.' | '.$title.'</title>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="vary" content="content-language">
+    <meta http-equiv="imagetoolbar" content="no">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="VaSlibre">
+	<meta name="revisit-after" content="1 days">
+	<meta name="revisit" content="1">
+	<meta name="distribution" content="Global">
+	<meta name="generator" content="Aptana">
+	<meta name="rating" content="General">
+	<meta name="country" content="Venezuela">
+	<meta name="language" content="'.$lenguaje.'">
+	<meta name="adblock" content="disable">
+	<meta name="advertising" content="ask">
+	<meta name="dc.title" content="'.$nombre_sitio.'">
+	<meta name="dc.date" content="'.date("Y-m-d",$_SERVER['REQUEST_TIME']).'">
+	<meta name="dc.format" content="text/html">
+	<meta name="dc.language" content="'.$lenguaje.'">
+	<meta name="geo.region" content="VE-G">
+	<meta name="geo.placename" content="Valencia">
+	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
+	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml">
+	<meta name="description" content="'.$descripcion.' - '.$title.'">
+	<meta name = "viewport" content = "initial-scale = 1.0">
+	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
+	<meta name="medium" content="mult">
+    <meta name="twitter:creator" content="@'.$twitter.'">
+    <meta name="twitter:card" content="summary"/>
+	<meta name="twitter:title" content="'.$nombre_sitio.' | '.$title.'">
+	<meta name="twitter: description" content="'.$nombre_sitio.' | '.$title.'"> 
+	<meta name="twitter: url" content="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
+	<meta name="twitter:imagen" content="'.$urlplanet.'img/logo.png">
+	<meta name="abstract" content="'.$nombre_sitio.'">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="'.$nombre_sitio.' | '.$title.'">
+	<meta property="og:description" content="'.$nombre_sitio.' | '.$title.'">
+	<meta property="og:url" content="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
+	<meta property="og:site_name" content="'.$nombre_sitio.'">
+	<meta property="og:image" content="'.$urlplanet.'img/logo.png">
+    <meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/images/planeta-vaslibre.png">
+    <meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/images/logovaslibre2.png">
+	<meta property="og:locale" content="es_VE">
+    	<meta property="og:image:width" content="295">
+	<meta property="og:image:height" content="295">
+    <link rel="apple-touch-icon" href="img/apple.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="'.$urlplanet.'backend.xml">
+    <link rel="canonical" href="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
+	<link rel="socialmedia" href="'.$urlplanet.'socialmedia.txt" rel="socialmedia">
+    <link rel="me" href="https://plus.google.com/'.$glus.'/about">
+    <link rel="publisher" href="https://plus.google.com/'.$glus.'">';
+  $parselyPage = array();
+  $parselyPage["title"]     = $nombre_sitio.' | '.$title;
+  $parselyPage["link"]      = $urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl;
+  $parselyPage["image_url"] = $urlplanet.'/themes/'.$theme.'/img/logo.png';
+  $parselyPage["type"]      = "post";
+  $parselyPage["post_id"]   = $post_id;  
+  $parselyPage["pub_date"]  = gmdate("M d Y H:i:s",time());
+  $parselyPage["author"]    = getCleanParselyPageValue($nombre_sitio);
+  $output = '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'">';
 return;
 }
 
@@ -374,7 +461,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
                        <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" width="95" height="95" style="margin-right:10px;" class="img-responsive img-circle">
                       </a>
                    </div>
-                   <h2><a href="index.php?r='.$entry['link'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
+                   <h2><a href="index.php?r='.$entry['link'].'|'.$entry['title'].'" target="_self title="Leer nota: '.$entry['title'].'">'.$entry['title'].'</a></h2>
                    <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">
@@ -417,33 +504,41 @@ function VERIFICA_CACHE($urlcache,$expira,$vidafile)
 return;
 }
 
-function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$titulonoticia)
-{  $urlcorta = explode('/',$urlsitio);
+function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme)
+{  $title = urlencode(str_replace('%20',' ',$title));
+   $urlcorta = explode('/',$urlsitio);
+   $url=$urlplanet.'index.php?r='.$urlsitio.'|'.$title;
+   $imagen=$urlplanet.'img/logo.png';
 echo '
-<nav>
+<div style="visibility:hidden; height:0px">
+ <img src="'.$imagen.'" style="visibility:hidden" />
+</div>
+<nav><img src="img/apple.png" alt="logo_small" style="float:left; margin-top:32px; z-index:99999" />
     <ul class="list-inline">
       <li><strong>Regresar a:</strong> <a href="'.$urlplanet.'" rel="'.$urlplanet.'" target="_self">'.$nombre_sitio.'</a></li>
       <li><strong>Ver desde sitio:</strong> <a href="'.$urlsitio.'" target="_blank" rel="'.$urlsitio.'" title="ir al sitio '.$urlsitio.'">'.$urlcorta[2].'</a></li> 
-      <li>Compartir en:</li>
+     <li>Compartir en:</li>
       <li>
-        <a href="http://www.facebook.com/sharer.php?u='.$urlplanet.'index.php?r='.$urlsitio.'&t=Lee en Planeta VaSLibre%20'.$titulonoticia.'" target="_blank" title="Compartir en facebook">
-            <img src="img/icon/02_facebook.png" alt="Compartir en facebook" class="share" />
+       <a href="http://www.facebook.com/sharer.php?u='.$url.'&image='.$imagen.'" target="_blank" title="Compartir en facebook"> 
+           <img src="img/icon/02_facebook.png" alt="Compartir en facebook" class="share" />
         </a>
       </li>
       <li>
-        <a href="http://twitter.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'&text='.$titulonoticia.'%20via @vaslibre" target="_blank" title="Compartir en twiiter">
-            <img src="img/icon/01_twitter.png" alt="Compartir en twitter" class="share" />
+        <a href="http://twitter.com/?status='.$title.'%20via @vaslibre '.$url.'" target="_blank" title="Compartir en twiiter">
+          <img src="img/icon/01_twitter.png" alt="Compartir en twitter" class="share" />
         </a>
       </li>
       <li>
-        <a href="https://plus.google.com/share?url='.$urlplanet.'index.php?r='.$urlsitio.'" target="_blank" title="Compartir en G+">                <img src="img/icon/14_google+.png" alt="Compartir en G+" class="share" />
+        <a href="https://plus.google.com/share?url='.$url.'" target="_blank" title="Compartir en G+"> 
+          <img src="img/icon/14_google+.png" alt="Compartir en G+" class="share" />
         </a>    
-      </li>
+      </li>  
     </ul>
 </nav>
 <div class="marco">
     <iframe src="'.$urlsitio.'" frameborder="0" scrolling="yes" id="iframe"></iframe>
 </div>
+
 ';
 return;
 }

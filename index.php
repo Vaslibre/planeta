@@ -19,11 +19,14 @@ if(!empty($_GET["r"]))
   echo '<html lang="'.$lenguaje.'">
   <head><link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
    GoogleAnalytics($UA);
-   META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme); 
+   $tok = explode('|',$urlsitio);
+   $title = str_replace(' ','%20',$tok[1]);
+   $urlsitio = $tok[0];
+   METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme);
   echo ' 
   </head><body>';
   flush();
-  VER_FEED($urlsitio,$urlplanet,$nombre_sitio);
+  VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme);
   echo '</body><html>';
   BUFFER_FIN();
   BORRAR_VARIABLES();
