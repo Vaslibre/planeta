@@ -320,7 +320,7 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
     <meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/images/planeta-vaslibre.png">
     <meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/images/logovaslibre2.png">
 	<meta property="og:locale" content="es_VE">
-    	<meta property="og:image:width" content="295">
+    <meta property="og:image:width" content="295">
 	<meta property="og:image:height" content="295">
     <link rel="apple-touch-icon" href="img/apple.png">
     <link rel="shortcut icon" href="img/favicon.png">
@@ -371,7 +371,7 @@ function NUBE_TAGS($tags)
 		  case '2': echo '<li><button class="btn btn-success btn-xs" role="button">'; break;
 		  case '3': echo '<li><button class="btn btn-warning btn-xs" role="button">'; break;
 		  case '4': echo '<li><button class="btn btn-danger  btn-xs" role="button">'; break;
-          case '5': echo '<li><button class="btn btn-info  btn-xs" role="button">'; break;     
+          case '5': echo '<li><button class="btn btn-info  btn-xs" role="button">';   break;     
 		 }
 		echo $tags[$i].'</button></li>';	 
 	}
@@ -383,7 +383,6 @@ function OPML()
 { include 'openml.php';
 return;
 }
-
 
 function PUBLICIDAD($publicidad)
 {foreach ($publicidad as $imagen => $enlace) {
@@ -544,7 +543,6 @@ echo '
 <div class="marco">
     <iframe src="'.$urlsitio.'" frameborder="0" scrolling="yes" id="iframe"></iframe>
 </div>
-
 ';
 return;
 }
