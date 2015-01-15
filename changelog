@@ -1,4 +1,34 @@
-commit a248251904d00fa6d2ef3ada94321adde7955ac4 (HEAD, origin/master, origin/HEAD, master)
+commit 53f162a0633f6b00e44af37e4893a9399572c641 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 20:20:10 2015 -0430
+
+    * solucion de redireccion y corregido enlaces en backend
+
+commit ec62484489c26e2151a56fcbc3592d7c019a011f
+Author: abr4xas <me@abr4xas.org>
+Date:   Wed Jan 14 14:58:09 2015 -0430
+
+    Agregando cambios del tema
+
+commit 8fa905e2b21c16207ba413fec19e2798f7b1a6f9
+Author: abr4xas <me@abr4xas.org>
+Date:   Wed Jan 14 14:47:06 2015 -0430
+
+    Agregando cambios (estilos e imagenes) en la funcion redireccion.
+
+commit f25f4af4c49a1eff2fe0d0b2c16ef6270eed9f51
+Author: abr4xas <me@abr4xas.org>
+Date:   Wed Jan 14 14:15:27 2015 -0430
+
+    Agregando cambios (estilos e imagenes) en la funcion redireccion
+
+commit 7d0fb71081740b482fc7cca010511938964c2466
+Author: xombra <xombra.com@gmail.com>
+Date:   Wed Jan 14 13:02:28 2015 -0430
+
+    * changelog
+
+commit a248251904d00fa6d2ef3ada94321adde7955ac4
 Author: xombra <xombra.com@gmail.com>
 Date:   Wed Jan 14 13:00:43 2015 -0430
 
