@@ -345,12 +345,13 @@ function NUBE_TAGS($tags)
 	 { $tags[$i] = $result[$rand_keys[$i]]; }
 	for ($i=0;$i<$rnd;$i++)
 	{    srand((double)microtime()*1000000); 
-	     $ft = rand(1,4);
+	     $ft = rand(1,5);
 	     switch($ft){
 		  case '1': echo '<li><button class="btn btn-primary btn-xs" role="button">'; break;
 		  case '2': echo '<li><button class="btn btn-success btn-xs" role="button">'; break;
 		  case '3': echo '<li><button class="btn btn-warning btn-xs" role="button">'; break;
 		  case '4': echo '<li><button class="btn btn-danger  btn-xs" role="button">'; break;
+          case '5': echo '<li><button class="btn btn-info  btn-xs" role="button">'; break;     
 		 }
 		echo $tags[$i].'</button></li>';	 
 	}
@@ -443,7 +444,7 @@ if (VERIFICA_ONLINE($url)){
 return $entries;
 }
 
-function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
+function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
 {  $tags = '';
   echo '
 <div class="feed">';
@@ -463,7 +464,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds)
                    <p>'.$entry['description'].'</p>
                    <hr/>
                    <ul class="list-inline list-unstyled">
-                    <li><span><i class="fa fa-calendar"></i> '.date("d/m/Y",$entry['pubdate']).'</span></li>
+                    <li><img src="themes/'.$theme.'/images/calendar.png" title="calendar" class="calendar"/>&nbsp;'.date("d/m/Y",$entry['pubdate']).'</span></li>
                    </ul>
                   </article>                
               </div>';
@@ -474,11 +475,11 @@ return $tags;
 }
 
 function SUBSCRIPCIONES($feeds)
-{echo '<ul class="list-unstyled">';
+{echo '<ul>';
    foreach ($feeds as $imagen => $enlace) {
    $enlaceC = explode('/',$enlace);
-   $enlaceC = str_replace('www','',$enlaceC[2]);
-   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlace[2].'" >'.$enlaceC.'</a></li>';
+   $enlaceC = str_replace('www.','',$enlaceC[2]);
+   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlaceC.'" >'.$enlaceC.'</a></li>';
   }
  echo '</ul>';
 return;
