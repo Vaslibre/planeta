@@ -480,11 +480,15 @@ return $tags;
 function RSS_IMG(){
 echo'<h3>Agreganos a tu web</h3>
     <p>Agrega estos botones a tu web</p>
-    <p><img src="img/planeta_vaslibre_80x15.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS"></p>
+    <p><img src="img/planeta_vaslibre_80x15.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS">
+        <pre>
+        &lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_80x15.png" alt="Planeta Vaslibre RSS" /&gt;
+        </pre>     
+    </p>
     <p>
         <img src="img/planeta_vaslibre_rss_200x200.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS">
         <pre>
-        &lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_rss_200x200.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS" /&gt;
+        &lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_rss_200x200.png" alt="Planeta Vaslibre RSS" /&gt;
         </pre>        
     </p>
     <hr />';
