@@ -216,7 +216,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali,Android">
 	<meta name="description" content="'.$descripcion.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
@@ -225,7 +225,7 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
 	<meta name="twitter:title" content="'.$nombre_sitio.'">
 	<meta name="twitter: description" content="'.$nombre_sitio.'"> 
 	<meta name="twitter: url" content="'.$urlplanet.'">
-	<meta name="twitter:imagen" content="'.$urlplanet.'img/logo.png">
+	<meta name="twitter:image:src" content="'.$urlplanet.'img/logo.png">
 	<meta name="abstract" content="'.$nombre_sitio.'">
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -267,7 +267,7 @@ if ($activar == 1) {
 return;
 }
 
-function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme)
+function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme,$enlace)
 { $titleurl = $title;
   $title = str_replace('-',' ',$title);
  echo '<meta charset="utf-8">
@@ -297,16 +297,16 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
 	<meta name="geo.placename" content="Valencia">
 	<meta name="geo.position" content="'.$latitud.';'.$longitud.'">
 	<meta name="icbm" content="'.$latitud.';'.$longitud.'">
-	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali">
+	<meta name="keywords" content="Planeta,VaSlibre,RSS,Feed,Agregador,Xanadu,Xanadu,Linux,sinfallas,xombra,viserproject,gnu,linux,keyword,keyword,WOT_keyword,planet,tux,rss,xml,opml,fedora,ubuntu,debian,gentoo,arch,venenux,canaima,mint,kali,Android">
 	<meta name="description" content="'.$descripcion.' - '.$title.'">
 	<meta name = "viewport" content = "initial-scale = 1.0">
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/">
 	<meta name="medium" content="mult">
     <meta name="twitter:creator" content="@'.$twitter.'">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="'.$nombre_sitio.' | '.$title.'">
 	<meta name="twitter: description" content="'.$nombre_sitio.' | '.$title.'"> 
-	<meta name="twitter: url" content="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
+	<meta name="twitter: url" content="'.$enlace.'">
 	<meta name="twitter:imagen" content="'.$urlplanet.'img/logo.png">
 	<meta name="abstract" content="'.$nombre_sitio.'">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -314,7 +314,7 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="'.$nombre_sitio.' | '.$title.'">
 	<meta property="og:description" content="'.$nombre_sitio.' | '.$title.'">
-	<meta property="og:url" content="'.$urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl.'">
+	<meta property="og:url" content="'.$enlace.'">
 	<meta property="og:site_name" content="'.$nombre_sitio.'">
 	<meta property="og:image" content="'.$urlplanet.'img/logo.png">
     <meta property="og:image" content="'.$urlplanet.'themes/'.$theme.'/images/planeta-vaslibre.png">
@@ -333,7 +333,7 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
     <link rel="publisher" href="https://plus.google.com/'.$glus.'">';
   $parselyPage = array();
   $parselyPage["title"]     = $nombre_sitio.' | '.$title;
-  $parselyPage["link"]      = $urlplanet.'index.php?r='.$urlsitio.'|'.$titleurl;
+  $parselyPage["link"]      = $enlace;
   $parselyPage["image_url"] = $urlplanet.'/themes/'.$theme.'/img/logo.png';
   $parselyPage["type"]      = "post";
   $parselyPage["post_id"]   = $post_id;  
@@ -344,7 +344,8 @@ return;
 }
 
 function NUBE_TAGS($tags)
-{ 	$busqueda = $GLOBALS['palabras'];
+{ 	$tags .= 'ubuntu linux fedora planeta planet abr4xas xombra blog web internet gentoo debian mint';
+    $busqueda = $GLOBALS['palabras'];
 	$search  = array('Á', 'É', 'Í', 'Ó', 'Ú', 'á', 'é', 'í', 'ó', 'ú', 'Ü', 'ü', 'Ñ', 'ñ','&');
 	$replace = array('a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'u', 'u', 'n', 'n',' ');
 	$tags = trim(strtolower($tags));
@@ -478,25 +479,17 @@ return $tags;
 }
 function RSS_IMG(){
 echo'<h3>Agreganos a tu web</h3>
-
+    <p>Agrega estos botones a tu web</p>
     <p><img src="img/planeta_vaslibre_80x15.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS"></p>
-        <pre>        
-        &lt;a href="http://planeta.vaslibre.org.ve" title="Planeta VaSlibre" target="_blank"&gt;&lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_80x15.png" width="80" height="15" alt="Planeta Vaslibre RSS"/&gt;&lt;/a&gt;
-        </pre>  
     <p>
         <img src="img/planeta_vaslibre_rss_200x200.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS">
-        <pre>        
-        &lt;a href="http://planeta.vaslibre.org.ve" title="Planeta VaSlibre" target="_blank"&gt;&lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_rss_200x200.png" width="200" height="200" alt="Planeta Vaslibre RSS"/&gt;&lt;/a&gt;
+        <pre>
+        &lt;img src="http://planeta.vaslibre.org.ve/img/planeta_vaslibre_rss_200x200.png" class="img-responsive img-center" alt="Planeta Vaslibre RSS" /&gt;
         </pre>        
     </p>
-    
     <hr />';
 return;
 }
-
-
-
-
 
 function SUBSCRIPCIONES($feeds)
 {echo '<ul>';

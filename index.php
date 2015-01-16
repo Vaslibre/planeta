@@ -20,11 +20,12 @@ if(!empty($_GET["r"]))
   <head><link href="css/redireccion.css" rel="stylesheet" type="text/css" media="all">';
    GoogleAnalytics($UA);
    $enlace = $urlsitio;
+   $enlace = $urlplanet.'index.php?r='.$enlace;
    $urlsitio = base64_decode($urlsitio);
    $tok = explode('|',$urlsitio);
    $title = str_replace(' ','-',$tok[1]);
    $urlsitio = $tok[0];
-   METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme);
+   METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$twitter,$lenguaje,$urlsitio,$title,$theme,$enlace);
   echo ' 
   </head><body>';
   flush();
