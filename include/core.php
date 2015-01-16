@@ -460,7 +460,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
               <div class="feed-item">
                  <article class="feed-content">
                    <div class="pull-left">
-                      <a class="media-left" href="#">
+                      <a class="media-left" href="'.$entry['link'].'" target="_self title="Leer nota: '.$entry['title'].'">
             <img alt="'.$entry['image'].'" src="img/avatar/'.$entry['image'].'.png" class="img-responsive img-circle avatar">
                       </a>
                    </div>
