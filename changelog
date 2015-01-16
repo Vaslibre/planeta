@@ -1,4 +1,40 @@
-commit 0c12f7c5f50996dad06218e43e8f16133056a283 (HEAD, origin/master, origin/HEAD, master)
+commit 8faf6babb0f2c2914d9aa47ab05fc085c33c252c (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 16 19:05:36 2015 -0430
+
+    * optimizacion
+
+commit 3dd9be990662aa45d34bbd93f649f00cbf99af20
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 16 15:46:43 2015 -0430
+
+    cambios menores
+
+commit 6d80663f4becdc64df1f876a6288abb24e0a616b
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 16 15:44:56 2015 -0430
+
+    Actualizando core
+
+commit 7d16a4058ed684c9892aa7ac96d1a26eb07e93c2
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 16 14:14:22 2015 -0430
+
+    Agregando funcionalidad sugerida por ajha63
+
+commit 61e9139306c415acdd720d69a35eb69cbd1102d2
+Author: abr4xas <me@abr4xas.org>
+Date:   Fri Jan 16 13:05:00 2015 -0430
+
+    Agregado codigo de botones del planet
+
+commit 7f7697b8d32b3001a1e014583b20be4cfdf9db42
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 16 00:47:44 2015 -0430
+
+    * changelog
+
+commit 0c12f7c5f50996dad06218e43e8f16133056a283
 Author: xombra <xombra.com@gmail.com>
 Date:   Fri Jan 16 00:47:03 2015 -0430
 
