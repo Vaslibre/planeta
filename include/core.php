@@ -190,6 +190,7 @@ return;
 
 function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$glus,$activar,$twitter,$wot,$bing,$yahoo,$google,$alexa,$lenguaje,$theme)
 { echo '<meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True" />
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta http-equiv="pragma" content="cache">
@@ -272,6 +273,7 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
   $title = str_replace('-',' ',$title);
  echo '<meta charset="utf-8">
     <title>'.$nombre_sitio.' | '.$title.'</title>
+    <meta name="HandheldFriendly" content="True" />    
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta http-equiv="pragma" content="no-cache">
