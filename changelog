@@ -1,3 +1,48 @@
+commit 020bfb9c57d189fb33f6a9b24235bc8348128c05 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Thu Jan 15 23:03:45 2015 -0430
+
+    * Modificacion de ompl
+    * agregado opciones en el HOWTO
+
+commit 15629ca8dc85af7a62e4cce6a0221598d920f1fe (tag: 1.0.1)
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 19:19:16 2015 -0430
+
+    Agregado pop up para las politicas de uso
+
+commit 7c059a5ca47378da3d25b6b6a44a795d9f07992f
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 18:24:19 2015 -0430
+
+    Actualizando estilos e imagenes de Agreganos a tu web
+
+commit 2d357e1cd54e4ff6423220d0a5a9b2a463176880
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 18:03:46 2015 -0430
+
+    Actualizando estilos e imagenes de Agreganos a tu web
+
+commit 3b8cd69f7e0df10addb6a26dbfbcd32a8be04524 (tag: 1.0)
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 16:59:21 2015 -0430
+
+    Actualizando estilos de la pagina
+
+commit af00c4d1536eb488e74f1e2079382c9a81dd9c5d
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 16:05:11 2015 -0430
+
+    Actualizando los estilos de los botones de la nube de tags
+
+commit 466d5be23f2ba75f4782c56c1de528e3346c30e7
+Author: abr4xas <me@abr4xas.org>
+Date:   Thu Jan 15 14:19:33 2015 -0430
+
+    Actualizando estilos e imagenes de la plantilla y de los avatares
+    Agregado estilo para las politicas de uso
+    Actualizacion del codigo de OPML y de index.php
+
 commit 887deae3dfb65b686bedf9b709183e0c420f93b4
 Author: abr4xas <me@abr4xas.org>
 Date:   Thu Jan 15 12:20:35 2015 -0430
@@ -616,7 +661,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1
+commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
