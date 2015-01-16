@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<opml version="1.0">
+<opml version="2.0">
 
 <head>
 
 <title>Feed List Planeta VaSlibre</title>
-
+<ownerName>Planeta VaSlibre</ownerName>
+<dateCreated>Thu, 15 Jan 2015 22:28:02 -0430 GMT</dateCreated>
+<dateModified>Thu, 15 Jan 2015 19:29:21 -0430 GMT</dateModified>
+<ownerEmail>webmaster@vaslibre.org.ve</ownerEmail>
 </head>
 
 <body>
 
-<outline text="vaslibre" title="vaslibre" type="rss" xmlUrl="http://vaslibre.org.ve/backend.php"/>
+<outline text="Planeta VaSlibre"  title="Planeta VaSlibre">
+<outline text="Planeta VaSlibre" title="Planeta VaSlibre" type="rss" xmlUrl="http://planeta.vaslibre.org.ve/backend.xml"/>
+<outline text="meridaspot.png" title="meridaspot.png" type="rss" xmlUrl="http://meridaspot.blogspot.com/feeds/posts/default"/>
 <outline text="xombra" title="xombra" type="rss" xmlUrl="http://xombra.com/backend.php"/>
+</outline>
 
 </body>
 
