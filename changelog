@@ -1,4 +1,16 @@
-commit 020bfb9c57d189fb33f6a9b24235bc8348128c05 (HEAD, origin/master, origin/HEAD, master)
+commit 0c12f7c5f50996dad06218e43e8f16133056a283 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 16 00:47:03 2015 -0430
+
+    * solucionado problema en enlaces codificados
+
+commit ee58698f15f68808d553a44df35bef30130d28f0
+Author: xombra <xombra.com@gmail.com>
+Date:   Thu Jan 15 23:05:05 2015 -0430
+
+    * changelog
+
+commit 020bfb9c57d189fb33f6a9b24235bc8348128c05
 Author: xombra <xombra.com@gmail.com>
 Date:   Thu Jan 15 23:03:45 2015 -0430
 
