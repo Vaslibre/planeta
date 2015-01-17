@@ -1,25 +1,59 @@
-# Configuración para vaslibre.org.ve
+# ConfiguraciÃ³n para vaslibre.org.ve
 ErrorDocument 404  /errores/404.html
+Options All -Indexes
+ServerSignature Off
 RewriteEngine On
 Options +FollowSymlinks
+FileETag None
 RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{QUERY_STRING} ^(.*)=http [NC]
-RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E)[N,C]
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/jpg "access plus 1 year"
-ExpiresByType image/jpeg "access plus 1 year"
-ExpiresByType image/gif "access plus 1 year"
-ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 1 year"
-ExpiresByType text/x-javascript "access plus 1 year"
-ExpiresByType image/x-icon "access plus 1 year"
-ExpiresDefault "access plus 2 days"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+# GZip Files
+<FilesMatch "\.(htm|html|php|css|js)$">
+   AddHandler application/x-httpd-php .html
+</FilesMatch>
+<FilesMatch "\.(htm|html|php|xml|css|js)$">
+   SetOutputFilter DEFLATE
+</FilesMatch>
+<IfModule mod_deflate.c>
+   AddOutputFilterByType DEFLATE text/html text/plain text/css application/json text/xml  application/xml
+   AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript text/x-component
+   SetOutputFilter DEFLATE
 </IfModule>
+#
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresDefault A0
+  ExpiresByType text/cache-manifest A2592000
+  ExpiresByType text/html A2592000
+  ExpiresByType text/xml A2592000
+  ExpiresByType application/xml A2592000
+  ExpiresByType application/json A2592000
+  ExpiresByType application/rss+xml A2592000
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/x-javascript "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/x-icon  "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+# A2592000 means 1 month in the future (60*60*24*30=2592000)
+  <IfModule mod_headers.c>
+    Header append Cache-Control "public"
+  </IfModule>
+</IfModule>
+#
 <IfModule mod_headers.c>
- KeepAlive On
+ #KeepAlive On
  Header set Connection keep-alive
  ExpiresActive On
  ExpiresDefault A0
@@ -31,7 +65,6 @@ ExpiresDefault "access plus 2 days"
   RequestHeader unset Cookie
   Header always unset Set-Cookie
   Header unset ETag
-  FileETag None
   </FilesMatch>
   # 10 min
   <FilesMatch "\.(html|htm|txt|php)$">
@@ -40,19 +73,5 @@ ExpiresDefault "access plus 2 days"
   ExpiresDefault A600
   </FilesMatch>
 </IfModule>
-<FilesMatch "\.(htm|html|shtml)$">
-AddHandler application/x-httpd-php .html
-</FilesMatch>
-<FilesMatch "\.(htm|html|shtml|php|xml|css|js|ico)$">
-SetOutputFilter DEFLATE
-</FilesMatch>
-<FilesMatch "\.js$">
-AddHandler application/x-httpd-php .js
-</FilesMatch>
-<FilesMatch "\.css$">
-AddHandler application/x-httpd-php .css
-</FilesMatch>
-<FilesMatch "\.(htm|html|shtml)$">
-AddHandler application/x-httpd-php .html
-</FilesMatch>
+#
 SetEnv SERVER_ADMIN info@viserproject.com
