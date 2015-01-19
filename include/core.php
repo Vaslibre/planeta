@@ -414,27 +414,31 @@ function  REDES($twitter, $facebook, $youtube, $glus, $principal, $theme)
 return;
 }
 
-function RSS($url,$imagen,$leer_cant_feed,$largo_lectura)
+function RSS($url,$imagen,$leer_cant_feed,$largo_lectura,$timenota)
 { global $entries;
 if (VERIFICA_ONLINE($url)){
 	$noticias= simplexml_load_file($url);
 	$lee= $leer_cant_feed;
+    $ahora = time();
 	$ciclo= 1;
     $largo= $largo_lectura;
 	foreach ($noticias as $noticia) {  
 		foreach($noticia as $reg){ 
 			if(!empty($reg->title) && $ciclo<$lee&& !empty($reg->description) && !empty($reg->pubDate)){
-		        $pubdate=  $reg->pubDate;
-		        $title  =  trim(strip_tags($reg->title));
+		        $pubdate = $reg->pubDate;
+                $timestamp  =  strtotime(substr($reg->pubDate,0,25));
+                $dif =  $ahora - $timestamp;
+                if ($dif <= $timenota) {
+                 $title  =  trim(strip_tags($reg->title));
 	 			$link   =  $reg->link;
 		        $description=  strip_tags(substr($reg->description,0,$largo)).'...';
-		        $timestamp  =  strtotime(substr($reg->pubDate,0,25));
 		        $entries[$timestamp]['pubdate']= $timestamp;
 		        $entries[$timestamp]['title']  = $title;
 		        $entries[$timestamp]['link']   = $link;
 		        $entries[$timestamp]['image']  = $imagen;
 		        $entries[$timestamp]['description']= $description;
-		        $ciclo++;    
+		        $ciclo++;
+              }    
 			} 
 		}
 	}
@@ -442,11 +446,11 @@ if (VERIFICA_ONLINE($url)){
 return $entries;
 }
 
-function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
+function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme,$timenota)
 {  $tags= '';
   echo '<div class="feed">';
            foreach ($feeds as $imagen=> $url) 
-             { $entries= RSS($url,$imagen,$leer_cant_feed,$largo_lectura);  }
+             { $entries = RSS($url,$imagen,$leer_cant_feed,$largo_lectura,$timenota);  }
            krsort($entries); 
            foreach ($entries as $timestamp=> $entry) {
             $entry['link']="index.php?r=".base64_encode("$entry[link]|$entry[title]");
@@ -471,6 +475,7 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme)
  echo '</div>';
 return $tags;
 }
+
 function RSS_IMG(){
 echo'<h3>Agreganos a tu web</h3>
     <p>Agrega estos botones a tu web</p>
