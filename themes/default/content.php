@@ -17,7 +17,7 @@ echo '
 </div>
 <div class="col-md-12 column">
 	<div style="margin-top:-40px">';
-	 $tags = RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds); 
+	$tags = RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme,$timenota); 
 echo '
     </div>
 </div>';
