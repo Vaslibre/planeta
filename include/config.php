@@ -57,6 +57,10 @@ http://vaslibre.org.ve
 
    $timecache    = 7200; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
+   
+#  Tiempo máximo que un blog debe tener de la ultima nota publicada
+ 
+  $timenota     = 31536000; # 3600 X 23 X 365 = 1 año   
 
    # valores para Feed
 
