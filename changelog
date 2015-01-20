@@ -1,10 +1,46 @@
-commit bc54ad2d506e761d5327e97a6fa8dc58c71c157a (HEAD, master)
+commit 9d496210f4f0716187a49d26a00949b3c1027b65 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 20 10:49:01 2015 -0430
+
+    * corregido bug en nube de tag
+
+commit 0bdfc676fb0d82418770333127340eb8f10098e8
+Author: Hector A. Mantellini <xombra@users.noreply.github.com>
+Date:   Mon Jan 19 15:40:15 2015 -0430
+
+    Update core.php
+    
+    Mostrara solo las noticias que tengas un maximo de tiempo de publicacion
+
+commit b3aeb9e1c944feddc8c17cd9284c167e37298191
+Author: Hector A. Mantellini <xombra@users.noreply.github.com>
+Date:   Mon Jan 19 14:58:02 2015 -0430
+
+    Update content.php
+    
+    parámetro para tiempo max de nota publicada
+
+commit 36e7f8c16760581ade42fda882b929a24142cab3
+Author: Hector A. Mantellini <xombra@users.noreply.github.com>
+Date:   Mon Jan 19 14:56:14 2015 -0430
+
+    Update config.php
+    
+    agrgado opcion de maximo de tiempo de la ultima noticia de un blog
+
+commit a98dd00ed318e3bb46fedbb314fac85dfad36e3d
+Author: xombra <xombra.com@gmail.com>
+Date:   Mon Jan 19 14:17:39 2015 -0430
+
+    * changelog
+
+commit bc54ad2d506e761d5327e97a6fa8dc58c71c157a
 Author: xombra <xombra.com@gmail.com>
 Date:   Sat Jan 17 22:42:47 2015 -0430
 
     * changelog
 
-commit a98f81afd933346b972f646726a54f0eb4636dd6 (origin/master, origin/HEAD)
+commit a98f81afd933346b972f646726a54f0eb4636dd6
 Author: xombra <xombra.com@gmail.com>
 Date:   Sat Jan 17 22:41:59 2015 -0430
 
