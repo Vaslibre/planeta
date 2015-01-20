@@ -15,34 +15,35 @@ LIMPIAR_VALORES();
 $buffer= BUFFER_INICIO();
 global $palabras;
 $GLOBALS['palabras']= array(
-		  ' a','ah','al','alla','alo','ano','ante','anti','am','aquel','aquellos','aquellas ',
-          ' atras','ay','ahora ',
-		  ' bajo','bien','bueno ',
-		  ' cada','casi','con','contra','coma','comer','como','cómo','cambiar','cuyo','.com','com ',
-		  ' da','dando','de ' , ' del','dejar','desde','di','dia ','dice',' donde','dijo','día ',
-		  ' e','el','ella','ellas','ello','ellos','en ' ,' entonces','entre','era','eran','es ', 
-          ' esa','ese','esas','eso','esos','esta','estan','estas','esto','estos','está','eramos ',
-		  ' fue','fueron','fuese','fuesen','fui','fuimos','full ',
-          ' gran','grande','gracias ',
-	      ' ha','halla','hallar','hasta','haya','hayan','hayamos','hayaron','hubo ',
-          ' hablemos','hablar ',
-          ' i','iban','idem','ido','in','ir','irian','item ',
-          ' ja','jamas','je','ji','jo','juntos ',
+		  ' a ',' ah ',' al ',' alla ',' alo ',' ano ',' ante ',' anti ',' am ',' aquel ',' aquellos ',' aquellas ',
+          ' atras ',' ay ',' ahora ',' are ',' anos ',' ano ',
+		  ' b ',' bajo',' bien',' bueno ',
+		  ' cada',' casi ',' con ',' contra ',' coma ',' comer ',' como ',' cómo ',' cambiar ',' cuyo ',' .com ',' com ',
+		  ' da ',' dando ',' de ' , ' del',' dejar ',' desde ',' di ',' dia ',' dice ',' donde ',' dijo ',' día ',
+		  ' e ',' el ',' ella ',' ellas ',' ello ',' ellos ',' en ' ,' entonces ',' entre ',' era ',' eran ',' es ', 
+          ' esa ',' ese ',' esas ',' eso ',' esos ',' esta ',' estan ',' estas ',' esto ',' estos ',' está ',' eramos ',
+		  ' fue ',' fueron ',' fuese ',' fuesen ',' fui ',' fuimos ','full ',' for ',
+          ' gran ',' grande ','gracias ',
+	      ' ha ',' halla ',' hallar ',' hasta ',' haya ',' hayan ',' hayamos ',' hayaron ',' hubo ',
+          ' hablemos ',' hablar ',
+          ' i ',' iban ',' idem ',' ido ',' in ',' ir ',' irian ',' item ',' is ',
+          ' ja ',' jamas ',' je ',' ji ',' jo ',' juntos ',
 		  ' kill ',
-	  	  ' la','las','lanza','le','les','lo','los ',
-		  ' mas ',  ' matar','me','mes','mejor ',  ' mi','mias','mios','mis','mucho ',
-		  ' nada','nadie','ni','ninguno','no','nos','nosotros','numero','numeros ',
-	 	  ' o','ok','on','otras','otros ',
-		  ' para','paran','parte','peor','pm','por','poco','podran','pondra','pondran','porque ',
-          ' puede','pero','puedo','pueden','puedes','pudo','punto ',
-		  ' que','quien','quienes','quiere','quieren','quiero','quisiera','quisieran','quisieras','quiso ',
-		  ' se','sera','si ','sin',' sobre','solo','sólo','su','sus ', 
-		  ' t','tambien','te','the','tiene','tienen','to','toda','todas','tras','tu ',
-          ' tus','tuyas ','tuyos ',
-	 	  ' u ',  ' un','una','unas','uno','unos ',
-		  ' v','vamos','van','viene','vienen','vosotros','vive','voy','vuelve ', 
-		  ' y','ya','yo ',
-		  '/','#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',' | ','“','...',
+	  	  ' la ',' las ',' lanza ',' le ',' les ',' lo ',' los ',
+		  ' mas ',  ' matar ',' me ',' mes ',' mejor ',' mi ',' mias ',' mios ',' mis ',' mucho ',
+		  ' nada ',' nadie ',' ni ',' ninguno ',' no ',' nos ',' nosotros ',' numero ',' numeros ',
+	 	  ' o ',' ok ',' on ',' otras ',' otros ',
+		  ' para ',' paran ',' parte ',' peor ',' pm ',' por ',' poco ',' podran ',' pondra ',' pondran ',' porque ',
+          ' puede ',' pero ',' puedo ',' pueden ',' puedes ',' pudo ',' punto ',
+		  ' que ',' quien ',' quienes ',' quiere ',' quieren ',' quiero ',' quisiera ',' quisieran ',' quisieras ',' quiso ',
+		  ' se ',' sera ',' si ',' sin ',' sobre ',' solo ',' sólo ',' su ',' sus ', ' ser ', 
+		  ' t ',' tambien ',' te ',' tenia ',' the ',' tiene ',' tienen ',' to ',' toda ',' todas ',' tras ',' tu ',
+          ' tus ',' tuyas ',' tuyos ',' tuvo ',
+	 	  ' u ',  ' un ',' una ',' unas ',' uno ',' unos ',
+		  ' v ',' vamos ',' van ',' viene ',' vienen ',' vosotros ',' vive ',' voy ',' vuelve ',' va ', 
+		  ' y ',' ya ', ' yo ',
+		  '/','#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',
+           '|','“','...','¡',' - ','–',,'”',
 		  '1','2','3','4','5','6','7','8','9','0');
 
 function BORRAR_VARIABLES()
@@ -339,8 +340,8 @@ return;
 }
 
 function NUBE_TAGS($tags)
-{ 	$tags .= 'ubuntu linux fedora planeta planet abr4xas xombra blog web internet gentoo debian mint';
-    $busqueda= $GLOBALS['palabras'];
+{ 	$busqueda= $GLOBALS['palabras'];
+    $tags .= 'ubuntu linux fedora planeta planet abraxas xombra blog web internet gentoo debian mint gnu sabayon libreoffice thunderbird firefox';
 	$search = array('Á','É','Í','Ó','Ú','á','é','í','ó','ú','Ü','ü','Ñ','ñ','&');
 	$replace= array('a','e','i','o','u','a','e','i','o','u','u','u','n','n',' ');
 	$tags= trim(strtolower($tags));
@@ -475,7 +476,6 @@ function RSS_MOSTRAR($url,$imagen,$leer_cant_feed,$largo_lectura,$feeds,$theme,$
  echo '</div>';
 return $tags;
 }
-
 function RSS_IMG(){
 echo'<h3>Agreganos a tu web</h3>
     <p>Agrega estos botones a tu web</p>
