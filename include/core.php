@@ -16,7 +16,7 @@ $buffer= BUFFER_INICIO();
 global $palabras;
 $GLOBALS['palabras']= array(
 		  ' a ',' ah ',' al ',' alla ',' alo ',' ano ',' ante ',' anti ',' am ',' aquel ',' aquellos ',' aquellas ',
-          ' atras ',' ay ',' ahora ',' are ',' anos ',' ano ',
+          ' atras ',' ay ',' ahora ',' are ',' anos ',' ano ',' aqui ',' antes ',
 		  ' b ',' bajo',' bien',' bueno ',
 		  ' cada',' casi ',' con ',' contra ',' coma ',' comer ',' como ',' cómo ',' cambiar ',' cuyo ',' .com ',' com ',
 		  ' da ',' dando ',' de ' , ' del',' dejar ',' desde ',' di ',' dia ',' dice ',' donde ',' dijo ',' día ',
@@ -25,14 +25,14 @@ $GLOBALS['palabras']= array(
 		  ' fue ',' fueron ',' fuese ',' fuesen ',' fui ',' fuimos ','full ',' for ',
           ' gran ',' grande ','gracias ',
 	      ' ha ',' halla ',' hallar ',' hasta ',' haya ',' hayan ',' hayamos ',' hayaron ',' hubo ',
-          ' hablemos ',' hablar ',
+          ' hablemos ',' hablar ',' hacer ',' hacen ',
           ' i ',' iban ',' idem ',' ido ',' in ',' ir ',' irian ',' item ',' is ',
           ' ja ',' jamas ',' je ',' ji ',' jo ',' juntos ',
 		  ' kill ',
 	  	  ' la ',' las ',' lanza ',' le ',' les ',' lo ',' los ',
 		  ' mas ',  ' matar ',' me ',' mes ',' mejor ',' mi ',' mias ',' mios ',' mis ',' mucho ',
 		  ' nada ',' nadie ',' ni ',' ninguno ',' no ',' nos ',' nosotros ',' numero ',' numeros ',
-	 	  ' o ',' ok ',' on ',' otras ',' otros ',
+	 	  ' o ',' ok ',' on ',' otras ',' otros ','of',
 		  ' para ',' paran ',' parte ',' peor ',' pm ',' por ',' poco ',' podran ',' pondra ',' pondran ',' porque ',
           ' puede ',' pero ',' puedo ',' pueden ',' puedes ',' pudo ',' punto ',
 		  ' que ',' quien ',' quienes ',' quiere ',' quieren ',' quiero ',' quisiera ',' quisieran ',' quisieras ',' quiso ',
@@ -40,10 +40,10 @@ $GLOBALS['palabras']= array(
 		  ' t ',' tambien ',' te ',' tenia ',' the ',' tiene ',' tienen ',' to ',' toda ',' todas ',' tras ',' tu ',
           ' tus ',' tuyas ',' tuyos ',' tuvo ',
 	 	  ' u ',  ' un ',' una ',' unas ',' uno ',' unos ',
-		  ' v ',' vamos ',' van ',' viene ',' vienen ',' vosotros ',' vive ',' voy ',' vuelve ',' va ', 
+		  ' v ',' vamos ',' van ',' viene ',' vienen ',' ver ',' viste ',' vosotros ',' vive ',' voy ',' vuelve ',' va ', 
 		  ' y ',' ya ', ' yo ',
 		  '/','#','&','(',')','.',',',';',':','-','*','{','}','[',']','<','>','$','%','=','@','?','!','"','+','¿',
-           '|','“','...','¡',' - ','–',,'”',
+           '|','“','...','¡',' - ','–','”','“','€',
 		  '1','2','3','4','5','6','7','8','9','0');
 
 function BORRAR_VARIABLES()
@@ -499,7 +499,7 @@ function SUBSCRIPCIONES($feeds)
    foreach ($feeds as $imagen=> $enlace) {
    $enlaceC= explode('/',$enlace);
    $enlaceC= str_replace('www.','',$enlaceC[2]);
-   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlaceC.'">'.$enlaceC.'</a></li>';
+   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlaceC.'">'.$imagen.'</a></li>';
   }
  echo '</ul>';
 return;
