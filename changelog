@@ -1,4 +1,16 @@
-commit 9d496210f4f0716187a49d26a00949b3c1027b65 (HEAD, origin/master, origin/HEAD, master)
+commit 58f4485e12abbb81ff572bb53f662aefdfb61d14 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 23 11:51:48 2015 -0430
+
+    * Correcion en modo de mostrar suscripciones
+
+commit 219604005c5a0488813895f00dabd8a99b6fae13
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 20 10:49:48 2015 -0430
+
+    * changelog
+
+commit 9d496210f4f0716187a49d26a00949b3c1027b65
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 20 10:49:01 2015 -0430
 
