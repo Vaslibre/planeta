@@ -497,9 +497,9 @@ return;
 function SUBSCRIPCIONES($feeds)
 {echo '<ul>';
    foreach ($feeds as $imagen=> $enlace) {
-   $enlaceC= explode('/',$enlace);
-   $enlaceC= str_replace('www.','',$enlaceC[2]);
-   echo '<li><a href="http://'.$enlaceC.'" target="_blank" title="Visitar:'.$enlaceC.'">'.$imagen.'</a></li>';
+   #$enlaceC= explode('/',$enlace);
+   #$enlaceC= str_replace('www.','',$enlaceC[2]);
+   echo '<li><a href="'.$enlace.'" target="_blank" title="Visitar:'.$imagen.'">'.$imagen.'</a></li>';
   }
  echo '</ul>';
 return;
