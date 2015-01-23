@@ -1,4 +1,16 @@
-commit 58f4485e12abbb81ff572bb53f662aefdfb61d14 (HEAD, origin/master, origin/HEAD, master)
+commit 1e70315df86456e4bcb1375d4ffe215b686bc735 (HEAD, origin/master, origin/HEAD, master)
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 23 12:29:59 2015 -0430
+
+    *cambio menor
+
+commit fab2cda822928cff63f95cd72e67c208cc7dd475
+Author: xombra <xombra.com@gmail.com>
+Date:   Fri Jan 23 11:52:26 2015 -0430
+
+    * changelog
+
+commit 58f4485e12abbb81ff572bb53f662aefdfb61d14
 Author: xombra <xombra.com@gmail.com>
 Date:   Fri Jan 23 11:51:48 2015 -0430
 
