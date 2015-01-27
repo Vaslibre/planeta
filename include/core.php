@@ -527,6 +527,7 @@ function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme,$enlace)
 {  #$enlace= $enlace;
    $title= urlencode(str_replace('%20',' ',$title));
    $title= str_replace('-',' ',$title);
+   $title= str_replace('+',' ',$title);
    $urlcorta= explode('/',$urlsitio);
    $url=$urlplanet.'index.php?r='.$urlsitio.'|'.$title;
    $imagen=$urlplanet.'img/logo.png';
