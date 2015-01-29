@@ -72,6 +72,7 @@ http://vaslibre.org.ve
         "vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
         "xombra"   		      => "http://xombra.com/backend.php",
 		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
+		"alexandersalas"         	  => "http://alexandersalas.name/blog.rss",
         "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
         "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
         "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
