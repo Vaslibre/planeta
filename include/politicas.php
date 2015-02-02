@@ -1,14 +1,14 @@
 <?php
 include 'config.php';
-echo "<div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-md-12\">
-                <div class=\"feed\">
-                    <div class=\"feed-item\">
-                        <article class=\"feed-content\">
-        <div class=\"page-header\">
-          <h1 class=\"text-center text-uppercase\">Pol&iacute;ticas de uso:</h1>
-        </div>
+echo "<div class=\"col-sm-12 col-md-12\">    
+    <ol class=\"breadcrumb text-uppercase\">
+      <li><a href=\"/\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Ir al Inicio\">Inicio</a></li>
+      <li>Pol&iacute;ticas de uso:</li>
+    </ol>    
+</div>    
+<div class=\"col-sm-12 col-md-12\">
+    <div class=\"badger-left\" data-badger=\"Estas leyendo\">
+        <h3 class=\"text-uppercase\">Pol&iacute;ticas de uso:</h3>
             <p> Bienvenido(a) a $nombre_sitio a partir de ahora denominado como p&aacute;gina o $dominio, donde mostramos las &uacute;ltimas noticias de diferentes sitios web y/o blogs de usuarios de Software Libre. Usted al ingresar o visitar a nuestro sitio web, indica que a le&iacute;do y aceptado los t&eacute;rminos del uso de nuestro sitio web. Por favor rev&iacute;selo con detenimiento. Este acuerdo el cual est&aacute; sujeto a cambios en cualquier momento, y adem&aacute;s los cambios son efectivos en el acto de publicaci&oacute;n. Le recomendamos que sit&uacute;e esta p&aacute;gina en su lista de favoritos para que pueda visitarla con frecuencia o cuando necesites alguna informaci&oacute;n sobre cambios y actualizaciones en nuestros t&eacute;rminos del acuerdo original.</p>
 
             <p><strong> 1. Costos/Terminacion:</strong></p>
@@ -152,11 +152,6 @@ echo "<div class=\"container\">
               <p> Cuando  $nombre_sitio;  recibe datos de sus Visitantes/usuarios/usuarios por encuestas, compras, participaci&oacute;n en sorteos o cualquier otro evento, es porque Usted lo ha entendido as&iacute; y lo hace voluntariamente.  $nombre_sitio;  garantiza que los datos recibidos ser&aacute;n utilizados solamente para los fines que fueron requeridos.</p>
 
               <p> Cualquiera puede poner un v&iacute;nculo hacia  $nombre_sitio;  en su sitio web o blog  sin que esto implique recibir un v&iacute;nculo rec&iacute;proco. Cualquiera que acceda mediante un v&iacute;nculo de este tipo queda sujeto por completo a los presentes T&eacute;rminos y Condiciones de Uso.</p>
-              </article>
-                                  </div>
-                    </div>
-      </div>
     </div>
-</div>
-"
+</div>";
 ?>

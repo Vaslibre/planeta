@@ -1,4 +1,10 @@
-commit b25a6cadd4b429dbb2abfd7f0f85b7aac4a2a814 (HEAD, origin/master, origin/HEAD, master)
+commit d4fa3cd64fdfd6c6af03eb2680b13806fbe94b88
+Author: xombra <xombra.com@gmail.com>
+Date:   Tue Jan 27 08:59:15 2015 -0430
+
+    * changelog
+
+commit b25a6cadd4b429dbb2abfd7f0f85b7aac4a2a814
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 27 08:58:37 2015 -0430
 
@@ -151,7 +157,7 @@ Date:   Thu Jan 15 23:03:45 2015 -0430
     * Modificacion de ompl
     * agregado opciones en el HOWTO
 
-commit 15629ca8dc85af7a62e4cce6a0221598d920f1fe (tag: 1.0.1)
+commit 15629ca8dc85af7a62e4cce6a0221598d920f1fe
 Author: abr4xas <me@abr4xas.org>
 Date:   Thu Jan 15 19:19:16 2015 -0430
 
@@ -169,7 +175,7 @@ Date:   Thu Jan 15 18:03:46 2015 -0430
 
     Actualizando estilos e imagenes de Agreganos a tu web
 
-commit 3b8cd69f7e0df10addb6a26dbfbcd32a8be04524 (tag: 1.0)
+commit 3b8cd69f7e0df10addb6a26dbfbcd32a8be04524
 Author: abr4xas <me@abr4xas.org>
 Date:   Thu Jan 15 16:59:21 2015 -0430
 
@@ -807,7 +813,7 @@ Date:   Tue Jan 6 20:01:11 2015 -0430
 
     * Corregido bug en js de cookies
 
-commit e9b1531816c4933fc810e06895784a9fefadcad1 (tag: 0.5b)
+commit e9b1531816c4933fc810e06895784a9fefadcad1
 Author: xombra <xombra.com@gmail.com>
 Date:   Tue Jan 6 10:44:29 2015 -0430
 
