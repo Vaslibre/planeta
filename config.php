@@ -1,7 +1,7 @@
 <?php
 # Planet VaSlibre
 /* -------------------------------------------------------
-Script  bajo los t�rminos y Licencia
+Script  bajo los términos y Licencia
 GNU GENERAL PUBLIC LICENSE
 Ver Terminos en:
 http://www.gnu.org/copyleft/gpl.html
@@ -13,7 +13,7 @@ http://vaslibre.org.ve
 
 #Valores del sistema
 
-   $theme = 'default';   # nombre del theme a usar
+   $theme = 'planetaVaSLibre';   # nombre del theme a usar - tambien esta "default"
 
 # Redes sociales
 
@@ -25,9 +25,9 @@ http://vaslibre.org.ve
 # Sitio
 
    $nombre_sitio = 'Planeta VaSlibre';
-   $lenguaje     = 'es'; # esp = espa�ol | eng = ingles
+   $lenguaje     = 'es'; # esp = español | eng = ingles
    $dominio      = 'vaslibre.org.ve';
-   $contacto     = 'xombra.com@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
+   $contacto     = 'xombra.com@gmail.com,bullgram@gmail.com'; #direccion para recibir el nuevo feed, si son varias separar por coma
    $emailinfo    = 'webmaster@vaslibre.org.ve'; # direccion email que aparecera en el envio de email (debe existir)
    $principal    = 'vaslibre.org.ve';   # enlace al sitio principal blog | sitio web 
 
@@ -55,47 +55,67 @@ http://vaslibre.org.ve
 
 #  Cache del sitio
 
-   $timecache    = 7200; # 1 horas = 3600 | recomendado 7200 
+   $timecache    = 14400; # 1 horas = 3600 | recomendado 7200 
    $urlcache     = 'cache/index.html';
 
-   # valores para Feed
+#  Tiempo máximo que un blog debe tener de la ultima nota publicada
+ 
+  $timenota     = 31536000; # 3600 X 23 X 365 = 1 año
 
-    $largo_lectura   = 550;   # cantidad maxima de caracteres de texto por nota en cada feed
-    $leer_cant_feed  = 3;     # Mientras mas lea mas tardara en mostrar
+# valores para Feed
+
+    $largo_lectura   = 620;   # cantidad maxima de caracteres de texto por nota en cada feed
+    $leer_cant_feed  = 4;     # Mientras mas lea mas tardara en mostrar
     $lang            = 'spa'; # Codigo idioma para el backend.php https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
-    #		
-	#	
-    
-    # Sitio feed / xml 
- 	$feeds = array (
-        "vaslibre"     	   	  => "http://vaslibre.org.ve/backend.php",
-        "xombra"   		      => "http://xombra.com/backend.php",
-		"abr4xas"         	  => "http://blog.abr4xas.org/feed",
-        "xanadu"         	  => "http://xanadulinux.wordpress.com/feed/",
-        "sinfallas"        	  => "http://sinfallas.wordpress.com/feed/",
-        "jeidi"               => "https://jeidienwp.wordpress.com/feed/",
-		"Mint"                => "http://blog.linuxmint.com/?feed=rss2",
-		"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/",
-		"no-photo"         	  => "http://richzendy.org/feed",
-		"tatica"         	  => "http://tatica.org/feed/?lang=es",
-		"safecreative"    	  => "http://feeds.feedburner.com/es_blog_safecreative",
-		"ubuntu"         	  => "http://www.ubuntu.org.ve/rss.xml",
-        "cachoycapote"     	  => "http://www.alvaro.web.ve/feed/",
-        "echevemaster"        => "http://echevemaster.org/feeds/all.rss.xml",
+#
+#
 
-        "libreofficevzla"     => "http://libreoffice-ve.net/category/noticias/feed/",
+# Sitio feed / xml 
+	$feeds = array (
+        "xombra"          => "http://xombra.com/backend.php",
+        "vaslibre"        => "http://vaslibre.org.ve/backend.php",
+	    "abr4xas"         => "https://blog.abr4xas.org/feed",
+        "xanadu"          => "https://xanadulinux.wordpress.com/feed/",
+        "sinfallas"       => "https://sinfallas.wordpress.com/feed/",
+        "frikosfera"      => "https://frikosfera.wordpress.com/feed/",
+        "cachoycapote"    => "http://www.alvaro.web.ve/feed/",
+	    "Mint"            => "http://blog.linuxmint.com/?feed=rss2",
+	    "phenobarbital"   => "http://phenobarbital.wordpress.com/feed/",
+	    "richzendy"       => "http://www.richzendy.org/feed",
+	    "tatica"          => "http://tatica.org/feed/?lang=es",
+	    "safecreative"    => "http://resources.safecreative.org/feed/works/latest",
+	    "ubuntu"          => "http://www.ubuntu.org.ve/rss.xml",
+	    "jjedi"           => "https://jjedixdefault.wordpress.com/feed/",
+        "libreofficevzla" => "http://libreoffice.org.ve/feed/",
+        "viser"		      => "http://viserproject.com/backend.php",
+        "skatox"	      => "http://skatox.com/blog/feed/",
+ 		"meridaspot"      => "http://meridaspot.blogspot.com/feeds/posts/default/-/ubuntu-ve",
+        "ubunlog"         => "http://ubunlog.com/feed/",
+        "arawako"         => "http://arawako.com/feed/",
+        "linuxadictos"    => "http://www.linuxadictos.com/feed",
+        "atareado"        => "http://feedpress.me/atareao",
+        "cnti"            => "http://www.cnti.gob.ve/index.php?format=feed&type=rss",
+        "moziila-venezuela" => "http://mozillavenezuela.org/feed/",
+        "phenobarbita-info" => "http://blog.phenobarbital.info/feed/",
+	    "android_libre"   => "http://www.elandroidelibre.com/feed/",
+        "desdelinux"      => "http://feeds.feedburner.com/usemoslinux",
+		"humanos-uci-cu"  => "http://humanos.uci.cu/feed/",
+		"medioslibres"    => "http://medioslibres.org.ve/index.php?format=feed&type=rss",
+        "huntingbears"    => "http://feeds.feedburner.com/BlogHuntingBears",
+		"losapuntesdetux" => "http://losapuntesdetux.blogspot.com.ar/feeds/posts/default",
+        "ernesto_crespo"  => "https://ernestocrespo13.wordpress.com/feed/",
+        "jotaeseymas"     => "https://jotaeseymas.wordpress.com/feed/"
+	);
 
+ # Publicidad
+    $publicidad = array (
+        "xombra"     	   	  => "http://xombra.com",
+        "abr4xas"  		      => "http://blog.abr4xas.org",
+		"vaslibre"         	  => "http://vaslibre.org",
+        "viser"               => "http://viserproject.com"
+	);
 
-
-
-	);   
- /*
-	//  feeds | RSS 
-    # solo 2 para las pruebas luego eliminar y activar el de arriba
-  	$feeds = array (
-        "xanadu"         	=> "http://xanadulinux.wordpress.com/feed/",
-    	"phenobarbital"       => "http://phenobarbital.wordpress.com/feed/"
- 	);   */ 
- 
+    $ancho = 200;
+    $alto  = 324;
 ?>
