@@ -38,8 +38,7 @@ if(!empty($_GET["r"]))
 if (!is_dir("themes/$theme"))
 { $theme='default'; }
 $expira=time() - $timecache;
-$vidafile= filemtime($urlcache);
-VERIFICA_CACHE($urlcache,$expira,$vidafile);
+$vidafile = VERIFICA_CACHE($urlcache,$expira);
 include 'sitemap.php';
 echo '<!DOCTYPE html>
 <html lang="'.$lenguaje.'">
