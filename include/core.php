@@ -69,21 +69,19 @@ function COOKIES()
 return;
 }
 
-function COMPRESS_PAGE($buffer) 
-{ $search = $replace= array(); 
-  $search = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s'); 
-  $replace= array(">","<",'\\1');
-  $buffer = preg_replace($search, $replace, $buffer);
-  $buffer = str_replace('> <','><',$buffer);
-  return trim($buffer);
+function COMPRESS_PAGE($buffer)
+{ $search =$replace=array();
+ $search =array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');
+ $replace=array(">","<",'\\1');
+return trim(preg_replace($search,$replace,$buffer));
 }
 
 function CREA_CACHE($urlcache,$buffer)
 {  ob_end_flush();
    $filecached= fopen($urlcache, 'w+');
    $contenido = trim(COMPRESS_PAGE(ob_get_contents()));
-   fwrite($filecached, $contenido);
-   fclose($filecached);  
+   fwrite($filecached,$contenido);
+   fclose($filecached);
 return;
 }
 
@@ -128,8 +126,7 @@ function getCleanParselyPageValue($val) {
 }
 
 function GoogleAnalytics($UA)
-{ 
-echo "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create','$UA','auto'); ga('send','pageview');</script>";
+{ echo "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create','$UA','auto'); ga('send','pageview');</script>";
 return;
 }
 
@@ -245,7 +242,6 @@ function META($nombre_sitio,$descripcion,$latitud,$longitud,$urlplanet,$ExpStr,$
   $parselyPage["link"]     = $urlplanet;
   $parselyPage["image_url"]= $urlplanet.'img/logo.png';
   $parselyPage["type"]     ="post";
-  $parselyPage["post_id"]  = $post_id;  
   $parselyPage["pub_date"] = gmdate("M d Y H:i:s",time());
   $parselyPage["author"]   = getCleanParselyPageValue($nombre_sitio);
   $output= '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'">';
@@ -332,7 +328,6 @@ function METAREDIRECCION($nombre_sitio,$descripcion,$latitud,$longitud,$urlplane
   $parselyPage["link"]     = $enlace;
   $parselyPage["image_url"]= $urlplanet.'/themes/'.$theme.'/img/logo.png';
   $parselyPage["type"]     ="post";
-  $parselyPage["post_id"]  = $post_id;  
   $parselyPage["pub_date"] = gmdate("M d Y H:i:s",time());
   $parselyPage["author"]   = getCleanParselyPageValue($nombre_sitio);
   $output= '<meta name="parsely-page" content="'.json_encode($parselyPage,JSON_HEX_APOS | JSON_HEX_QUOT).'">';
@@ -514,13 +509,18 @@ function URL() {
 return; 
 }
 
-function VERIFICA_CACHE($urlcache,$expira,$vidafile)
+function VERIFICA_CACHE($urlcache,$expira)
 { ob_start("COMPRESS_PAGE");
-  if (file_exists($urlcache) && $vidafile>= $expira ) {
-     include $urlcache; 
+  $x = 0;
+  if (file_exists($urlcache)) {
+		$vidafile= filemtime($urlcache);
+		if ($vidafile>=$expira){
+			$x = 1;
+			include $urlcache;
      die();
-    }
-return;
+    }}
+if ($x == 0) {$vidafile = time() - 86400;}
+return $vidafile;
 }
 
 function VER_FEED($urlsitio,$urlplanet,$nombre_sitio,$title,$theme,$enlace)
